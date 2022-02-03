@@ -13,7 +13,12 @@
                   $("#appendToThis").append(data);
            });
       });
-</script>
+      $(function() {
+          $.get("./Topbar.html", function(data){
+            $("#TopBarHere").append(data);
+          });
+        });
+    </script>
 
     <style>
       html, body {
@@ -33,7 +38,7 @@
         class="w-[360px] h-[720px] absolute left-[-1px] top-[-1px] overflow-hidden rounded-[20px] bg-white"
         style="box-shadow: 0px 33px 43px 0 rgba(0,0,0,0.1), 0px 9.94853401184082px 12.963241577148438px 0 rgba(0,0,0,0.07), 0px 4.1321120262146px 5.384267330169678px 0 rgba(0,0,0,0.05), 0px 1.4945039749145508px 1.9473838806152344px 0 rgba(0,0,0,0.03);"
       >
-        <svg
+        <!-- <svg
           width="191"
           height="676"
           viewBox="0 0 191 676"
@@ -71,8 +76,8 @@
                 result="effect1_foregroundBlur_164_778"
               ></feGaussianBlur>
             </filter>
-          </defs></svg
-        ><svg
+          </defs></svg> -->
+        <!-- <svg
           width="360"
           height="56"
           viewBox="0 0 360 56"
@@ -202,7 +207,9 @@
               <stop offset="1" stop-color="#FF1744"></stop>
             </linearGradient>
           </defs>
-        </svg>
+        </svg> -->
+        
+        <div id="TopBarHere"></div>
         <div id="appendToThis"></div>
 
       </div>
@@ -439,7 +446,7 @@
             </mask>
             <g mask="url(#mask0_71_4457)"><rect width="32" height="32" fill="#828282"></rect></g>
           </svg>
-          <div class="w-[328px] h-5 absolute left-[-1px] top-[29px] opacity-[0.54]">
+          <div class="w-[328px] h-5 absolute left-[3px] top-[29px] opacity-[0.54]">
             <p class="w-[328px] h-5 absolute left-0 top-0 text-base text-left text-black/[0.87]">
               Artical Name
             </p>
@@ -449,7 +456,7 @@
           <div class="w-[328px] h-px absolute left-[-1px] top-[54px] opacity-40">
             <div class="w-[328px] h-px absolute left-[-1px] top-[-1px] bg-black/[0.87]"></div>
           </div>
-          <div class="w-[328px] h-5 absolute left-[-1px] top-[29px] opacity-[0.54]">
+          <div class="w-[328px] h-5 absolute left-[3px] top-[29px] opacity-[0.54]">
             <p class="w-[328px] h-5 absolute left-0 top-0 text-base text-left text-black/[0.87]">
               Price
             </p>
@@ -486,7 +493,7 @@
           <div class="w-[328px] h-px absolute left-[-1px] top-[54px] opacity-40">
             <div class="w-[328px] h-px absolute left-[-1px] top-[-1px] bg-black/[0.87]"></div>
           </div>
-          <div class="w-[328px] h-5 absolute left-[-1px] top-[29px] opacity-[0.54]">
+          <div class="w-[328px] h-5 absolute left-[3px] top-[29px] opacity-[0.54]">
             <p class="w-[328px] h-5 absolute left-0 top-0 text-base text-left text-black/[0.87]">
               Date
             </p>
@@ -523,7 +530,7 @@
           <div class="w-[328px] h-px absolute left-[-1px] top-[54px] opacity-40">
             <div class="w-[328px] h-px absolute left-[-1px] top-[-1px] bg-black/[0.87]"></div>
           </div>
-          <div class="w-[328px] h-5 absolute left-[-1px] top-[29px] opacity-[0.54]">
+          <div class="w-[328px] h-5 absolute left-[3px] top-[29px] opacity-[0.54]">
             <p class="w-[328px] h-5 absolute left-0 top-0 text-base text-left text-black/[0.87]">
               City
             </p>
@@ -570,7 +577,7 @@
           <div class="w-[328px] h-px absolute left-[-1px] top-[54px] opacity-40">
             <div class="w-[328px] h-px absolute left-[-1px] top-[-1px] bg-black/[0.87]"></div>
           </div>
-          <div class="w-[328px] h-5 absolute left-[-1px] top-[29px] opacity-[0.54]">
+          <div class="w-[328px] h-5 absolute left-[3px] top-[29px] opacity-[0.54]">
             <p class="w-[328px] h-5 absolute left-0 top-0 text-base text-left text-black/[0.87]">
               Shop
             </p>
@@ -615,7 +622,8 @@
               style="box-shadow: 0px 4px 8px 0 rgba(29,116,233,0.16);"
             ></div>
           </div>
-          <p class="w-[68px] h-3 absolute left-[52px] top-5 text-xl font-medium text-center text-white">
+          <!-- <p class="w-[68px] h-3 absolute left-[52px] top-5 text-xl font-medium text-center text-white"> -->
+          <p class="w-[110px] h-[20px] absolute left-[30px] top-4 text-sm font-medium text-center uppercase text-white">
             OCR
           </p>
         </div>
@@ -631,7 +639,7 @@
             ></div>
           </div>
           <p
-            class="w-[88px] h-[15px] absolute left-[30px] top-3 text-sm font-medium text-center uppercase text-black/[0.87]"
+            class="w-[88px] h-[20px] absolute left-[30px] top-2 text-sm font-medium text-center uppercase text-black/[0.87]"
           >
             register
           </p>

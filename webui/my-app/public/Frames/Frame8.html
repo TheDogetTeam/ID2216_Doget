@@ -13,7 +13,13 @@
                   $("#appendToThis").append(data);
            });
       });
-</script>
+      $(function() {
+        $.get("./Topbar.html", function(data){
+          $("#TopBarHere").append(data);
+        });
+      });
+    
+    </script>
 
     <style>
       html, body {
@@ -34,7 +40,7 @@
     class="w-[348px] h-[728px] absolute left-[-1px] top-[-1px] overflow-hidden rounded-[20px] bg-white"
     style="box-shadow: 0px 33px 43px 0 rgba(0,0,0,0.1), 0px 9.94853401184082px 12.963241577148438px 0 rgba(0,0,0,0.07), 0px 4.1321120262146px 5.384267330169678px 0 rgba(0,0,0,0.05), 0px 1.4945039749145508px 1.9473838806152344px 0 rgba(0,0,0,0.03);"
   >
-    <svg
+    <!-- <svg
       width="189"
       height="682"
       viewBox="0 0 189 682"
@@ -72,8 +78,8 @@
             result="effect1_foregroundBlur_164_1026"
           ></feGaussianBlur>
         </filter>
-      </defs></svg
-    ><svg
+      </defs></svg> -->
+    <!-- <svg
       width="348"
       height="56"
       viewBox="0 0 348 56"
@@ -203,7 +209,9 @@
           <stop offset="1" stop-color="#FF1744"></stop>
         </linearGradient>
       </defs>
-    </svg>
+    </svg> -->
+
+    <div id="TopBarHere"></div>
     <div id="appendToThis"></div>
 
   </div>
