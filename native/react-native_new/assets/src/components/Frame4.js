@@ -66,7 +66,7 @@ export default function Frame4(props) {
                     y="0px minmax(0px, max-content) 2px"
                     style={styles.group}>
                     <Px.View
-                      x="44fr 63.79% 44fr"
+                      x="44fr 63.79fr 44fr"
                       y="18px minmax(0px, max-content) 16px"
                       absolute
                       style={styles.small_text_body_box}>
@@ -171,7 +171,7 @@ export default function Frame4(props) {
                           y="9px minmax(0px, max-content) 0px"
                           style={styles.cover_block8}>
                           <Px.View
-                            x="0% 82.3% 17.7%"
+                            x="0fr 82.3fr 17.7fr"
                             y="0px 6px 0px"
                             style={styles.cover_group1}>
                             <ImageBackground
@@ -196,7 +196,7 @@ export default function Frame4(props) {
                 y="21px minmax(0px, max-content) 0px"
                 style={styles.group}>
                 <Px.View
-                  x="44fr 71.7% 44fr"
+                  x="44fr 71.7fr 44fr"
                   y="17px minmax(0px, max-content) 19px"
                   absolute
                   style={styles.small_text_body_box}>
@@ -336,7 +336,7 @@ export default function Frame4(props) {
                 y="20px minmax(0px, max-content) 0px"
                 style={styles.group}>
                 <Px.View
-                  x="49fr 68.49% 49fr"
+                  x="49fr 68.49fr 49fr"
                   y="18px minmax(0px, max-content) 18px"
                   absolute
                   style={styles.small_text_body_box}>
@@ -345,7 +345,7 @@ export default function Frame4(props) {
                   </Text>
                 </Px.View>
                 <Px.ImageBackground
-                  x="97.43% 0.32% 2.25%"
+                  x="97.43fr 0.32fr 2.25fr"
                   y="20px 0px 28px"
                   absolute
                   style={styles.line2}
@@ -356,7 +356,7 @@ export default function Frame4(props) {
                   source={require('../assets/4a8d14d81367781eb26a80a75576ded2.png')}
                 />
                 <Px.ImageBackground
-                  x="98.71% 0.32% 0.96%"
+                  x="98.71fr 0.32fr 0.96fr"
                   y="20px 0px 28px"
                   absolute
                   style={styles.line2}
@@ -487,7 +487,7 @@ export default function Frame4(props) {
                 y="21px minmax(0px, max-content) 0px"
                 style={styles.group}>
                 <Px.View
-                  x="68fr 56.27% 68fr"
+                  x="68fr 56.27fr 68fr"
                   y="18px minmax(0px, max-content) 18px"
                   absolute
                   style={styles.small_text_body1_box}>
@@ -496,7 +496,7 @@ export default function Frame4(props) {
                   </Text>
                 </Px.View>
                 <Px.View
-                  x="52fr 66.56% 52fr"
+                  x="52fr 66.56fr 52fr"
                   y="17px minmax(0px, max-content) 19px"
                   absolute
                   style={styles.small_text_body_box}>
@@ -617,7 +617,7 @@ export default function Frame4(props) {
                 y="20px minmax(0px, max-content) 0px"
                 style={styles.group}>
                 <Px.View
-                  x="68fr 56.27% 68fr"
+                  x="68fr 56.27fr 68fr"
                   y="18px minmax(0px, max-content) 18px"
                   absolute
                   style={styles.small_text_body1_box}>
@@ -626,7 +626,7 @@ export default function Frame4(props) {
                   </Text>
                 </Px.View>
                 <Px.View
-                  x="52fr 66.56% 52fr"
+                  x="52fr 66.56fr 52fr"
                   y="18px minmax(0px, max-content) 18px"
                   absolute
                   style={styles.small_text_body_box}>
@@ -755,7 +755,7 @@ export default function Frame4(props) {
         />
 
         <Px.ImageBackground
-          x="49.14% 13.79% 37.07%"
+          x="49.14fr 13.79fr 37.07fr"
           y="273px minmax(0px, max-content) 422px"
           absolute
           style={styles.cover_block5}
@@ -789,7 +789,7 @@ export default function Frame4(props) {
           source={require('../assets/ee79d44504791b11c0edf7c3bb8d0ef5.png')}
           resizeMode="contain">
           <Px.ImageBackground
-            x="72fr 58.62% 72fr"
+            x="72fr 58.62fr 72fr"
             y="16px 24px 16px"
             absolute
             style={styles.image11}
@@ -797,7 +797,7 @@ export default function Frame4(props) {
           />
 
           <Px.ImageBackground
-            x="2.3% 11.49% 86.21%"
+            x="2.3fr 11.49fr 86.21fr"
             y="8px minmax(0px, max-content) 8px"
             style={styles.cover_block3}
             source={require('../assets/9e421376b5abcc4ab003916e58fa69b3.png')}
@@ -817,7 +817,7 @@ export default function Frame4(props) {
           source={require('../assets/28437159809aa6bc9073d761fca53921.png')}
         />
         <Px.View
-          x="9.2% 15.8% 75%"
+          x="9.2fr 15.8fr 75fr"
           y="705px minmax(0px, max-content) 10px"
           absolute
           style={styles.small_text_body2_box}>
@@ -827,7 +827,7 @@ export default function Frame4(props) {
         </Px.View>
 
         <Px.View
-          x="35.92% 5.75% 58.33%"
+          x="35.92fr 5.75fr 58.33fr"
           y="673px 20px 34px"
           absolute
           style={styles.cover_group}>
@@ -842,7 +842,7 @@ export default function Frame4(props) {
         </Px.View>
 
         <Px.View
-          x="35.34% 7.18% 57.47%"
+          x="35.34fr 7.18fr 57.47fr"
           y="705px minmax(0px, max-content) 10px"
           absolute
           style={styles.small_text_body2_box}>
@@ -852,7 +852,7 @@ export default function Frame4(props) {
         </Px.View>
 
         <Px.View
-          x="58.05% 5.17% 36.78%"
+          x="58.05fr 5.17fr 36.78fr"
           y="674px minmax(0px, max-content) 35px"
           absolute
           style={styles.cover_block2}>
@@ -879,7 +879,7 @@ export default function Frame4(props) {
         </Px.View>
 
         <Px.View
-          x="52.44% 16.67% 30.89%"
+          x="52.44fr 16.67fr 30.89fr"
           y="705px minmax(0px, max-content) 10px"
           absolute
           style={styles.small_text_body2_box}>
@@ -889,7 +889,7 @@ export default function Frame4(props) {
         </Px.View>
 
         <Px.ImageBackground
-          x="79.6% 5.75% 14.66%"
+          x="79.6fr 5.75fr 14.66fr"
           y="673px minmax(0px, max-content) 34px"
           absolute
           style={styles.cover_block1}
@@ -910,7 +910,7 @@ export default function Frame4(props) {
         </Px.ImageBackground>
 
         <Px.View
-          x="76.44% 12.07% 11.49%"
+          x="76.44fr 12.07fr 11.49fr"
           y="705px minmax(0px, max-content) 10px"
           absolute
           style={styles.small_text_body2_box}>
@@ -919,7 +919,7 @@ export default function Frame4(props) {
           </Text>
         </Px.View>
         <Px.View
-          x="55.75% 41.38% 2.87%"
+          x="55.75fr 41.38fr 2.87fr"
           y="139px minmax(0px, max-content) 530px"
           absolute
           style={styles.highlights_box}>
@@ -928,7 +928,7 @@ export default function Frame4(props) {
           </Text>
         </Px.View>
         <Px.ImageBackground
-          x="0.29% 53.45% 46.26%"
+          x="0.29fr 53.45fr 46.26fr"
           y="69px 185px 473px"
           absolute
           style={styles.image17}

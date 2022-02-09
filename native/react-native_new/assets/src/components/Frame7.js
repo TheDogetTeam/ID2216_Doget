@@ -34,7 +34,7 @@ export default function Frame7(props) {
         />
 
         <Px.ImageBackground
-          x="54.6% 6.9% 38.51%"
+          x="54.6fr 6.9fr 38.51fr"
           y="186px minmax(0px, max-content) 518px"
           absolute
           style={styles.cover_block3}
@@ -55,7 +55,7 @@ export default function Frame7(props) {
         </Px.ImageBackground>
 
         <Px.View
-          x="77.3% 10.06% 12.64%"
+          x="77.3fr 10.06fr 12.64fr"
           y="215px minmax(0px, max-content) 501px"
           absolute
           style={styles.small_text_body1_box}>
@@ -80,7 +80,7 @@ export default function Frame7(props) {
           </Text>
         </Px.View>
         <Px.View
-          x="53.16% 11.21% 35.63%"
+          x="53.16fr 11.21fr 35.63fr"
           y="215px minmax(0px, max-content) 501px"
           absolute
           style={styles.small_text_body1_box}>
@@ -96,7 +96,7 @@ export default function Frame7(props) {
           source={require('../assets/dd7c5ae566fe1390b0808724ab980a38.png')}
         />
         <Px.View
-          x="29.31% 14.08% 56.61%"
+          x="29.31fr 14.08fr 56.61fr"
           y="215px minmax(0px, max-content) 501px"
           absolute
           style={styles.small_text_body1_box}>
@@ -112,7 +112,7 @@ export default function Frame7(props) {
           source={require('../assets/2f26d94934d9d899c40cce3e225b45ed.png')}
         />
         <Px.View
-          x="4.74% 19.54% 75.72%"
+          x="4.74fr 19.54fr 75.72fr"
           y="215px minmax(0px, max-content) 501px"
           absolute
           style={styles.small_text_body1_box}>
@@ -128,7 +128,7 @@ export default function Frame7(props) {
           source={require('../assets/61d7497669827dca075c4045d0db34cc.png')}
         />
         <Px.View
-          x="74.57% 17.24% 8.19%"
+          x="74.57fr 17.24fr 8.19fr"
           y="157px minmax(0px, max-content) 559px"
           absolute
           style={styles.small_text_body1_box}>
@@ -144,7 +144,7 @@ export default function Frame7(props) {
           source={require('../assets/3edfa36a7a616c2d1e7126ec79ed4d78.png')}
         />
         <Px.View
-          x="53.16% 11.78% 35.06%"
+          x="53.16fr 11.78fr 35.06fr"
           y="156px minmax(0px, max-content) 560px"
           absolute
           style={styles.small_text_body1_box}>
@@ -160,7 +160,7 @@ export default function Frame7(props) {
           source={require('../assets/693d4b7ea32786b64267cad01e32af81.png')}
         />
         <Px.View
-          x="28.74% 17.24% 54.02%"
+          x="28.74fr 17.24fr 54.02fr"
           y="157px minmax(0px, max-content) 559px"
           absolute
           style={styles.small_text_body1_box}>
@@ -169,7 +169,7 @@ export default function Frame7(props) {
           </Text>
         </Px.View>
         <Px.View
-          x="8.05% 10.06% 81.9%"
+          x="8.05fr 10.06fr 81.9fr"
           y="156px minmax(0px, max-content) 560px"
           absolute
           style={styles.small_text_body1_box}>
@@ -329,7 +329,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.ImageBackground
-          x="2.3% 37.36% 60.34%"
+          x="2.3fr 37.36fr 60.34fr"
           y="612px minmax(0px, max-content) 80px"
           absolute
           style={styles.cover_block1}
@@ -346,7 +346,7 @@ export default function Frame7(props) {
         </Px.ImageBackground>
 
         <Px.ImageBackground
-          x="79.6% 5.75% 14.66%"
+          x="79.6fr 5.75fr 14.66fr"
           y="673px minmax(0px, max-content) 35px"
           absolute
           style={styles.cover_block7}
@@ -367,7 +367,7 @@ export default function Frame7(props) {
         </Px.ImageBackground>
 
         <Px.View
-          x="52.44% 16.67% 30.89%"
+          x="52.44fr 16.67fr 30.89fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.small_text_body_box}>
@@ -377,7 +377,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.View
-          x="58.05% 5.17% 36.78%"
+          x="58.05fr 5.17fr 36.78fr"
           y="674px minmax(0px, max-content) 36px"
           absolute
           style={styles.cover_block6}>
@@ -404,7 +404,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.View
-          x="35.34% 7.18% 57.47%"
+          x="35.34fr 7.18fr 57.47fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.small_text_body_box}>
@@ -414,7 +414,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.View
-          x="35.92% 5.75% 58.33%"
+          x="35.92fr 5.75fr 58.33fr"
           y="673px 20px 35px"
           absolute
           style={styles.cover_group}>
@@ -429,7 +429,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.View
-          x="9.2% 15.8% 75%"
+          x="9.2fr 15.8fr 75fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.small_text_body_box}>
@@ -457,7 +457,7 @@ export default function Frame7(props) {
             source={require('../assets/95e33d8dcb8a97142a587be2b7086935.png')}
           />
           <Px.ImageBackground
-            x="72fr 58.62% 72fr"
+            x="72fr 58.62fr 72fr"
             y="16px 24px 16px"
             absolute
             style={styles.image}
@@ -465,7 +465,7 @@ export default function Frame7(props) {
           />
 
           <Px.ImageBackground
-            x="2.3% 11.49% 86.21%"
+            x="2.3fr 11.49fr 86.21fr"
             y="8px minmax(0px, max-content) 8px"
             style={styles.cover_block5}
             source={require('../assets/9e421376b5abcc4ab003916e58fa69b3.png')}
@@ -478,7 +478,7 @@ export default function Frame7(props) {
         </Px.View>
 
         <Px.View
-          x="76.44% 12.07% 11.49%"
+          x="76.44fr 12.07fr 11.49fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.small_text_body_box}>
@@ -492,7 +492,7 @@ export default function Frame7(props) {
         />
 
         <Px.ImageBackground
-          x="52.59% 39.66% 7.76%"
+          x="52.59fr 39.66fr 7.76fr"
           y="607px minmax(0px, max-content) 84px"
           absolute
           style={styles.cover_block2}

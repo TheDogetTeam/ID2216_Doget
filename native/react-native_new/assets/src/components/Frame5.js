@@ -201,7 +201,7 @@ export default function Frame5(props) {
                   source={require('../assets/4fd97e3456615a28f4900a972c69ce4d.png')}
                 />
                 <Px.ImageBackground
-                  x="72fr 58.62% 72fr"
+                  x="72fr 58.62fr 72fr"
                   y="16px 24px 688px"
                   absolute
                   style={styles.image}
@@ -209,7 +209,7 @@ export default function Frame5(props) {
                 />
 
                 <Px.ImageBackground
-                  x="110fr 36.78% 110fr"
+                  x="110fr 36.78fr 110fr"
                   y="558px minmax(0px, max-content) 134px"
                   style={styles.cover_block}
                   source={require('../assets/82886b3c52000c8202928b24606e661b.png')}

@@ -40,7 +40,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.ImageBackground
-          x="32.76% 6.32% 60.92%"
+          x="32.76fr 6.32fr 60.92fr"
           y="159px 208px 361px"
           absolute
           style={styles.img1}
@@ -51,21 +51,21 @@ export default function Frame8(props) {
           source={require('../assets/57b6504fa2668023d26cd6ff1e5dc2fa.png')}
         />
         <Px.ImageBackground
-          x="56.9% 6.32% 36.78%"
+          x="56.9fr 6.32fr 36.78fr"
           y="159px 208px 361px"
           absolute
           style={styles.img3}
           source={require('../assets/824e49f46ee31903d7c722ff0b5ba92e.png')}
         />
         <Px.ImageBackground
-          x="68.97% 6.32% 24.71%"
+          x="68.97fr 6.32fr 24.71fr"
           y="159px 208px 361px"
           absolute
           style={styles.img4}
           source={require('../assets/5455788c4467960920bae9e0819bc234.png')}
         />
         <Px.ImageBackground
-          x="20.69% 6.32% 72.99%"
+          x="20.69fr 6.32fr 72.99fr"
           y="159px 208px 361px"
           absolute
           style={styles.img5}
@@ -79,7 +79,7 @@ export default function Frame8(props) {
           source={require('../assets/28437159809aa6bc9073d761fca53921.png')}
         />
         <Px.View
-          x="7.76% 18.68% 73.56%"
+          x="7.76fr 18.68fr 73.56fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.txt_box}>
@@ -89,7 +89,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.View
-          x="35.92% 5.75% 58.33%"
+          x="35.92fr 5.75fr 58.33fr"
           y="673px 20px 35px"
           absolute
           style={styles.cover_group}>
@@ -104,7 +104,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.View
-          x="35.06% 7.76% 57.18%"
+          x="35.06fr 7.76fr 57.18fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.txt_box}>
@@ -114,7 +114,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.View
-          x="58.05% 5.17% 36.78%"
+          x="58.05fr 5.17fr 36.78fr"
           y="674px minmax(0px, max-content) 36px"
           absolute
           style={styles.cover_block3}>
@@ -141,7 +141,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.View
-          x="51.15% 19.25% 29.6%"
+          x="51.15fr 19.25fr 29.6fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.txt_box}>
@@ -151,7 +151,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.ImageBackground
-          x="79.6% 5.75% 14.66%"
+          x="79.6fr 5.75fr 14.66fr"
           y="673px minmax(0px, max-content) 35px"
           absolute
           style={styles.cover_block4}
@@ -172,7 +172,7 @@ export default function Frame8(props) {
         </Px.ImageBackground>
 
         <Px.View
-          x="75% 14.94% 10.06%"
+          x="75fr 14.94fr 10.06fr"
           y="705px minmax(0px, max-content) 11px"
           absolute
           style={styles.txt_box}>
@@ -195,7 +195,7 @@ export default function Frame8(props) {
           y="0px minmax(0px, max-content) 672px"
           style={styles.cover_block1}>
           <Px.ImageBackground
-            x="72fr 58.62% 72fr"
+            x="72fr 58.62fr 72fr"
             y="16px 24px 16px"
             absolute
             style={styles.img7}
@@ -210,7 +210,7 @@ export default function Frame8(props) {
           />
 
           <Px.ImageBackground
-            x="2.3% 11.49% 86.21%"
+            x="2.3fr 11.49fr 86.21fr"
             y="8px minmax(0px, max-content) 8px"
             style={styles.cover_block2}
             source={require('../assets/9e421376b5abcc4ab003916e58fa69b3.png')}
@@ -223,7 +223,7 @@ export default function Frame8(props) {
         </Px.View>
 
         <Px.View
-          x="70.98% 10.34% 18.68%"
+          x="70.98fr 10.34fr 18.68fr"
           y="460px minmax(0px, max-content) 254px"
           absolute
           style={styles.txt_box}>
