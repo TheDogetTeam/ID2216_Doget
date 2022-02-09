@@ -1,9 +1,13 @@
 import React from 'react';
-import StorybookUIRoot from './storybook';
+// import StorybookUIRoot from './storybook';
+import MainPage from './src/components/MainPage';
+import NewItem from './src/components/NewItem';
 import OCR_Page from './src/components/OCR_Page';
+import DogPage from './src/components/DogPage';
+import Statistics from './src/components/Statistics';
 
 // export { StorybookUIRoot as default };
-export {OCR_Page as default};
+export { DogPage as default };
 
 // import React from 'react';
 // import { StyleSheet, Text, View } from 'react-native';
