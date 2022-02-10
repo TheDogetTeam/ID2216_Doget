@@ -2,15 +2,14 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Pressable, Alert } from 'react-native';
 import { Px } from './posize';
 
 export default function Overview(props) {
   return (
-    <Px.View
-      x="0px 320fr 0px"
-      y="0px minmax(0px, max-content) 0px"
-      style={styles.flex}>
+    <Pressable
+      style={[styles.flex, styles.flex_layout]}
+      onPress={() => Alert.alert('click')}>
       <View style={styles.flex_item}>
         <Px.Image
           x="0px 163fr 4px"
@@ -175,7 +174,7 @@ export default function Overview(props) {
           </Px.View>
         </Px.View>
       </View>
-    </Px.View>
+    </Pressable>
   );
 }
 
@@ -185,9 +184,16 @@ Overview.scrollHeight = 176;
 
 const styles = StyleSheet.create({
   flex: {
-    flexGrow: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly'
+  },
+  flex_layout: {
+    marginTop: 0,
+    height: 176,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   flex_item: {
     flexGrow: 0,

@@ -7,10 +7,7 @@ import { Px } from './posize';
 
 export default function ItemBlanks(props) {
   return (
-    <Px.View
-      x="0px 316fr 0px"
-      y="0px minmax(0px, max-content) 0px"
-      style={styles.flex12}>
+    <View style={[styles.flex12, styles.flex12_layout]}>
       <View style={styles.flex12_item}>
         <Px.View
           x="0px 316fr 0px"
@@ -192,7 +189,7 @@ export default function ItemBlanks(props) {
           </View>
         </Px.View>
       </View>
-    </Px.View>
+    </View>
   );
 }
 
@@ -201,8 +198,14 @@ ItemBlanks.fitScreen = false;
 ItemBlanks.scrollHeight = 281;
 
 const styles = StyleSheet.create({
-  flex12: {
-    flexGrow: 1
+  flex12: {},
+  flex12_layout: {
+    marginTop: 0,
+    height: 281,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   flex12_item: {
     flexGrow: 0,

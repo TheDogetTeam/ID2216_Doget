@@ -2,7 +2,7 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native';
 import { Px } from './posize';
 
 export default function ScanButton(props) {
@@ -11,7 +11,9 @@ export default function ScanButton(props) {
       x="0px 148fr 0px"
       y="0px minmax(0px, max-content) 0px"
       style={styles.scan_button}
+      onPress={() => Alert.alert('click')}
       source={require('../assets/1ecd0d62563fcb122455f954f3c58dd1.png')}
+      container={TouchableOpacity}
       resizeMode="contain">
       <Px.View
         x="0px 148fr 0px"

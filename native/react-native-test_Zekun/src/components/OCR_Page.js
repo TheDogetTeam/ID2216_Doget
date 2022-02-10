@@ -21,12 +21,15 @@ export default function OCR_Page(props) {
       </View>
       <View style={styles.block_item}>
         <Px.View
-          x="17.82% 64.37% 17.82%"
-          y="111px minmax(0px, max-content) 105px"
+          x="62fr 224fr 62fr"
+          y="111px minmax(0px, max-content) 0px"
           style={styles.flex}>
           <View style={styles.flex_item}>
-            <ImageBackground
-              style={[styles.oCRname, styles.oCRname_layout]}
+            <Px.Image
+              x="0px 75px 149fr"
+              y="0px minmax(0px, max-content) 0px"
+              style={styles.oCRname}
+              aspectRatio={3}
               source={require('../assets/46e9fcb149364a40edbebd477fd73651.png')}
             />
           </View>
@@ -40,6 +43,7 @@ export default function OCR_Page(props) {
           </View>
         </Px.View>
       </View>
+      <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.bottomBar, styles.bottomBar_layout]}>
           <BottomBar />
@@ -56,7 +60,8 @@ OCR_Page.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20
+    borderRadius: 20,
+    justifyContent: 'center'
   },
   block_layout: {
     marginTop: 0,
@@ -86,15 +91,10 @@ const styles = StyleSheet.create({
     flexShrink: 1
   },
   oCRname: {
+    width: 'auto',
+    height: 'auto',
+    flexGrow: 1,
     resizeMode: 'contain'
-  },
-  oCRname_layout: {
-    marginTop: 0,
-    height: 25,
-    marginBottom: 0,
-    marginLeft: 0,
-    width: 75,
-    minWidth: 75
   },
   scanFrame: {
     backgroundColor: '#c4c4c4ff'
@@ -115,9 +115,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginRight: 39
   },
+  block_space: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 112
+  },
   bottomBar: {},
   bottomBar_layout: {
-    marginTop: 7,
+    marginTop: 0,
     marginBottom: 12,
     marginLeft: 33,
     flexGrow: 1,

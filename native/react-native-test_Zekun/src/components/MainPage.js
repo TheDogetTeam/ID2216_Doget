@@ -24,7 +24,7 @@ export default function MainPage(props) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <View style={styles.block_item}>
+      <View style={styles.block_item1}>
         <Px.View
           x="0px 348fr 0px"
           y="5px minmax(0px, max-content) 0px"
@@ -46,19 +46,17 @@ export default function MainPage(props) {
             </Px.View>
           </View>
           <View style={styles.block1_item}>
-            <Px.View
-              x="0px 348fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.cover_block3}>
+            <View style={[styles.cover_block3, styles.cover_block3_layout]}>
               <Items />
-            </Px.View>
+            </View>
           </View>
         </Px.View>
       </View>
+      <View style={styles.block_space} />
       <View style={styles.block_item}>
         <Px.View
           x="33px 282fr 33px"
-          y="2px minmax(0px, max-content) 12px"
+          y="0px minmax(0px, max-content) 12px"
           style={styles.flex21}>
           <BottomBar />
         </Px.View>
@@ -74,7 +72,8 @@ MainPage.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20
+    borderRadius: 20,
+    flexWrap: 'wrap'
   },
   block_layout: {
     marginTop: 0,
@@ -91,6 +90,10 @@ const styles = StyleSheet.create({
   content_box: {
     width: '100%'
   },
+  block_item1: {
+    flexGrow: 1,
+    flexShrink: 1
+  },
   block1: {
     flexGrow: 1,
     overflow: 'hidden'
@@ -105,8 +108,18 @@ const styles = StyleSheet.create({
   block2: {
     width: '100%'
   },
-  cover_block3: {
-    width: '100%'
+  cover_block3: {},
+  cover_block3_layout: {
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
+  },
+  block_space: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 2
   },
   flex21: {
     width: '100%'

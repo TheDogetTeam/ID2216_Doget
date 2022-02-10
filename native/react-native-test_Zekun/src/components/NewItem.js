@@ -2,7 +2,15 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Image, ImageBackground } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+  Alert
+} from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
 import Categories from './Categories';
@@ -26,7 +34,7 @@ export default function NewItem(props) {
       <View style={styles.block_item}>
         <Px.View
           x="14px 316fr 18px"
-          y="20px minmax(0px, max-content) 15px"
+          y="20px minmax(0px, max-content) 0px"
           style={styles.flex}>
           <View style={styles.flex_item}>
             <Px.View
@@ -64,7 +72,9 @@ export default function NewItem(props) {
                   x="0px 130fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block3}
+                  onPress={() => Alert.alert('click')}
                   source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
+                  container={TouchableOpacity}
                   resizeMode="contain">
                   <Px.View
                     x="0px 130fr 0px"
@@ -82,7 +92,9 @@ export default function NewItem(props) {
                   x="0px 130fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block2}
+                  onPress={() => Alert.alert('click')}
                   source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
+                  container={TouchableOpacity}
                   resizeMode="contain">
                   <Px.View
                     x="29px 72fr 29px"
@@ -98,6 +110,7 @@ export default function NewItem(props) {
           </View>
         </Px.View>
       </View>
+      <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
           <BottomBar />
@@ -114,7 +127,8 @@ NewItem.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20
+    borderRadius: 20,
+    justifyContent: 'space-between'
   },
   block_layout: {
     marginTop: 0,
@@ -225,9 +239,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  block_space: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 23
+  },
   component: {},
   component_layout: {
-    marginTop: 8,
+    marginTop: 0,
     height: 46,
     marginBottom: 12,
     marginLeft: 33,

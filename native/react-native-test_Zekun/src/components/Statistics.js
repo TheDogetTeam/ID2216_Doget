@@ -44,6 +44,7 @@ export default function Statistics(props) {
           </View>
         </View>
       </View>
+      <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
           <BottomBar />
@@ -60,7 +61,8 @@ Statistics.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20
+    borderRadius: 20,
+    justifyContent: 'center'
   },
   block_layout: {
     marginTop: 0,
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
   flex_layout: {
     marginTop: 20,
     height: 538,
-    marginBottom: 44,
+    marginBottom: 0,
     marginLeft: 33,
     flexGrow: 1,
     marginRight: 34
@@ -111,9 +113,14 @@ const styles = StyleSheet.create({
   flex1: {
     width: '100%'
   },
+  block_space: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 52
+  },
   component: {},
   component_layout: {
-    marginTop: 8,
+    marginTop: 0,
     height: 46,
     marginBottom: 12,
     marginLeft: 33,

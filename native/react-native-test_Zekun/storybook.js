@@ -4,7 +4,7 @@ import {
   ScrollView,
   View,
   StyleSheet,
-  AsyncStorage,
+  // AsyncStorage,
 } from 'react-native';
 import { getStorybookUI, storiesOf } from '@storybook/react-native';
 import Components from './src/components';

@@ -7,663 +7,633 @@ import { Px } from './posize';
 
 export default function Items(props) {
   return (
-    <Px.ImageBackground
-      x="0px 348fr 0px"
+    <Px.View
+      x="0px 311fr 0px"
       y="0px minmax(0px, max-content) 0px"
-      style={styles.cover_block3}
-      source={require('../assets/113d2e4ded9e654d962173f40ee39d98.png')}
-      resizeMode="contain">
-      <Px.View
-        x="14px 311fr 23px"
-        y="19px minmax(0px, max-content) 13px"
-        style={styles.block3}>
-        <View style={styles.block3_item}>
-          <View style={[styles.line, styles.line_layout]} />
-        </View>
-        <View style={styles.block3_item}>
+      style={styles.block3}>
+      <View style={styles.block3_item}>
+        <View style={[styles.line, styles.line_layout]} />
+      </View>
+      <View style={styles.block3_item}>
+        <View style={[styles.group, styles.group_layout]}>
           <Px.View
             x="0px 311fr 0px"
-            y="10px minmax(0px, max-content) 9px"
-            style={styles.group}>
-            <Px.View
-              x="0px 311fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex6}>
-              <View style={styles.flex6_item}>
-                <Px.ImageBackground
-                  x="0px 48fr 9px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.cover_block8}
-                  source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
-                  resizeMode="contain">
-                  <ImageBackground
-                    style={[styles.icon7, styles.icon7_layout]}
-                    source={require('../assets/a3e57bb31942d19207b892dd473b2064.png')}
-                  />
-                </Px.ImageBackground>
-              </View>
-              <View style={styles.flex6_item1}>
-                <Px.View
-                  x="11px 243fr 0px"
-                  y="0px minmax(0px, max-content) 3px"
-                  style={styles.flex7}>
-                  <View style={styles.flex7_item}>
+            y="0px minmax(0px, max-content) 0px"
+            style={styles.flex6}>
+            <View style={styles.flex6_item}>
+              <Px.ImageBackground
+                x="0px 48fr 9px"
+                y="0px minmax(0px, max-content) 0px"
+                style={styles.cover_block8}
+                source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
+                resizeMode="contain">
+                <ImageBackground
+                  style={[styles.icon7, styles.icon7_layout]}
+                  source={require('../assets/a3e57bb31942d19207b892dd473b2064.png')}
+                />
+              </Px.ImageBackground>
+            </View>
+            <View style={styles.flex6_item1}>
+              <Px.View
+                x="11px 243fr 0px"
+                y="0px minmax(0px, max-content) 3px"
+                style={styles.flex7}>
+                <View style={styles.flex7_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.group1}>
+                    <View
+                      style={[
+                        styles.small_text_body2_box,
+                        styles.small_text_body2_box_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body2}
+                        ellipsizeMode={'clip'}>
+                        {'Left:'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.text_body_box,
+                        styles.text_body_box_layout
+                      ]}>
+                      <Text style={styles.text_body} ellipsizeMode={'clip'}>
+                        {'$20'}
+                      </Text>
+                    </View>
+
                     <Px.View
                       x="0px 243fr 0px"
                       y="0px minmax(0px, max-content) 0px"
-                      style={styles.group}>
-                      <View
-                        style={[
-                          styles.small_text_body2_box,
-                          styles.small_text_body2_box_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body2}
-                          ellipsizeMode={'clip'}>
-                          {'Left:'}
-                        </Text>
+                      style={styles.flex8}>
+                      <View style={styles.flex8_item}>
+                        <Px.View
+                          x="0px 30fr 0px"
+                          y="0px minmax(0px, max-content) 10px"
+                          style={styles.text_body_box1}>
+                          <Text
+                            style={styles.text_body1}
+                            ellipsizeMode={'clip'}>
+                            {'Taxi'}
+                          </Text>
+                        </Px.View>
                       </View>
-                      <View
-                        style={[
-                          styles.text_body_box,
-                          styles.text_body_box_layout
-                        ]}>
-                        <Text style={styles.text_body} ellipsizeMode={'clip'}>
-                          {'$20'}
-                        </Text>
-                      </View>
-
-                      <Px.View
-                        x="0px 243fr 0px"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.flex8}>
-                        <View style={styles.flex8_item}>
-                          <Px.View
-                            x="0px 30fr 0px"
-                            y="0px minmax(0px, max-content) 10px"
-                            style={styles.text_body_box1}>
-                            <Text
-                              style={styles.text_body1}
-                              ellipsizeMode={'clip'}>
-                              {'Taxi'}
-                            </Text>
-                          </Px.View>
-                        </View>
-                        <View style={styles.flex8_space} />
-                        <View style={styles.flex8_item1}>
-                          <Px.ImageBackground
-                            x="0px 12fr 0px"
-                            y="15px minmax(0px, max-content) 0px"
-                            style={styles.cover_block7}
-                            source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
-                            resizeMode="contain">
-                            <ImageBackground
-                              style={[styles.image14, styles.image14_layout]}
-                              source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
-                            />
-                          </Px.ImageBackground>
-                        </View>
-                      </Px.View>
-
-                      <View
-                        style={[
-                          styles.small_text_body1_box,
-                          styles.small_text_body1_box_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body1}
-                          ellipsizeMode={'clip'}>
-                          {'$100'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.small_text_body2_box1,
-                          styles.small_text_body2_box1_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body21}
-                          ellipsizeMode={'clip'}>
-                          {'/$120'}
-                        </Text>
-                      </View>
-                    </Px.View>
-                  </View>
-                  <View style={styles.flex7_item}>
-                    <Px.View
-                      x="0px 243fr 0px"
-                      y="12px minmax(0px, max-content) 0px"
-                      style={styles.cover_block16}>
-                      <Px.Image
-                        x="0fr 200fr 43fr"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.cover_group3}
-                        aspectRatio={33.333333333333336}
-                        source={require('../assets/0f92c801984f5afecf895d5bc3bb42c8.png')}
-                      />
-                    </Px.View>
-                  </View>
-                </Px.View>
-              </View>
-            </Px.View>
-
-            <View style={[styles.line1, styles.line1_layout]} />
-          </Px.View>
-        </View>
-        <View style={styles.block3_item}>
-          <Px.View
-            x="0px 311fr 0px"
-            y="1px minmax(0px, max-content) 9px"
-            style={styles.group}>
-            <Px.View
-              x="0px 311fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex9}>
-              <View style={styles.flex9_item}>
-                <Px.ImageBackground
-                  x="0px 48fr 8px"
-                  y="10px minmax(0px, max-content) 0px"
-                  style={styles.cover_block8}
-                  source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
-                  resizeMode="contain">
-                  <ImageBackground
-                    style={[styles.icon7, styles.icon7_layout]}
-                    source={require('../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png')}
-                  />
-                </Px.ImageBackground>
-              </View>
-              <View style={styles.flex9_item1}>
-                <Px.View
-                  x="12px 243fr 0px"
-                  y="10px minmax(0px, max-content) 2px"
-                  style={styles.flex10}>
-                  <View style={styles.flex10_item}>
-                    <Px.View
-                      x="0px 243fr 0px"
-                      y="0px minmax(0px, max-content) 0px"
-                      style={styles.group}>
-                      <View
-                        style={[
-                          styles.small_text_body2_box,
-                          styles.small_text_body2_box_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body2}
-                          ellipsizeMode={'clip'}>
-                          {'Left:'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.text_body_box,
-                          styles.text_body_box_layout
-                        ]}>
-                        <Text style={styles.text_body} ellipsizeMode={'clip'}>
-                          {'$18'}
-                        </Text>
-                      </View>
-
-                      <Px.View
-                        x="0px 243fr 0px"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.flex11}>
-                        <View style={styles.flex11_item}>
-                          <Px.View
-                            x="0px 104fr 0px"
-                            y="0px minmax(0px, max-content) 11px"
-                            style={styles.text_body_box2}>
-                            <Text
-                              style={styles.text_body2}
-                              ellipsizeMode={'clip'}>
-                              {'Public transport'}
-                            </Text>
-                          </Px.View>
-                        </View>
-                        <View style={styles.flex11_space} />
-                        <View style={styles.flex11_item1}>
-                          <Px.ImageBackground
-                            x="0px 12fr 0px"
-                            y="16px minmax(0px, max-content) 0px"
-                            style={styles.cover_block7}
-                            source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
-                            resizeMode="contain">
-                            <ImageBackground
-                              style={[styles.image14, styles.image14_layout1]}
-                              source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
-                            />
-                          </Px.ImageBackground>
-                        </View>
-                      </Px.View>
-
-                      <View
-                        style={[
-                          styles.small_text_body1_box,
-                          styles.small_text_body1_box_layout1
-                        ]}>
-                        <Text
-                          style={styles.small_text_body1}
-                          ellipsizeMode={'clip'}>
-                          {'$2'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.small_text_body2_box2,
-                          styles.small_text_body2_box2_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body22}
-                          ellipsizeMode={'clip'}>
-                          {'/$20'}
-                        </Text>
-                      </View>
-                    </Px.View>
-                  </View>
-                  <View style={styles.flex10_item}>
-                    <Px.View
-                      x="0px 243fr 0px"
-                      y="12px minmax(0px, max-content) 0px"
-                      style={styles.cover_block13}>
-                      <ImageBackground
-                        style={[styles.image16, styles.image16_layout]}
-                        source={require('../assets/58657a5c9395bf2a374e39d3b2585bf2.png')}
-                      />
-                    </Px.View>
-                  </View>
-                </Px.View>
-              </View>
-            </Px.View>
-
-            <View style={[styles.line, styles.line_layout1]} />
-          </Px.View>
-        </View>
-        <View style={styles.block3_item}>
-          <Px.View
-            x="0px 311fr 0px"
-            y="1px minmax(0px, max-content) 9px"
-            style={styles.group}>
-            <Px.View
-              x="0px 311fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex12}>
-              <View style={styles.flex12_item}>
-                <Px.ImageBackground
-                  x="0px 48fr 10px"
-                  y="11px minmax(0px, max-content) 0px"
-                  style={styles.cover_block8}
-                  source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
-                  resizeMode="contain">
-                  <ImageBackground
-                    style={[styles.icon7, styles.icon7_layout]}
-                    source={require('../assets/ac6e6279ad9ba4d089b374f9a10b158c.png')}
-                  />
-                </Px.ImageBackground>
-              </View>
-              <View style={styles.flex12_item1}>
-                <Px.View
-                  x="10px 243fr 0px"
-                  y="11px minmax(0px, max-content) 3px"
-                  style={styles.flex13}>
-                  <View style={styles.flex13_item}>
-                    <Px.View
-                      x="0px 243fr 0px"
-                      y="0px minmax(0px, max-content) 0px"
-                      style={styles.group}>
-                      <View
-                        style={[
-                          styles.small_text_body2_box,
-                          styles.small_text_body2_box_layout1
-                        ]}>
-                        <Text
-                          style={styles.small_text_body2}
-                          ellipsizeMode={'clip'}>
-                          {'Limit is exceeded:'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.text_body1_box,
-                          styles.text_body1_box_layout
-                        ]}>
-                        <Text style={styles.text_body11} ellipsizeMode={'clip'}>
-                          {'-$10'}
-                        </Text>
-                      </View>
-
-                      <Px.View
-                        x="0px 243fr 0px"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.flex14}>
-                        <View style={styles.flex14_item}>
-                          <Px.View
-                            x="0px 42fr 0px"
-                            y="0px minmax(0px, max-content) 10px"
-                            style={styles.text_body_box3}>
-                            <Text
-                              style={styles.text_body3}
-                              ellipsizeMode={'clip'}>
-                              {'Home'}
-                            </Text>
-                          </Px.View>
-                        </View>
-                        <View style={styles.flex14_space} />
-                        <View style={styles.flex14_item1}>
-                          <Px.Image
-                            x="0px 12px 0px"
-                            y="15px minmax(0px, max-content) 0px"
-                            style={styles.cover_group2}
-                            aspectRatio={1}
-                            source={require('../assets/de39c5099f0b1e616754176648128912.png')}
+                      <View style={styles.flex8_space} />
+                      <View style={styles.flex8_item1}>
+                        <Px.ImageBackground
+                          x="0px 12fr 0px"
+                          y="15px minmax(0px, max-content) 0px"
+                          style={styles.cover_block7}
+                          source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
+                          resizeMode="contain">
+                          <ImageBackground
+                            style={[styles.image14, styles.image14_layout]}
+                            source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
                           />
-                        </View>
-                      </Px.View>
-
-                      <View
-                        style={[
-                          styles.small_text_body1_box,
-                          styles.small_text_body1_box_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body1}
-                          ellipsizeMode={'clip'}>
-                          {'$210'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.small_text_body2_box3,
-                          styles.small_text_body2_box3_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body23}
-                          ellipsizeMode={'clip'}>
-                          {'/$200'}
-                        </Text>
+                        </Px.ImageBackground>
                       </View>
                     </Px.View>
-                  </View>
-                  <View style={styles.flex13_item}>
-                    <ImageBackground
-                      style={[styles.image18, styles.image18_layout]}
-                      source={require('../assets/11af3806068c3f832180ea6c53b04b2b.png')}
+
+                    <View
+                      style={[
+                        styles.small_text_body1_box,
+                        styles.small_text_body1_box_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body1}
+                        ellipsizeMode={'clip'}>
+                        {'$100'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.small_text_body2_box1,
+                        styles.small_text_body2_box1_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body21}
+                        ellipsizeMode={'clip'}>
+                        {'/$120'}
+                      </Text>
+                    </View>
+                  </Px.View>
+                </View>
+                <View style={styles.flex7_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="12px minmax(0px, max-content) 0px"
+                    style={styles.cover_block16}>
+                    <Px.Image
+                      x="0fr 200fr 43fr"
+                      y="0px minmax(0px, max-content) 0px"
+                      style={styles.cover_group3}
+                      aspectRatio={33.333333333333336}
+                      source={require('../assets/0f92c801984f5afecf895d5bc3bb42c8.png')}
                     />
-                  </View>
-                </Px.View>
-              </View>
-            </Px.View>
-
-            <View style={[styles.line1, styles.line1_layout]} />
+                  </Px.View>
+                </View>
+              </Px.View>
+            </View>
           </Px.View>
+
+          <View style={[styles.line1, styles.line1_layout]} />
         </View>
-        <View style={styles.block3_item}>
+      </View>
+      <View style={styles.block3_item}>
+        <View style={[styles.group, styles.group_layout1]}>
           <Px.View
             x="0px 311fr 0px"
-            y="1px minmax(0px, max-content) 9px"
-            style={styles.group}>
-            <Px.View
-              x="0px 311fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex15}>
-              <View style={styles.flex15_item}>
-                <Px.ImageBackground
-                  x="0px 48fr 7px"
-                  y="10px minmax(0px, max-content) 0px"
-                  style={styles.cover_block8}
-                  source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
-                  resizeMode="contain">
-                  <ImageBackground
-                    style={[styles.icon7, styles.icon7_layout]}
-                    source={require('../assets/4c105694eaddcb9b824f2a116db34c73.png')}
-                  />
-                </Px.ImageBackground>
-              </View>
-              <View style={styles.flex15_item1}>
-                <Px.View
-                  x="13px 243fr 0px"
-                  y="10px minmax(0px, max-content) 2px"
-                  style={styles.flex16}>
-                  <View style={styles.flex16_item}>
+            y="0px minmax(0px, max-content) 0px"
+            style={styles.flex9}>
+            <View style={styles.flex9_item}>
+              <Px.ImageBackground
+                x="0px 48fr 8px"
+                y="10px minmax(0px, max-content) 0px"
+                style={styles.cover_block8}
+                source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
+                resizeMode="contain">
+                <ImageBackground
+                  style={[styles.icon7, styles.icon7_layout]}
+                  source={require('../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png')}
+                />
+              </Px.ImageBackground>
+            </View>
+            <View style={styles.flex9_item1}>
+              <Px.View
+                x="12px 243fr 0px"
+                y="10px minmax(0px, max-content) 2px"
+                style={styles.flex10}>
+                <View style={styles.flex10_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.group2}>
+                    <View
+                      style={[
+                        styles.small_text_body2_box,
+                        styles.small_text_body2_box_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body2}
+                        ellipsizeMode={'clip'}>
+                        {'Left:'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.text_body_box,
+                        styles.text_body_box_layout
+                      ]}>
+                      <Text style={styles.text_body} ellipsizeMode={'clip'}>
+                        {'$18'}
+                      </Text>
+                    </View>
+
                     <Px.View
                       x="0px 243fr 0px"
                       y="0px minmax(0px, max-content) 0px"
-                      style={styles.group}>
-                      <View
-                        style={[
-                          styles.small_text_body2_box,
-                          styles.small_text_body2_box_layout2
-                        ]}>
-                        <Text
-                          style={styles.small_text_body2}
-                          ellipsizeMode={'clip'}>
-                          {'Left:'}
-                        </Text>
+                      style={styles.flex11}>
+                      <View style={styles.flex11_item}>
+                        <Px.View
+                          x="0px 104fr 0px"
+                          y="0px minmax(0px, max-content) 11px"
+                          style={styles.text_body_box2}>
+                          <Text
+                            style={styles.text_body2}
+                            ellipsizeMode={'clip'}>
+                            {'Public transport'}
+                          </Text>
+                        </Px.View>
                       </View>
-                      <View
-                        style={[
-                          styles.text_body_box,
-                          styles.text_body_box_layout1
-                        ]}>
-                        <Text style={styles.text_body} ellipsizeMode={'clip'}>
-                          {'$130'}
-                        </Text>
-                      </View>
-
-                      <Px.View
-                        x="0px 243fr 0px"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.flex11}>
-                        <View style={styles.flex11_item}>
-                          <Px.View
-                            x="0px 93fr 0px"
-                            y="0px minmax(0px, max-content) 11px"
-                            style={styles.text_body_box4}>
-                            <Text
-                              style={styles.text_body4}
-                              ellipsizeMode={'clip'}>
-                              {'Entertainment'}
-                            </Text>
-                          </Px.View>
-                        </View>
-                        <View style={styles.flex11_space1} />
-                        <View style={styles.flex11_item2}>
-                          <Px.ImageBackground
-                            x="0px 12fr 0px"
-                            y="16px minmax(0px, max-content) 0px"
-                            style={styles.cover_block7}
-                            source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
-                            resizeMode="contain">
-                            <ImageBackground
-                              style={[styles.image14, styles.image14_layout2]}
-                              source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
-                            />
-                          </Px.ImageBackground>
-                        </View>
-                      </Px.View>
-
-                      <View
-                        style={[
-                          styles.small_text_body1_box,
-                          styles.small_text_body1_box_layout2
-                        ]}>
-                        <Text
-                          style={styles.small_text_body1}
-                          ellipsizeMode={'clip'}>
-                          {'$70'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.small_text_body2_box4,
-                          styles.small_text_body2_box4_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body24}
-                          ellipsizeMode={'clip'}>
-                          {'/$200'}
-                        </Text>
+                      <View style={styles.flex11_space} />
+                      <View style={styles.flex11_item1}>
+                        <Px.ImageBackground
+                          x="0px 12fr 0px"
+                          y="16px minmax(0px, max-content) 0px"
+                          style={styles.cover_block7}
+                          source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
+                          resizeMode="contain">
+                          <ImageBackground
+                            style={[styles.image14, styles.image14_layout1]}
+                            source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
+                          />
+                        </Px.ImageBackground>
                       </View>
                     </Px.View>
-                  </View>
-                  <View style={styles.flex16_item}>
-                    <Px.View
-                      x="0px 243fr 0px"
-                      y="12px minmax(0px, max-content) 0px"
-                      style={styles.cover_block6}>
-                      <ImageBackground
-                        style={[styles.image15, styles.image15_layout]}
-                        source={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
-                      />
-                    </Px.View>
-                  </View>
-                </Px.View>
-              </View>
-            </Px.View>
 
-            <View style={[styles.line, styles.line_layout2]} />
+                    <View
+                      style={[
+                        styles.small_text_body1_box,
+                        styles.small_text_body1_box_layout1
+                      ]}>
+                      <Text
+                        style={styles.small_text_body1}
+                        ellipsizeMode={'clip'}>
+                        {'$2'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.small_text_body2_box2,
+                        styles.small_text_body2_box2_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body22}
+                        ellipsizeMode={'clip'}>
+                        {'/$20'}
+                      </Text>
+                    </View>
+                  </Px.View>
+                </View>
+                <View style={styles.flex10_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="12px minmax(0px, max-content) 0px"
+                    style={styles.cover_block13}>
+                    <ImageBackground
+                      style={[styles.image16, styles.image16_layout]}
+                      source={require('../assets/58657a5c9395bf2a374e39d3b2585bf2.png')}
+                    />
+                  </Px.View>
+                </View>
+              </Px.View>
+            </View>
           </Px.View>
+
+          <View style={[styles.line, styles.line_layout1]} />
         </View>
-        <View style={styles.block3_item}>
+      </View>
+      <View style={styles.block3_item}>
+        <View style={[styles.group, styles.group_layout2]}>
           <Px.View
             x="0px 311fr 0px"
-            y="1px minmax(0px, max-content) 0px"
-            style={styles.group}>
-            <Px.View
-              x="0px 311fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex18}>
-              <View style={styles.flex18_item}>
-                <Px.ImageBackground
-                  x="0px 48fr 10px"
-                  y="11px minmax(0px, max-content) 0px"
-                  style={styles.cover_block8}
-                  source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
-                  resizeMode="contain">
-                  <ImageBackground
-                    style={[styles.icon7, styles.icon7_layout]}
-                    source={require('../assets/cefcd19f007efa2ca07b3c589d7e3179.png')}
-                  />
-                </Px.ImageBackground>
-              </View>
-              <View style={styles.flex18_item1}>
-                <Px.View
-                  x="10px 243fr 0px"
-                  y="11px minmax(0px, max-content) 3px"
-                  style={styles.flex19}>
-                  <View style={styles.flex19_item}>
+            y="0px minmax(0px, max-content) 0px"
+            style={styles.flex12}>
+            <View style={styles.flex12_item}>
+              <Px.ImageBackground
+                x="0px 48fr 10px"
+                y="11px minmax(0px, max-content) 0px"
+                style={styles.cover_block8}
+                source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
+                resizeMode="contain">
+                <ImageBackground
+                  style={[styles.icon7, styles.icon7_layout]}
+                  source={require('../assets/ac6e6279ad9ba4d089b374f9a10b158c.png')}
+                />
+              </Px.ImageBackground>
+            </View>
+            <View style={styles.flex12_item1}>
+              <Px.View
+                x="10px 243fr 0px"
+                y="11px minmax(0px, max-content) 3px"
+                style={styles.flex13}>
+                <View style={styles.flex13_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.group3}>
+                    <View
+                      style={[
+                        styles.small_text_body2_box,
+                        styles.small_text_body2_box_layout1
+                      ]}>
+                      <Text
+                        style={styles.small_text_body2}
+                        ellipsizeMode={'clip'}>
+                        {'Limit is exceeded:'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.text_body1_box,
+                        styles.text_body1_box_layout
+                      ]}>
+                      <Text style={styles.text_body11} ellipsizeMode={'clip'}>
+                        {'-$10'}
+                      </Text>
+                    </View>
+
                     <Px.View
                       x="0px 243fr 0px"
                       y="0px minmax(0px, max-content) 0px"
-                      style={styles.group}>
-                      <View
-                        style={[
-                          styles.small_text_body2_box,
-                          styles.small_text_body2_box_layout3
-                        ]}>
-                        <Text
-                          style={styles.small_text_body2}
-                          ellipsizeMode={'clip'}>
-                          {'Left:'}
-                        </Text>
+                      style={styles.flex14}>
+                      <View style={styles.flex14_item}>
+                        <Px.View
+                          x="0px 42fr 0px"
+                          y="0px minmax(0px, max-content) 10px"
+                          style={styles.text_body_box3}>
+                          <Text
+                            style={styles.text_body3}
+                            ellipsizeMode={'clip'}>
+                            {'Home'}
+                          </Text>
+                        </Px.View>
                       </View>
-                      <View
-                        style={[
-                          styles.text_body_box,
-                          styles.text_body_box_layout2
-                        ]}>
-                        <Text style={styles.text_body} ellipsizeMode={'clip'}>
-                          {'$130'}
-                        </Text>
-                      </View>
-
-                      <Px.View
-                        x="0px 243fr 0px"
-                        y="0px minmax(0px, max-content) 0px"
-                        style={styles.flex8}>
-                        <View style={styles.flex8_item}>
-                          <Px.View
-                            x="0px 38fr 0px"
-                            y="0px minmax(0px, max-content) 10px"
-                            style={styles.text_body_box5}>
-                            <Text
-                              style={styles.text_body5}
-                              ellipsizeMode={'clip'}>
-                              {'Sport'}
-                            </Text>
-                          </Px.View>
-                        </View>
-                        <View style={styles.flex8_space1} />
-                        <View style={styles.flex8_item2}>
-                          <Px.ImageBackground
-                            x="0px 12fr 0px"
-                            y="15px minmax(0px, max-content) 0px"
-                            style={styles.cover_block7}
-                            source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
-                            resizeMode="contain">
-                            <ImageBackground
-                              style={[styles.image14, styles.image14_layout]}
-                              source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
-                            />
-                          </Px.ImageBackground>
-                        </View>
-                      </Px.View>
-
-                      <View
-                        style={[
-                          styles.small_text_body1_box,
-                          styles.small_text_body1_box_layout3
-                        ]}>
-                        <Text
-                          style={styles.small_text_body1}
-                          ellipsizeMode={'clip'}>
-                          {'$70'}
-                        </Text>
-                      </View>
-                      <View
-                        style={[
-                          styles.small_text_body2_box5,
-                          styles.small_text_body2_box5_layout
-                        ]}>
-                        <Text
-                          style={styles.small_text_body25}
-                          ellipsizeMode={'clip'}>
-                          {'/$200'}
-                        </Text>
+                      <View style={styles.flex14_space} />
+                      <View style={styles.flex14_item1}>
+                        <Px.Image
+                          x="0px 12px 0px"
+                          y="15px minmax(0px, max-content) 0px"
+                          style={styles.cover_group2}
+                          aspectRatio={1}
+                          source={require('../assets/de39c5099f0b1e616754176648128912.png')}
+                        />
                       </View>
                     </Px.View>
-                  </View>
-                  <View style={styles.flex19_item}>
+
+                    <View
+                      style={[
+                        styles.small_text_body1_box,
+                        styles.small_text_body1_box_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body1}
+                        ellipsizeMode={'clip'}>
+                        {'$210'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.small_text_body2_box3,
+                        styles.small_text_body2_box3_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body23}
+                        ellipsizeMode={'clip'}>
+                        {'/$200'}
+                      </Text>
+                    </View>
+                  </Px.View>
+                </View>
+                <View style={styles.flex13_item}>
+                  <ImageBackground
+                    style={[styles.image18, styles.image18_layout]}
+                    source={require('../assets/11af3806068c3f832180ea6c53b04b2b.png')}
+                  />
+                </View>
+              </Px.View>
+            </View>
+          </Px.View>
+
+          <View style={[styles.line1, styles.line1_layout]} />
+        </View>
+      </View>
+      <View style={styles.block3_item}>
+        <View style={[styles.group, styles.group_layout3]}>
+          <Px.View
+            x="0px 311fr 0px"
+            y="0px minmax(0px, max-content) 0px"
+            style={styles.flex15}>
+            <View style={styles.flex15_item}>
+              <Px.ImageBackground
+                x="0px 48fr 7px"
+                y="10px minmax(0px, max-content) 0px"
+                style={styles.cover_block8}
+                source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
+                resizeMode="contain">
+                <ImageBackground
+                  style={[styles.icon7, styles.icon7_layout]}
+                  source={require('../assets/4c105694eaddcb9b824f2a116db34c73.png')}
+                />
+              </Px.ImageBackground>
+            </View>
+            <View style={styles.flex15_item1}>
+              <Px.View
+                x="13px 243fr 0px"
+                y="10px minmax(0px, max-content) 2px"
+                style={styles.flex16}>
+                <View style={styles.flex16_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.group4}>
+                    <View
+                      style={[
+                        styles.small_text_body2_box,
+                        styles.small_text_body2_box_layout2
+                      ]}>
+                      <Text
+                        style={styles.small_text_body2}
+                        ellipsizeMode={'clip'}>
+                        {'Left:'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.text_body_box,
+                        styles.text_body_box_layout1
+                      ]}>
+                      <Text style={styles.text_body} ellipsizeMode={'clip'}>
+                        {'$130'}
+                      </Text>
+                    </View>
+
                     <Px.View
                       x="0px 243fr 0px"
-                      y="12px minmax(0px, max-content) 0px"
-                      style={styles.cover_block6}>
-                      <ImageBackground
-                        style={[styles.image15, styles.image15_layout]}
-                        source={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
-                      />
+                      y="0px minmax(0px, max-content) 0px"
+                      style={styles.flex11}>
+                      <View style={styles.flex11_item}>
+                        <Px.View
+                          x="0px 93fr 0px"
+                          y="0px minmax(0px, max-content) 11px"
+                          style={styles.text_body_box4}>
+                          <Text
+                            style={styles.text_body4}
+                            ellipsizeMode={'clip'}>
+                            {'Entertainment'}
+                          </Text>
+                        </Px.View>
+                      </View>
+                      <View style={styles.flex11_space1} />
+                      <View style={styles.flex11_item2}>
+                        <Px.ImageBackground
+                          x="0px 12fr 0px"
+                          y="16px minmax(0px, max-content) 0px"
+                          style={styles.cover_block7}
+                          source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
+                          resizeMode="contain">
+                          <ImageBackground
+                            style={[styles.image14, styles.image14_layout2]}
+                            source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
+                          />
+                        </Px.ImageBackground>
+                      </View>
                     </Px.View>
-                  </View>
-                </Px.View>
-              </View>
-            </Px.View>
 
-            <View style={[styles.line1, styles.line1_layout]} />
+                    <View
+                      style={[
+                        styles.small_text_body1_box,
+                        styles.small_text_body1_box_layout2
+                      ]}>
+                      <Text
+                        style={styles.small_text_body1}
+                        ellipsizeMode={'clip'}>
+                        {'$70'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.small_text_body2_box4,
+                        styles.small_text_body2_box4_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body24}
+                        ellipsizeMode={'clip'}>
+                        {'/$200'}
+                      </Text>
+                    </View>
+                  </Px.View>
+                </View>
+                <View style={styles.flex16_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="12px minmax(0px, max-content) 0px"
+                    style={styles.cover_block6}>
+                    <ImageBackground
+                      style={[styles.image15, styles.image15_layout]}
+                      source={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
+                    />
+                  </Px.View>
+                </View>
+              </Px.View>
+            </View>
           </Px.View>
+
+          <View style={[styles.line, styles.line_layout2]} />
         </View>
-      </Px.View>
-    </Px.ImageBackground>
+      </View>
+      <View style={styles.block3_item}>
+        <View style={[styles.group, styles.group_layout4]}>
+          <View style={[styles.flex18, styles.flex18_layout]}>
+            <View style={styles.flex18_item}>
+              <Px.ImageBackground
+                x="0px 48fr 10px"
+                y="11px minmax(0px, max-content) 0px"
+                style={styles.cover_block8}
+                source={require('../assets/63845229547f4fecc351fcbdae9528a5.png')}
+                resizeMode="contain">
+                <ImageBackground
+                  style={[styles.icon7, styles.icon7_layout]}
+                  source={require('../assets/cefcd19f007efa2ca07b3c589d7e3179.png')}
+                />
+              </Px.ImageBackground>
+            </View>
+            <View style={styles.flex18_item1}>
+              <Px.View
+                x="10px 243fr 0px"
+                y="11px minmax(0px, max-content) 3px"
+                style={styles.flex19}>
+                <View style={styles.flex19_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.group5}>
+                    <View
+                      style={[
+                        styles.small_text_body2_box,
+                        styles.small_text_body2_box_layout3
+                      ]}>
+                      <Text
+                        style={styles.small_text_body2}
+                        ellipsizeMode={'clip'}>
+                        {'Left:'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.text_body_box,
+                        styles.text_body_box_layout2
+                      ]}>
+                      <Text style={styles.text_body} ellipsizeMode={'clip'}>
+                        {'$130'}
+                      </Text>
+                    </View>
+
+                    <Px.View
+                      x="0px 243fr 0px"
+                      y="0px minmax(0px, max-content) 0px"
+                      style={styles.flex8}>
+                      <View style={styles.flex8_item}>
+                        <Px.View
+                          x="0px 38fr 0px"
+                          y="0px minmax(0px, max-content) 10px"
+                          style={styles.text_body_box5}>
+                          <Text
+                            style={styles.text_body5}
+                            ellipsizeMode={'clip'}>
+                            {'Sport'}
+                          </Text>
+                        </Px.View>
+                      </View>
+                      <View style={styles.flex8_space1} />
+                      <View style={styles.flex8_item2}>
+                        <Px.ImageBackground
+                          x="0px 12fr 0px"
+                          y="15px minmax(0px, max-content) 0px"
+                          style={styles.cover_block7}
+                          source={require('../assets/cdfc0d4748e7637340634db1ca4defec.png')}
+                          resizeMode="contain">
+                          <ImageBackground
+                            style={[styles.image14, styles.image14_layout]}
+                            source={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
+                          />
+                        </Px.ImageBackground>
+                      </View>
+                    </Px.View>
+
+                    <View
+                      style={[
+                        styles.small_text_body1_box,
+                        styles.small_text_body1_box_layout3
+                      ]}>
+                      <Text
+                        style={styles.small_text_body1}
+                        ellipsizeMode={'clip'}>
+                        {'$70'}
+                      </Text>
+                    </View>
+                    <View
+                      style={[
+                        styles.small_text_body2_box5,
+                        styles.small_text_body2_box5_layout
+                      ]}>
+                      <Text
+                        style={styles.small_text_body25}
+                        ellipsizeMode={'clip'}>
+                        {'/$200'}
+                      </Text>
+                    </View>
+                  </Px.View>
+                </View>
+                <View style={styles.flex19_item}>
+                  <Px.View
+                    x="0px 243fr 0px"
+                    y="12px minmax(0px, max-content) 0px"
+                    style={styles.cover_block6}>
+                    <ImageBackground
+                      style={[styles.image15, styles.image15_layout]}
+                      source={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
+                    />
+                  </Px.View>
+                </View>
+              </Px.View>
+            </View>
+          </View>
+
+          <View style={[styles.line1, styles.line1_layout]} />
+        </View>
+      </View>
+    </Px.View>
   );
 }
 
 Items.inStorybook = true;
 Items.fitScreen = false;
-Items.scrollHeight = 365;
+Items.scrollHeight = 333;
 
 const styles = StyleSheet.create({
-  cover_block3: {
-    width: '100%',
-    flexGrow: 1,
-    backgroundColor: '#ffffffff'
-  },
   block3: {
     flexGrow: 1
   },
@@ -682,9 +652,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginRight: 0
   },
-  group: {
-    width: '100%',
-    flexGrow: 1
+  group: {},
+  group_layout: {
+    marginTop: 10,
+    height: 48,
+    marginBottom: 9,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   flex6: {
     flexGrow: 1,
@@ -723,6 +698,10 @@ const styles = StyleSheet.create({
   flex7_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  group1: {
+    width: '100%',
+    flexGrow: 1
   },
   small_text_body2_box_layout: {
     position: 'absolute',
@@ -895,6 +874,14 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0
   },
+  group_layout1: {
+    marginTop: 1,
+    height: 58,
+    marginBottom: 9,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
+  },
   flex9: {
     flexGrow: 1,
     flexDirection: 'row',
@@ -916,6 +903,10 @@ const styles = StyleSheet.create({
   flex10_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  group2: {
+    width: '100%',
+    flexGrow: 1
   },
   small_text_body2: {
     color: '#888888ff',
@@ -1055,6 +1046,14 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0
   },
+  group_layout2: {
+    marginTop: 1,
+    height: 59,
+    marginBottom: 9,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
+  },
   flex12: {
     flexGrow: 1,
     flexDirection: 'row',
@@ -1076,6 +1075,10 @@ const styles = StyleSheet.create({
   flex13_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  group3: {
+    width: '100%',
+    flexGrow: 1
   },
   small_text_body2_box_layout1: {
     position: 'absolute',
@@ -1211,6 +1214,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginRight: 0
   },
+  group_layout3: {
+    marginTop: 1,
+    height: 58,
+    marginBottom: 9,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
+  },
   flex15: {
     flexGrow: 1,
     flexDirection: 'row',
@@ -1232,6 +1243,10 @@ const styles = StyleSheet.create({
   flex16_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  group4: {
+    width: '100%',
+    flexGrow: 1
   },
   small_text_body2_box_layout2: {
     position: 'absolute',
@@ -1376,10 +1391,25 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0
   },
-  flex18: {
+  group_layout4: {
+    marginTop: 1,
+    height: 59,
+    marginBottom: 0,
+    marginLeft: 0,
     flexGrow: 1,
+    marginRight: 0
+  },
+  flex18: {
     flexDirection: 'row',
     justifyContent: 'space-evenly'
+  },
+  flex18_layout: {
+    marginTop: 0,
+    height: 59,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   flex18_item: {
     flexGrow: 0,
@@ -1397,6 +1427,10 @@ const styles = StyleSheet.create({
   flex19_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  group5: {
+    width: '100%',
+    flexGrow: 1
   },
   small_text_body2_box_layout3: {
     position: 'absolute',
