@@ -61,8 +61,7 @@ Statistics.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20,
-    justifyContent: 'center'
+    borderRadius: 20
   },
   block_layout: {
     position: 'absolute',
@@ -115,8 +114,7 @@ const styles = StyleSheet.create({
   },
   block_space: {
     flexGrow: 1,
-    flexShrink: 1,
-    flexBasis: 52
+    flexShrink: 1
   },
   component: {},
   component_layout: {

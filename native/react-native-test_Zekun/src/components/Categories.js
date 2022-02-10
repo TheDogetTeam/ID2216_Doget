@@ -2,7 +2,14 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Image, ImageBackground } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  ImageBackground,
+  Alert
+} from 'react-native';
 import { Px } from './posize';
 
 export default function Categories(props) {
@@ -17,10 +24,11 @@ export default function Categories(props) {
           y="1px minmax(0px, max-content) 0px"
           style={styles.flex2}>
           <View style={styles.flex2_item}>
-            <Px.View
+            <Px.Pressable
               x="11.5px 35fr 21.5px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex3}>
+              style={styles.flex3}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex3_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout]}
@@ -37,13 +45,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex2_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 68fr 0px"
               y="14px minmax(0px, max-content) 0px"
-              style={styles.flex4}>
+              style={styles.flex4}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex4_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout1]}
@@ -60,13 +69,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex2_item}>
-            <Px.View
+            <Px.Pressable
               x="9.5px 43fr 15.5px"
               y="12px minmax(0px, max-content) 0px"
-              style={styles.flex5}>
+              style={styles.flex5}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex5_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout2]}
@@ -83,7 +93,7 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
         </Px.View>
       </View>
@@ -93,10 +103,11 @@ export default function Categories(props) {
           y="1px minmax(0px, max-content) 0px"
           style={styles.flex6}>
           <View style={styles.flex6_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 60fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex7}>
+              style={styles.flex7}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex7_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout3]}
@@ -113,13 +124,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex6_item}>
-            <Px.View
+            <Px.Pressable
               x="2px 49fr 9px"
               y="13px minmax(0px, max-content) 0px"
-              style={styles.flex8}>
+              style={styles.flex8}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex8_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout4]}
@@ -136,13 +148,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex6_item}>
-            <Px.View
+            <Px.Pressable
               x="5.5px 48fr 6.5px"
               y="10px minmax(0px, max-content) 0px"
-              style={styles.flex9}>
+              style={styles.flex9}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex9_item}>
                 <ImageBackground
                   style={[styles.icon7, styles.icon7_layout]}
@@ -159,7 +172,7 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
         </Px.View>
       </View>
@@ -169,10 +182,11 @@ export default function Categories(props) {
           y="0px minmax(0px, max-content) 55px"
           style={styles.flex10}>
           <View style={styles.flex10_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 41fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex11}>
+              style={styles.flex11}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex11_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout5]}
@@ -189,13 +203,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex10_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 39fr 2px"
               y="18px minmax(0px, max-content) 0px"
-              style={styles.flex12}>
+              style={styles.flex12}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex12_item}>
                 <Px.ImageBackground
                   x="5px 24fr 10px"
@@ -227,7 +242,7 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
         </Px.View>
       </View>
@@ -237,10 +252,11 @@ export default function Categories(props) {
           y="0px minmax(0px, max-content) 55px"
           style={styles.flex13}>
           <View style={styles.flex13_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 60fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex14}>
+              style={styles.flex14}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex14_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout6]}
@@ -257,13 +273,14 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex13_item}>
-            <Px.View
+            <Px.Pressable
               x="9.5px 35fr 15.5px"
               y="13px minmax(0px, max-content) 0px"
-              style={styles.flex15}>
+              style={styles.flex15}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex15_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout]}
@@ -280,7 +297,7 @@ export default function Categories(props) {
                   </Text>
                 </Px.View>
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
         </Px.View>
       </View>

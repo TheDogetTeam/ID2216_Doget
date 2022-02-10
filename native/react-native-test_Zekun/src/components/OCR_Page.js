@@ -61,8 +61,7 @@ OCR_Page.scrollHeight = 728;
 const styles = StyleSheet.create({
   block: {
     backgroundColor: '#ffffff',
-    borderRadius: 20,
-    justifyContent: 'center'
+    borderRadius: 20
   },
   block_layout: {
     position: 'absolute',
@@ -112,6 +111,7 @@ const styles = StyleSheet.create({
   scan_button: {},
   scan_button_layout: {
     marginTop: 70,
+    height: 44,
     marginBottom: 0,
     marginLeft: 37,
     width: 148,
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
   },
   block_space: {
     flexGrow: 1,
-    flexShrink: 1,
-    flexBasis: 112
+    flexShrink: 1
   },
   bottomBar: {},
   bottomBar_layout: {
     marginTop: 0,
+    height: 46,
     marginBottom: 12,
     marginLeft: 33,
     flexGrow: 1,

@@ -2,7 +2,14 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Image, ImageBackground } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  ImageBackground,
+  Alert
+} from 'react-native';
 import { Px } from './posize';
 
 export default function ItemBlanks(props) {
@@ -14,10 +21,11 @@ export default function ItemBlanks(props) {
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex16}>
           <View style={styles.flex16_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.group}>
+              style={styles.group}
+              onPress={() => Alert.alert('click')}>
               <Px.ImageBackground
                 x="0px 316fr 0px"
                 y="0px minmax(0px, max-content) 0px"
@@ -43,7 +51,7 @@ export default function ItemBlanks(props) {
                   {'Artical Name'}
                 </Text>
               </Px.View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex16_item}>
             <ImageBackground
@@ -59,10 +67,11 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex17}>
           <View style={styles.flex17_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex18}>
+              style={styles.flex18}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex18_item}>
                 <Px.View
                   x="0px 41fr 0px"
@@ -80,7 +89,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
                 />
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex17_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -93,10 +102,11 @@ export default function ItemBlanks(props) {
           y="38px minmax(0px, max-content) 0px"
           style={styles.flex19}>
           <View style={styles.flex19_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex20}>
+              style={styles.flex20}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex20_item}>
                 <Px.View
                   x="0px 41fr 0px"
@@ -114,7 +124,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/dbeab1fb0edaaef8dc230c795050a934.png')}
                 />
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex19_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -127,10 +137,11 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex21}>
           <View style={styles.flex21_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex22}>
+              style={styles.flex22}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex22_item}>
                 <Px.View
                   x="0px 37fr 0px"
@@ -148,7 +159,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/3f93270ab868c86e4e57ca546bf7c6ff.png')}
                 />
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex21_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -161,10 +172,11 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex23}>
           <View style={styles.flex23_item}>
-            <Px.View
+            <Px.Pressable
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex24}>
+              style={styles.flex24}
+              onPress={() => Alert.alert('click')}>
               <View style={styles.flex24_item}>
                 <Px.View
                   x="0px 32fr 0px"
@@ -182,7 +194,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/f403aa6d5382d40732382eae901efa3e.png')}
                 />
               </View>
-            </Px.View>
+            </Px.Pressable>
           </View>
           <View style={styles.flex23_item}>
             <View style={[styles.line, styles.line_layout]} />

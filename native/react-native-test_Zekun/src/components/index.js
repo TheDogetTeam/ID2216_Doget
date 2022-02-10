@@ -1,33 +1,33 @@
-import TopBar from './TopBar';
 import ControlBar from './ControlBar';
-import Categories from './Categories';
 import Statistic from './Statistic';
-import ItemBlanks from './ItemBlanks';
 import Items from './Items';
-import BottomBar from './BottomBar';
 import Doge from './Doge';
-import Overview from './Overview';
-import ScanButton from './ScanButton';
 import DogPage from './DogPage';
+import TopBar from './TopBar';
 import Main from './Main';
+import BottomBar from './BottomBar';
 import Statistics from './Statistics';
-import OCR_Page from './OCR_Page';
+import ScanButton from './ScanButton';
 import NewItem from './NewItem';
+import OCR_Page from './OCR_Page';
+import Overview from './Overview';
+import Categories from './Categories';
+import ItemBlanks from './ItemBlanks';
 
 export default {
-  TopBar,
   ControlBar,
-  Categories,
   Statistic,
-  ItemBlanks,
   Items,
-  BottomBar,
   Doge,
-  Overview,
-  ScanButton,
   DogPage,
+  TopBar,
   Main,
+  BottomBar,
   Statistics,
-  OCR_Page,
+  ScanButton,
   NewItem,
+  OCR_Page,
+  Overview,
+  Categories,
+  ItemBlanks,
 };

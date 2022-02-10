@@ -39,10 +39,7 @@ export default function Overview(props) {
               </Px.View>
             </View>
             <View style={styles.flex1_item}>
-              <Px.View
-                x="1px 128fr 1px"
-                y="1px minmax(0px, max-content) 0px"
-                style={styles.flex2}>
+              <View style={[styles.flex2, styles.flex2_layout]}>
                 <View style={styles.flex2_item}>
                   <Px.View
                     x="0px 25fr 0px"
@@ -67,7 +64,7 @@ export default function Overview(props) {
                     </Text>
                   </Px.View>
                 </View>
-              </Px.View>
+              </View>
             </View>
             <View style={styles.flex1_item}>
               <Px.View
@@ -80,10 +77,7 @@ export default function Overview(props) {
               </Px.View>
             </View>
             <View style={styles.flex1_item}>
-              <Px.View
-                x="1px 128fr 1px"
-                y="1px minmax(0px, max-content) 0px"
-                style={styles.flex3}>
+              <View style={[styles.flex3, styles.flex3_layout]}>
                 <View style={styles.flex3_item}>
                   <Px.View
                     x="0px 25fr 0px"
@@ -108,7 +102,7 @@ export default function Overview(props) {
                     </Text>
                   </Px.View>
                 </View>
-              </Px.View>
+              </View>
             </View>
             <View style={styles.flex1_item}>
               <Px.View
@@ -121,10 +115,7 @@ export default function Overview(props) {
               </Px.View>
             </View>
             <View style={styles.flex1_item}>
-              <Px.View
-                x="0px 130fr 0px"
-                y="1px minmax(0px, max-content) 0px"
-                style={styles.flex4}>
+              <View style={[styles.flex4, styles.flex4_layout]}>
                 <View style={styles.flex4_item}>
                   <Px.View
                     x="0px 25fr 0px"
@@ -149,7 +140,7 @@ export default function Overview(props) {
                     </Text>
                   </Px.View>
                 </View>
-              </Px.View>
+              </View>
             </View>
             <View style={styles.flex1_item}>
               <Px.View
@@ -243,8 +234,15 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start'
   },
   flex2: {
-    flexGrow: 1,
     flexDirection: 'row'
+  },
+  flex2_layout: {
+    marginTop: 1,
+    height: 12,
+    marginBottom: 0,
+    marginLeft: 1,
+    flexGrow: 1,
+    marginRight: 1
   },
   flex2_item: {
     flexGrow: 0,
@@ -300,8 +298,15 @@ const styles = StyleSheet.create({
     paddingVertical: 0
   },
   flex3: {
-    flexGrow: 1,
     flexDirection: 'row'
+  },
+  flex3_layout: {
+    marginTop: 1,
+    height: 12,
+    marginBottom: 0,
+    marginLeft: 1,
+    flexGrow: 1,
+    marginRight: 1
   },
   flex3_item: {
     flexGrow: 0,
@@ -345,8 +350,15 @@ const styles = StyleSheet.create({
     paddingVertical: 0
   },
   flex4: {
-    flexGrow: 1,
     flexDirection: 'row'
+  },
+  flex4_layout: {
+    marginTop: 1,
+    height: 12,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   flex4_item: {
     flexGrow: 0,

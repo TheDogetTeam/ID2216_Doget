@@ -70,7 +70,7 @@ export default function NewItem(props) {
               <View style={styles.flex25_item}>
                 <Px.ImageBackground
                   x="0px 130fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
+                  y="0px 30px 0px"
                   style={styles.cover_block3}
                   onPress={() => Alert.alert('click')}
                   source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
@@ -90,7 +90,7 @@ export default function NewItem(props) {
               <View style={styles.flex25_item}>
                 <Px.ImageBackground
                   x="0px 130fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
+                  y="0px 30px 0px"
                   style={styles.cover_block2}
                   onPress={() => Alert.alert('click')}
                   source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
@@ -187,8 +187,6 @@ const styles = StyleSheet.create({
     flexBasis: 130
   },
   cover_block3: {
-    width: '100%',
-    flexGrow: 1,
     borderRadius: 6
   },
   highlights: {
@@ -216,8 +214,6 @@ const styles = StyleSheet.create({
     flexBasis: 10
   },
   cover_block2: {
-    width: '100%',
-    flexGrow: 1,
     borderRadius: 6
   },
   highlights1: {

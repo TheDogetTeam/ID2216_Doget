@@ -2,7 +2,7 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native';
 import { Px } from './posize';
 
 export default function TopBar(props) {
@@ -43,9 +43,13 @@ export default function TopBar(props) {
           </Px.View>
         </View>
         <View style={styles.flex_item1}>
-          <ImageBackground
-            style={[styles.searchIcon, styles.searchIcon_layout]}
+          <Px.ImageBackground
+            x="17px 18px 20px"
+            y="11px 18px 15px"
+            style={styles.searchIcon}
+            onPress={() => Alert.alert('click')}
             source={require('../assets/95e33d8dcb8a97142a587be2b7086935.png')}
+            container={TouchableOpacity}
           />
         </View>
       </Px.View>
@@ -123,14 +127,5 @@ const styles = StyleSheet.create({
   },
   searchIcon: {
     resizeMode: 'contain'
-  },
-  searchIcon_layout: {
-    marginTop: 11,
-    height: 18,
-    marginBottom: 15,
-    marginLeft: 17,
-    width: 18,
-    minWidth: 18,
-    marginRight: 20
   }
 });
