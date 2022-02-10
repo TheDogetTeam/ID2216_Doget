@@ -70,40 +70,44 @@ export default function NewItem(props) {
               <View style={styles.flex25_item}>
                 <Px.ImageBackground
                   x="0px 130fr 0px"
-                  y="0px 30px 0px"
+                  y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block3}
                   onPress={() => Alert.alert('click')}
                   source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
                   container={TouchableOpacity}
                   resizeMode="contain">
-                  <Px.View
-                    x="0px 130fr 0px"
-                    y="4px minmax(0px, max-content) 4px"
-                    style={styles.highlights_box}>
-                    <Text style={styles.highlights} ellipsizeMode={'clip'}>
-                      {'OCR'}
-                    </Text>
-                  </Px.View>
+                  <View style={styles.cover_block3_item}>
+                    <Px.View
+                      x="0px 130fr 0px"
+                      y="4px minmax(0px, max-content) 4px"
+                      style={styles.highlights_box}>
+                      <Text style={styles.highlights} ellipsizeMode={'clip'}>
+                        {'OCR'}
+                      </Text>
+                    </Px.View>
+                  </View>
                 </Px.ImageBackground>
               </View>
               <View style={styles.flex25_space} />
               <View style={styles.flex25_item}>
                 <Px.ImageBackground
                   x="0px 130fr 0px"
-                  y="0px 30px 0px"
+                  y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block2}
                   onPress={() => Alert.alert('click')}
                   source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
                   container={TouchableOpacity}
                   resizeMode="contain">
-                  <Px.View
-                    x="29px 72fr 29px"
-                    y="4px minmax(0px, max-content) 4px"
-                    style={styles.highlights1_box}>
-                    <Text style={styles.highlights1} ellipsizeMode={'clip'}>
-                      {'Register'}
-                    </Text>
-                  </Px.View>
+                  <View style={styles.cover_block2_item}>
+                    <Px.View
+                      x="29px 72fr 29px"
+                      y="4px minmax(0px, max-content) 4px"
+                      style={styles.highlights1_box}>
+                      <Text style={styles.highlights1} ellipsizeMode={'clip'}>
+                        {'Register'}
+                      </Text>
+                    </Px.View>
+                  </View>
                 </Px.ImageBackground>
               </View>
             </Px.View>
@@ -187,7 +191,15 @@ const styles = StyleSheet.create({
     flexBasis: 130
   },
   cover_block3: {
-    borderRadius: 6
+    flexGrow: 1,
+    borderRadius: 6,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  cover_block3_item: {
+    flexGrow: 0,
+    flexShrink: 0,
+    minWidth: 0
   },
   highlights: {
     color: '#ffffffff',
@@ -214,7 +226,15 @@ const styles = StyleSheet.create({
     flexBasis: 10
   },
   cover_block2: {
-    borderRadius: 6
+    flexGrow: 1,
+    borderRadius: 6,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  cover_block2_item: {
+    flexGrow: 0,
+    flexShrink: 0,
+    minWidth: 0
   },
   highlights1: {
     color: '#000000ff',

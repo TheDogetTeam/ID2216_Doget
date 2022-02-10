@@ -2,7 +2,14 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  ImageBackground,
+  Alert
+} from 'react-native';
 import { Px } from './posize';
 
 export default function BottomBar(props) {
@@ -12,52 +19,109 @@ export default function BottomBar(props) {
       y="0px minmax(0px, max-content) 0px"
       style={styles.bottomBar}>
       <View style={styles.bottomBar_item}>
-        <Px.Image
-          x="0px 55px 12px"
+        <Px.Pressable
+          x="0px 65fr 0px"
           y="0px minmax(0px, max-content) 0px"
-          id="overviewicon"
-          style={styles.overview}
-          onPress={() => Alert.alert('click')}
-          aspectRatio={1.1956521739130435}
-          source={require('../assets/4cc57317f545f27def93230bca381a8a.png')}
-          container={TouchableOpacity}
-        />
+          style={styles.flex}
+          onPress={() => Alert.alert('click')}>
+          <View style={styles.flex_item}>
+            <ImageBackground
+              style={[styles.img, styles.img_layout]}
+              source={require('../assets/28437159809aa6bc9073d761fca53921.png')}
+            />
+          </View>
+          <View style={styles.flex_item}>
+            <Px.View
+              x="0px 65fr 0px"
+              y="5px minmax(0px, max-content) 0px"
+              style={styles.txt_box}>
+              <Text style={styles.txt} ellipsizeMode={'clip'}>
+                {'overview'}
+              </Text>
+            </Px.View>
+          </View>
+        </Px.Pressable>
       </View>
       <View style={styles.bottomBar_item1}>
-        <Px.Image
-          x="24px 25px 25.5px"
-          y="2px minmax(0px, max-content) 0px"
-          id="addicon"
-          style={styles.img}
-          onPress={() => Alert.alert('click')}
-          aspectRatio={0.5681818181818182}
-          source={require('../assets/b89a2b85c436f4a1fb2c4fb94f1ea0ed.png')}
-          container={TouchableOpacity}
-        />
+        <Px.Pressable
+          x="0px 27fr 0px"
+          y="0px minmax(0px, max-content) 0px"
+          style={styles.flex1}
+          onPress={() => Alert.alert('click')}>
+          <View style={styles.flex1_item}>
+            <Px.Image
+              x="3px 20px 4px"
+              y="0px minmax(0px, max-content) 0px"
+              style={styles.cover_group}
+              aspectRatio={1}
+              source={require('../assets/d19b3bcb3d42893369c50341b6408dc7.png')}
+            />
+          </View>
+          <View style={styles.flex1_item}>
+            <Px.View
+              x="0px 27fr 0px"
+              y="5px minmax(0px, max-content) 0px"
+              style={styles.txt_box}>
+              <Text style={styles.txt} ellipsizeMode={'clip'}>
+                {'add'}
+              </Text>
+            </Px.View>
+          </View>
+        </Px.Pressable>
       </View>
       <View style={styles.bottomBar_item2}>
-        <Px.Image
-          x="9px 58px 17.5px"
-          y="3px minmax(0px, max-content) 0px"
-          id="statisticicon"
-          style={styles.img}
-          onPress={() => Alert.alert('click')}
-          aspectRatio={1.3488372093023255}
-          source={require('../assets/6b101244c9e6efc0f0190e4f03d86a19.png')}
-          container={TouchableOpacity}
-        />
+        <Px.Pressable
+          x="0px 67fr 0px"
+          y="0px minmax(0px, max-content) 0px"
+          style={styles.flex2}
+          onPress={() => Alert.alert('click')}>
+          <View style={styles.flex2_item}>
+            <Px.Image
+              x="24px 18px 25px"
+              y="0px minmax(0px, max-content) 0px"
+              style={styles.cover_block1}
+              aspectRatio={1}
+              source={require('../assets/79ac0ecc3dae584df5fd1a6ad01f4323.png')}
+            />
+          </View>
+          <View style={styles.flex2_item}>
+            <Px.View
+              x="0px 67fr 0px"
+              y="5px minmax(0px, max-content) 0px"
+              style={styles.txt_box}>
+              <Text style={styles.txt} ellipsizeMode={'clip'}>
+                {'Statistics'}
+              </Text>
+            </Px.View>
+          </View>
+        </Px.Pressable>
       </View>
       <View style={styles.bottomBar_item3}>
-        <Px.Image
-          x="8px 42px 6px"
-          y="2px minmax(0px, max-content) 0px"
-          id="profileicon"
-          style={styles.img}
-          onPress={() => Alert.alert('click')}
-          aspectRatio={0.9545454545454546}
-          source={require('../assets/15f7b3bc1e1631e18cdb0b9236de62d1.png')}
-          container={TouchableOpacity}
-        />
+        <Px.Pressable
+          x="0px 52fr 0px"
+          y="0px minmax(0px, max-content) 0px"
+          style={styles.flex3}
+          onPress={() => Alert.alert('click')}>
+          <View style={styles.flex3_item}>
+            <Px.Image
+              x="16px 20px 16px"
+              y="0px minmax(0px, max-content) 0px"
+              style={styles.cover_block}
+              aspectRatio={1}
+              source={require('../assets/271dce5dd7939fef6e98e309e2c38f68.png')}
+            />
+          </View>
+          <View style={styles.flex3_item}>
+            <Px.View
+              x="0px 52fr 0px"
+              y="5px minmax(0px, max-content) 0px"
+              style={styles.txt_box}>
+              <Text style={styles.txt} ellipsizeMode={'clip'}>
+                {'profile'}
+              </Text>
+            </Px.View>
+          </View>
+        </Px.Pressable>
       </View>
     </Px.View>
   );
@@ -77,33 +141,133 @@ const styles = StyleSheet.create({
   bottomBar_item: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 67
+    flexBasis: 65
   },
-  overview: {
-    width: 'auto',
-    height: 'auto',
-    flexGrow: 1,
+  flex: {
+    flexGrow: 1
+  },
+  flex_item: {
+    flexGrow: 0,
+    flexShrink: 1
+  },
+  img: {
     resizeMode: 'contain'
+  },
+  img_layout: {
+    marginTop: 0,
+    height: 24,
+    marginBottom: 0,
+    marginLeft: 20,
+    width: 24,
+    minWidth: 24,
+    marginRight: 21
+  },
+  txt: {
+    color: '#888888ff',
+    textAlign: 'center',
+    letterSpacing: 1,
+    lineHeight: 12,
+    fontSize: 10,
+    fontWeight: '600',
+    fontStyle: 'normal',
+    fontFamily: 'System' /* Montserrat */,
+    paddingHorizontal: 0,
+    paddingVertical: 0
+  },
+  txt_box: {
+    flexGrow: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'center'
   },
   bottomBar_item1: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 74.5
+    flexBasis: 27
   },
-  img: {
+  flex1: {
+    flexGrow: 1
+  },
+  flex1_item: {
+    flexGrow: 0,
+    flexShrink: 1
+  },
+  cover_group: {
     width: 'auto',
     height: 'auto',
     flexGrow: 1,
     resizeMode: 'contain'
   },
+  txt: {
+    color: '#888888ff',
+    textAlign: 'center',
+    letterSpacing: 1,
+    lineHeight: 12,
+    fontSize: 10,
+    fontWeight: '600',
+    fontStyle: 'normal',
+    fontFamily: 'System' /* Montserrat */,
+    paddingHorizontal: 0,
+    paddingVertical: 0
+  },
   bottomBar_item2: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 84.5
+    flexBasis: 67
+  },
+  flex2: {
+    flexGrow: 1
+  },
+  flex2_item: {
+    flexGrow: 0,
+    flexShrink: 1
+  },
+  cover_block1: {
+    width: 'auto',
+    height: 'auto',
+    flexGrow: 1,
+    resizeMode: 'contain'
+  },
+  txt: {
+    color: '#888888ff',
+    textAlign: 'center',
+    letterSpacing: 1,
+    lineHeight: 12,
+    fontSize: 10,
+    fontWeight: '600',
+    fontStyle: 'normal',
+    fontFamily: 'System' /* Montserrat */,
+    paddingHorizontal: 0,
+    paddingVertical: 0
   },
   bottomBar_item3: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 56
+    flexBasis: 52
+  },
+  flex3: {
+    flexGrow: 1
+  },
+  flex3_item: {
+    flexGrow: 0,
+    flexShrink: 1
+  },
+  cover_block: {
+    width: 'auto',
+    height: 'auto',
+    flexGrow: 1,
+    resizeMode: 'contain'
+  },
+  txt: {
+    color: '#888888ff',
+    textAlign: 'center',
+    letterSpacing: 1,
+    lineHeight: 12,
+    fontSize: 10,
+    fontWeight: '600',
+    fontStyle: 'normal',
+    fontFamily: 'System' /* Montserrat */,
+    paddingHorizontal: 0,
+    paddingVertical: 0
   }
 });

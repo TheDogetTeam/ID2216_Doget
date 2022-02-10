@@ -5,14 +5,14 @@ import Doge from './Doge';
 import DogPage from './DogPage';
 import TopBar from './TopBar';
 import Main from './Main';
-import BottomBar from './BottomBar';
 import Statistics from './Statistics';
 import ScanButton from './ScanButton';
-import NewItem from './NewItem';
 import OCR_Page from './OCR_Page';
 import Overview from './Overview';
 import Categories from './Categories';
 import ItemBlanks from './ItemBlanks';
+import NewItem from './NewItem';
+import BottomBar from './BottomBar';
 
 export default {
   ControlBar,
@@ -22,12 +22,12 @@ export default {
   DogPage,
   TopBar,
   Main,
-  BottomBar,
   Statistics,
   ScanButton,
-  NewItem,
   OCR_Page,
   Overview,
   Categories,
   ItemBlanks,
+  NewItem,
+  BottomBar,
 };

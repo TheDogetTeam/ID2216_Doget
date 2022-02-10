@@ -7,7 +7,7 @@ import NewItem from './src/components/NewItem';
 import Statistics from './src/components/Statistics';
 
 // export { StorybookUIRoot as default };
-export {NewItem as default};
+export {OCR_Page as default};
 
 // import React from 'react';
 // import { StyleSheet, Text, View } from 'react-native';
