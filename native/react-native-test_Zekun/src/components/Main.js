@@ -82,7 +82,7 @@ export default function Main(props) {
 }
 
 Main.inStorybook = true;
-Main.fitScreen = false;
+Main.fitScreen = true;
 Main.scrollHeight = 728;
 
 const styles = StyleSheet.create({
@@ -91,12 +91,12 @@ const styles = StyleSheet.create({
     borderRadius: 20
   },
   block_layout: {
-    marginTop: 0,
-    marginBottom: 0,
-    minHeight: 728,
-    marginLeft: 0,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
     flexGrow: 1,
-    marginRight: 0
+    right: 0
   },
   block_item: {
     flexGrow: 0,
@@ -136,8 +136,7 @@ const styles = StyleSheet.create({
   },
   block_space: {
     flexGrow: 1,
-    flexShrink: 1,
-    flexBasis: 2
+    flexShrink: 1
   },
   component_layout1: {
     marginTop: 0,

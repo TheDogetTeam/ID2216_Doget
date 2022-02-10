@@ -121,7 +121,7 @@ export default function NewItem(props) {
 }
 
 NewItem.inStorybook = true;
-NewItem.fitScreen = false;
+NewItem.fitScreen = true;
 NewItem.scrollHeight = 728;
 
 const styles = StyleSheet.create({
@@ -131,12 +131,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   block_layout: {
-    marginTop: 0,
-    marginBottom: 0,
-    minHeight: 728,
-    marginLeft: 0,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
     flexGrow: 1,
-    marginRight: 0
+    right: 0
   },
   block_item: {
     flexGrow: 0,

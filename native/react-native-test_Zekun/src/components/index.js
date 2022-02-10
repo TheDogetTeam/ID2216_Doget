@@ -7,12 +7,12 @@ import Items from './Items';
 import BottomBar from './BottomBar';
 import Doge from './Doge';
 import Overview from './Overview';
-import Main from './Main';
+import ScanButton from './ScanButton';
 import DogPage from './DogPage';
+import Main from './Main';
 import Statistics from './Statistics';
 import OCR_Page from './OCR_Page';
 import NewItem from './NewItem';
-import ScanButton from './ScanButton';
 
 export default {
   TopBar,
@@ -24,10 +24,10 @@ export default {
   BottomBar,
   Doge,
   Overview,
-  Main,
+  ScanButton,
   DogPage,
+  Main,
   Statistics,
   OCR_Page,
   NewItem,
-  ScanButton,
 };

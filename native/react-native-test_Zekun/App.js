@@ -1,7 +1,8 @@
 import React from 'react';
 import StorybookUIRoot from './storybook';
+import Main from './src/components/Main';
 
-export { StorybookUIRoot as default };
+export { Main as default };
 
 // import React from 'react';
 // import { StyleSheet, Text, View } from 'react-native';

@@ -55,7 +55,7 @@ export default function Statistics(props) {
 }
 
 Statistics.inStorybook = true;
-Statistics.fitScreen = false;
+Statistics.fitScreen = true;
 Statistics.scrollHeight = 728;
 
 const styles = StyleSheet.create({
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   block_layout: {
-    marginTop: 0,
-    marginBottom: 0,
-    minHeight: 728,
-    marginLeft: 0,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
     flexGrow: 1,
-    marginRight: 0
+    right: 0
   },
   block_item: {
     flexGrow: 0,

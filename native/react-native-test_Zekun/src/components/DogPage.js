@@ -129,8 +129,7 @@ const styles = StyleSheet.create({
   },
   block_space: {
     flexGrow: 1,
-    flexShrink: 1,
-    flexBasis: 2
+    flexShrink: 1
   },
   component: {},
   component_layout: {

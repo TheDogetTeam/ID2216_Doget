@@ -11,6 +11,7 @@ import BottomBar from './BottomBar';
 export default function OCR_Page(props) {
   return (
     <ImageBackground
+      id={'ocrpage'}
       style={[styles.block, styles.block_layout]}
       source={require('../assets/e54b8dfe285249b01b1ac9f5f05bec52.png')}
       resizeMode="cover">
@@ -21,12 +22,12 @@ export default function OCR_Page(props) {
       </View>
       <View style={styles.block_item}>
         <Px.View
-          x="62fr 224fr 62fr"
+          x="62fr 224px 62fr"
           y="111px minmax(0px, max-content) 0px"
           style={styles.flex}>
           <View style={styles.flex_item}>
             <Px.Image
-              x="0px 75px 149fr"
+              x="0px 75px 149px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.oCRname}
               aspectRatio={3}
@@ -54,7 +55,7 @@ export default function OCR_Page(props) {
 }
 
 OCR_Page.inStorybook = true;
-OCR_Page.fitScreen = false;
+OCR_Page.fitScreen = true;
 OCR_Page.scrollHeight = 728;
 
 const styles = StyleSheet.create({
@@ -64,12 +65,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   block_layout: {
-    marginTop: 0,
-    marginBottom: 0,
-    minHeight: 728,
-    marginLeft: 0,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
     flexGrow: 1,
-    marginRight: 0
+    right: 0
   },
   block_item: {
     flexGrow: 0,
@@ -104,7 +105,8 @@ const styles = StyleSheet.create({
     height: 230,
     marginBottom: 0,
     marginLeft: 0,
-    flexGrow: 1,
+    width: 224,
+    minWidth: 224,
     marginRight: 0
   },
   scan_button: {},
@@ -112,7 +114,8 @@ const styles = StyleSheet.create({
     marginTop: 70,
     marginBottom: 0,
     marginLeft: 37,
-    flexGrow: 1,
+    width: 148,
+    minWidth: 148,
     marginRight: 39
   },
   block_space: {
