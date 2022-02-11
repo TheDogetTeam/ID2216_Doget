@@ -2,8 +2,10 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, Image, ImageBackground, Dimensions} from 'react-native';
 import { Px } from './posize';
+const win = Dimensions.get('window');
+
 
 export default function Statistic(props) {
   return (
@@ -40,25 +42,27 @@ const styles = StyleSheet.create({
     flexShrink: 1
   },
   image18: {
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    paddingTop: 50
   },
   image18_layout: {
-    marginTop: 0,
-    height: 233,
-    marginBottom: 0,
-    marginLeft: 0,
-    flexGrow: 1,
-    marginRight: 0
+    width: win.width/1.3,
+    height: win.width/1.5,
+    alignSelf: "center",
+    borderWidth: 0,
+    borderRadius: 20,
   },
   image12: {
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    paddingTop: 50
+
   },
   image12_layout: {
-    marginTop: 17,
-    height: 228,
-    marginBottom: 0,
-    marginLeft: 0,
-    flexGrow: 1,
-    marginRight: 0
+    top:10,
+    width: win.width/1.3,
+    height: win.width/1.5,
+    alignSelf: "center",
+    borderWidth: 0,
+    borderRadius: 20,
   }
 });

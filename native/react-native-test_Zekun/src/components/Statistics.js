@@ -8,7 +8,7 @@ import { Px } from './posize';
 import Statistic from './Statistic';
 import BottomBar from './BottomBar';
 
-export default function Statistics(props) {
+export default function Statistics({navigation}) {
   return (
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -47,7 +47,7 @@ export default function Statistics(props) {
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
-          <BottomBar />
+        <BottomBar navigation = {navigation} />
         </View>
       </View>
     </ImageBackground>

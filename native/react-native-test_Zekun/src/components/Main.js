@@ -10,8 +10,9 @@ import ControlBar from './ControlBar';
 import Items from './Items';
 import BottomBar from './BottomBar';
 
-export default function Main(props) {
-  return (
+
+export default function Main({ navigation }) {
+  return (    
     <ImageBackground
       style={[styles.block, styles.block_layout]}
       source={require('../assets/e54b8dfe285249b01b1ac9f5f05bec52.png')}
@@ -31,7 +32,7 @@ export default function Main(props) {
           style={styles.block1}>
           <View style={styles.block1_item}>
             <View style={[styles.component, styles.component_layout]}>
-              <Overview
+              <Overview navigation = {navigation}
                 small_text_body1={'$100'}
                 small_text_body2={'/$120'}
                 text_body={'Income/Expense'}
@@ -74,7 +75,7 @@ export default function Main(props) {
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout1]}>
-          <BottomBar />
+          <BottomBar navigation = {navigation} />
         </View>
       </View>
     </ImageBackground>

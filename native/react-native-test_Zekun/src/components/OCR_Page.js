@@ -8,7 +8,7 @@ import { Px } from './posize';
 import ScanButton from './ScanButton';
 import BottomBar from './BottomBar';
 
-export default function OCR_Page(props) {
+export default function OCR_Page({navigation}) {
   return (
     <ImageBackground
       id={'ocrpage'}
@@ -39,7 +39,7 @@ export default function OCR_Page(props) {
           </View>
           <View style={styles.flex_item}>
             <View style={[styles.scan_button, styles.scan_button_layout]}>
-              <ScanButton />
+              <ScanButton  navigation = {navigation}/>
             </View>
           </View>
         </Px.View>
@@ -47,7 +47,7 @@ export default function OCR_Page(props) {
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.bottomBar, styles.bottomBar_layout]}>
-          <BottomBar />
+        <BottomBar navigation = {navigation} />
         </View>
       </View>
     </ImageBackground>

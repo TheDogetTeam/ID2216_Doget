@@ -9,13 +9,11 @@ export default function Overview(props) {
   return (
     <Pressable
       style={[styles.flex, styles.flex_layout]}
-      onPress={() => Alert.alert('click')}>
+      onPress={() => props.navigation.navigate('DogPage')}>
       <View style={styles.flex_item}>
         <Px.Image
-          x="0px 163fr 4px"
-          y="7px minmax(0px, max-content) 8px"
           style={styles.cover_group1}
-          aspectRatio={1.0124223602484472}
+          aspectRatio={1}
           source={require('../assets/21e04622107cf3a329ece76f3276955a.png')}
         />
       </View>
@@ -181,6 +179,7 @@ const styles = StyleSheet.create({
   flex_layout: {
     marginTop: 0,
     height: 176,
+    left: 1,
     marginBottom: 0,
     marginLeft: 0,
     flexGrow: 1,
@@ -189,11 +188,13 @@ const styles = StyleSheet.create({
   flex_item: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 167
+    left: 1,
+    flexBasis: 150
   },
   cover_group1: {
-    width: 'auto',
-    height: 'auto',
+    width: 130,
+    height: 130,
+    left:1,
     flexGrow: 1,
     resizeMode: 'contain'
   },

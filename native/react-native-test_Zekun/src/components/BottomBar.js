@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Px } from './posize';
 
+
 export default function BottomBar(props) {
   return (
     <Px.View
@@ -23,7 +24,7 @@ export default function BottomBar(props) {
           x="0px 65fr 0px"
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex}
-          onPress={() => Alert.alert('click')}>
+          onPress={() => props.navigation.navigate('Main')}>
           <View style={styles.flex_item}>
             <ImageBackground
               style={[styles.img, styles.img_layout]}
@@ -42,18 +43,17 @@ export default function BottomBar(props) {
           </View>
         </Px.Pressable>
       </View>
-      <View style={styles.bottomBar_item1}>
+      
+      <View style={styles.bottomBar_item}>
         <Px.Pressable
-          x="0px 27fr 0px"
+          x="0px 65fr 0px"
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex1}
-          onPress={() => Alert.alert('click')}>
+          onPress={() => props.navigation.navigate('NewItem')}>
+
           <View style={styles.flex1_item}>
             <Px.Image
-              x="3px 20px 4px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.cover_group}
-              aspectRatio={1}
+              style={[styles.img, styles.img_layout]}
               source={require('../assets/d19b3bcb3d42893369c50341b6408dc7.png')}
             />
           </View>
@@ -69,18 +69,15 @@ export default function BottomBar(props) {
           </View>
         </Px.Pressable>
       </View>
-      <View style={styles.bottomBar_item2}>
+      <View style={styles.bottomBar_item}>
         <Px.Pressable
           x="0px 67fr 0px"
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex2}
-          onPress={() => Alert.alert('click')}>
+          onPress={() => props.navigation.navigate('Statistics')}>
           <View style={styles.flex2_item}>
             <Px.Image
-              x="24px 18px 25px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.cover_block1}
-              aspectRatio={1}
+              style={[styles.img, styles.img_layout]}
               source={require('../assets/79ac0ecc3dae584df5fd1a6ad01f4323.png')}
             />
           </View>
@@ -96,7 +93,7 @@ export default function BottomBar(props) {
           </View>
         </Px.Pressable>
       </View>
-      <View style={styles.bottomBar_item3}>
+      <View style={styles.bottomBar_item}>
         <Px.Pressable
           x="0px 52fr 0px"
           y="0px minmax(0px, max-content) 0px"
@@ -104,10 +101,7 @@ export default function BottomBar(props) {
           onPress={() => Alert.alert('click')}>
           <View style={styles.flex3_item}>
             <Px.Image
-              x="16px 20px 16px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.cover_block}
-              aspectRatio={1}
+              style={[styles.img, styles.img_layout]}
               source={require('../assets/271dce5dd7939fef6e98e309e2c38f68.png')}
             />
           </View>

@@ -8,11 +8,19 @@ import {
   Text,
   Image,
   ImageBackground,
-  Alert
+  Alert,
+  TextInput
 } from 'react-native';
 import { Px } from './posize';
 
 export default function ItemBlanks(props) {
+  const [article,onChangeText_article] = React.useState("Artical Name");
+  const [price,onChangeText_price] = React.useState("Price");
+  const [shop,onChangeText_shop] = React.useState("Shop");
+  const [date,onChangeText_date] = React.useState("Date");
+  const [city,onChangeText_city] = React.useState("City");
+
+
   return (
     <View style={[styles.flex12, styles.flex12_layout]}>
       <View style={styles.flex12_item}>
@@ -21,11 +29,7 @@ export default function ItemBlanks(props) {
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex16}>
           <View style={styles.flex16_item}>
-            <Px.Pressable
-              x="0px 316fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.group}
-              onPress={() => Alert.alert('click')}>
+
               <Px.ImageBackground
                 x="0px 316fr 0px"
                 y="0px minmax(0px, max-content) 0px"
@@ -47,11 +51,15 @@ export default function ItemBlanks(props) {
                 y="0px minmax(0px, max-content) 0px"
                 absolute
                 style={styles.highlights2_box}>
-                <Text style={styles.highlights2} ellipsizeMode={'clip'}>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_article}
+                  value={article}
+                   />
+{/*                 <Text style={styles.highlights2} ellipsizeMode={'clip'}>
                   {'Artical Name'}
-                </Text>
+                </Text> */}
               </Px.View>
-            </Px.Pressable>
           </View>
           <View style={styles.flex16_item}>
             <ImageBackground
@@ -67,19 +75,22 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex17}>
           <View style={styles.flex17_item}>
-            <Px.Pressable
+            <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex18}
-              onPress={() => Alert.alert('click')}>
+             >
               <View style={styles.flex18_item}>
                 <Px.View
                   x="0px 41fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.highlights2_box}>
-                  <Text style={styles.highlights2} ellipsizeMode={'clip'}>
-                    {'Price'}
-                  </Text>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_price}
+                  value={price}
+                   />
+
                 </Px.View>
               </View>
               <View style={styles.flex18_space} />
@@ -89,7 +100,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
                 />
               </View>
-            </Px.Pressable>
+            </Px.View>
           </View>
           <View style={styles.flex17_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -102,19 +113,21 @@ export default function ItemBlanks(props) {
           y="38px minmax(0px, max-content) 0px"
           style={styles.flex19}>
           <View style={styles.flex19_item}>
-            <Px.Pressable
+            <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex20}
-              onPress={() => Alert.alert('click')}>
+              >
               <View style={styles.flex20_item}>
                 <Px.View
                   x="0px 41fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.highlights2_box}>
-                  <Text style={styles.highlights2} ellipsizeMode={'clip'}>
-                    {'Shop'}
-                  </Text>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_shop}
+                  value={shop}
+                   />
                 </Px.View>
               </View>
               <View style={styles.flex20_space} />
@@ -124,7 +137,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/dbeab1fb0edaaef8dc230c795050a934.png')}
                 />
               </View>
-            </Px.Pressable>
+            </Px.View>
           </View>
           <View style={styles.flex19_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -137,19 +150,21 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex21}>
           <View style={styles.flex21_item}>
-            <Px.Pressable
+            <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex22}
-              onPress={() => Alert.alert('click')}>
+              >
               <View style={styles.flex22_item}>
                 <Px.View
                   x="0px 37fr 0px"
                   y="1px minmax(0px, max-content) 0px"
                   style={styles.highlights2_box}>
-                  <Text style={styles.highlights2} ellipsizeMode={'clip'}>
-                    {'Date'}
-                  </Text>
+                    <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_date}
+                  value={date}
+                   />
                 </Px.View>
               </View>
               <View style={styles.flex22_space} />
@@ -159,7 +174,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/3f93270ab868c86e4e57ca546bf7c6ff.png')}
                 />
               </View>
-            </Px.Pressable>
+            </Px.View>
           </View>
           <View style={styles.flex21_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -172,19 +187,21 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex23}>
           <View style={styles.flex23_item}>
-            <Px.Pressable
+            <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex24}
-              onPress={() => Alert.alert('click')}>
+              >
               <View style={styles.flex24_item}>
                 <Px.View
                   x="0px 32fr 0px"
                   y="1px minmax(0px, max-content) 0px"
                   style={styles.highlights2_box}>
-                  <Text style={styles.highlights2} ellipsizeMode={'clip'}>
-                    {'City'}
-                  </Text>
+                    <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_city}
+                  value={city}
+                   />
                 </Px.View>
               </View>
               <View style={styles.flex24_space} />
@@ -194,7 +211,7 @@ export default function ItemBlanks(props) {
                   source={require('../assets/f403aa6d5382d40732382eae901efa3e.png')}
                 />
               </View>
-            </Px.Pressable>
+            </Px.View>
           </View>
           <View style={styles.flex23_item}>
             <View style={[styles.line, styles.line_layout]} />

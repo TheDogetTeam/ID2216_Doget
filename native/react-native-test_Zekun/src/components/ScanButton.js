@@ -7,13 +7,15 @@ import { Px } from './posize';
 
 export default function ScanButton(props) {
   return (
+    <TouchableOpacity 
+    style={styles.cover_block3}
+    onPress={() => props.navigation.navigate('NewItem')}
+    >
     <Px.ImageBackground
       x="0px 148fr 0px"
       y="0px minmax(0px, 44fr) 0px"
       style={styles.scan_button}
-      onPress={() => Alert.alert('click')}
       source={require('../assets/1ecd0d62563fcb122455f954f3c58dd1.png')}
-      container={TouchableOpacity}
       resizeMode="contain">
       <View style={styles.scan_button_item}>
         <Px.View
@@ -26,6 +28,8 @@ export default function ScanButton(props) {
         </Px.View>
       </View>
     </Px.ImageBackground>
+    </TouchableOpacity>
+
   );
 }
 

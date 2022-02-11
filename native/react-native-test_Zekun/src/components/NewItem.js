@@ -9,7 +9,8 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  Alert
+  Alert,
+  Button
 } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
@@ -17,7 +18,7 @@ import Categories from './Categories';
 import ItemBlanks from './ItemBlanks';
 import BottomBar from './BottomBar';
 
-export default function NewItem(props) {
+export default function NewItem({navigation}) {
   return (
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -67,14 +68,17 @@ export default function NewItem(props) {
               x="25px 270fr 21px"
               y="8px minmax(0px, max-content) 0px"
               style={styles.flex25}>
+
               <View style={styles.flex25_item}>
+              <TouchableOpacity 
+            style={styles.cover_block3}
+            onPress={() => navigation.navigate('OCR_Page')}
+            >
                 <Px.ImageBackground
                   x="0px 130fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block3}
-                  onPress={() => Alert.alert('click')}
                   source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
-                  container={TouchableOpacity}
                   resizeMode="contain">
                   <View style={styles.cover_block3_item}>
                     <Px.View
@@ -87,16 +91,21 @@ export default function NewItem(props) {
                     </Px.View>
                   </View>
                 </Px.ImageBackground>
+                </TouchableOpacity>
               </View>
+
+
               <View style={styles.flex25_space} />
               <View style={styles.flex25_item}>
+              <TouchableOpacity 
+              style={styles.cover_block3}
+              onPress={() => navigation.navigate('Main')}
+              >
                 <Px.ImageBackground
                   x="0px 130fr 0px"
                   y="0px minmax(0px, max-content) 0px"
                   style={styles.cover_block2}
-                  onPress={() => Alert.alert('click')}
                   source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
-                  container={TouchableOpacity}
                   resizeMode="contain">
                   <View style={styles.cover_block2_item}>
                     <Px.View
@@ -109,6 +118,8 @@ export default function NewItem(props) {
                     </Px.View>
                   </View>
                 </Px.ImageBackground>
+                </TouchableOpacity>
+
               </View>
             </Px.View>
           </View>
@@ -117,7 +128,7 @@ export default function NewItem(props) {
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
-          <BottomBar />
+        <BottomBar navigation = {navigation} />
         </View>
       </View>
     </ImageBackground>

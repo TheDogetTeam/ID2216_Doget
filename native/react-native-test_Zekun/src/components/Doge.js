@@ -18,7 +18,7 @@ export default function Doge(props) {
     <Pressable
       id={'Doge'}
       style={[styles.flex, styles.flex_layout]}
-      onPress={() => Alert.alert('click')}>
+      onPress={() => props.navigation.navigate('Main')}>
       <View style={styles.flex_item}>
         <ImageBackground
           style={[styles.image6, styles.image6_layout]}
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   },
   image6_layout: {
     marginTop: 0,
-    height: 185,
+    height: 170,
+    width:170,
     marginBottom: 0,
     marginLeft: 0,
     flexGrow: 1,
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
   flex_item1: {
     flexGrow: 1,
     flexShrink: 1,
+    top: 5,
     minWidth: 144
   },
   highlights: {
@@ -91,6 +93,7 @@ const styles = StyleSheet.create({
   highlights_box: {
     flexGrow: 1,
     flexDirection: 'row',
+    width:160,
     alignItems: 'flex-start',
     justifyContent: 'center'
   }

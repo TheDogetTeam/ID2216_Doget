@@ -10,7 +10,7 @@ import ControlBar from './ControlBar';
 import Items from './Items';
 import BottomBar from './BottomBar';
 
-export default function DogPage(props) {
+export default function DogPage({navigation}) {
   return (
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -31,7 +31,7 @@ export default function DogPage(props) {
           style={styles.block1}>
           <View style={styles.block1_item}>
             <View style={[styles.flex, styles.flex_layout]}>
-              <Doge />
+              <Doge  navigation = {navigation} />
             </View>
           </View>
           <View style={styles.block1_item}>
@@ -67,7 +67,7 @@ export default function DogPage(props) {
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
-          <BottomBar />
+        <BottomBar navigation = {navigation} />
         </View>
       </View>
     </ImageBackground>
