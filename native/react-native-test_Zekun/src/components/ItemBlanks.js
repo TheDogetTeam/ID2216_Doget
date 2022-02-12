@@ -69,13 +69,14 @@ export default function ItemBlanks(props) {
           </View>
         </Px.View>
       </View>
+
       <View style={styles.flex12_item}>
         <Px.View
           x="0px 316fr 0px"
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex17}>
           <View style={styles.flex17_item}>
-            <Px.View
+            {/* <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex18}
@@ -100,57 +101,90 @@ export default function ItemBlanks(props) {
                   source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
                 />
               </View>
-            </Px.View>
+            </Px.View> */}
+              <Px.ImageBackground
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                style={styles.cover_block1}
+                source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
+                resizeMode="contain">
+                <View style={styles.cover_block1_space} />
+                <View style={styles.cover_block1_space1} />
+                <View style={styles.cover_block1_item}>
+                  <ImageBackground
+                    style={[styles.icon6, styles.icon6_layout]}
+                    source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
+                  />
+                </View>
+              </Px.ImageBackground>
+
+              <Px.View
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                absolute
+                style={styles.highlights2_box}>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_price}
+                  value={price}
+                   />
+              </Px.View>
+
           </View>
           <View style={styles.flex17_item}>
             <View style={[styles.line, styles.line_layout]} />
           </View>
         </Px.View>
       </View>
+
       <View style={styles.flex12_item}>
         <Px.View
           x="0px 316fr 0px"
           y="38px minmax(0px, max-content) 0px"
           style={styles.flex19}>
           <View style={styles.flex19_item}>
+            <Px.ImageBackground
+              x="0px 316fr 0px"
+              y="0px minmax(0px, max-content) 0px"
+              style={styles.cover_block1}
+              source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
+              resizeMode="contain">
+              <View style={styles.cover_block1_space} />
+              <View style={styles.cover_block1_space1} />
+              <View style={styles.cover_block1_item}>
+                <ImageBackground
+                  style={[styles.icon6, styles.icon6_layout]}
+                  source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
+                />
+              </View>
+            </Px.ImageBackground>
+
             <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.flex20}
-              >
-              <View style={styles.flex20_item}>
-                <Px.View
-                  x="0px 41fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.highlights2_box}>
-                  <TextInput
-                  style={styles.highlights2_box}
-                  onChangeText={onChangeText_shop}
-                  value={shop}
-                   />
-                </Px.View>
-              </View>
-              <View style={styles.flex20_space} />
-              <View style={styles.flex20_item1}>
-                <ImageBackground
-                  style={[styles.icon6, styles.icon6_layout]}
-                  source={require('../assets/dbeab1fb0edaaef8dc230c795050a934.png')}
-                />
-              </View>
+              absolute
+              style={styles.highlights2_box}>
+                <TextInput
+                style={styles.highlights2_box}
+                onChangeText={onChangeText_shop}
+                value={shop}
+                  />
             </Px.View>
+
           </View>
           <View style={styles.flex19_item}>
             <View style={[styles.line, styles.line_layout]} />
           </View>
         </Px.View>
       </View>
+
       <View style={styles.flex12_item}>
         <Px.View
           x="0px 316fr 0px"
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex21}>
           <View style={styles.flex21_item}>
-            <Px.View
+            {/* <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex22}
@@ -174,20 +208,49 @@ export default function ItemBlanks(props) {
                   source={require('../assets/3f93270ab868c86e4e57ca546bf7c6ff.png')}
                 />
               </View>
-            </Px.View>
+            </Px.View> */}
+              <Px.ImageBackground
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                style={styles.cover_block1}
+                source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
+                resizeMode="contain">
+                <View style={styles.cover_block1_space} />
+                <View style={styles.cover_block1_space1} />
+                <View style={styles.cover_block1_item}>
+                  <ImageBackground
+                    style={[styles.image6, styles.image6_layout]}
+                    source={require('../assets/3f93270ab868c86e4e57ca546bf7c6ff.png')}
+                  />
+                </View>
+              </Px.ImageBackground>
+
+              <Px.View
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                absolute
+                style={styles.highlights2_box}>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_date}
+                  value={date}
+                   />
+              </Px.View>
+
           </View>
           <View style={styles.flex21_item}>
             <View style={[styles.line, styles.line_layout]} />
           </View>
         </Px.View>
       </View>
+
       <View style={styles.flex12_item}>
         <Px.View
           x="0px 316fr 0px"
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex23}>
           <View style={styles.flex23_item}>
-            <Px.View
+            {/* <Px.View
               x="0px 316fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex24}
@@ -211,13 +274,42 @@ export default function ItemBlanks(props) {
                   source={require('../assets/f403aa6d5382d40732382eae901efa3e.png')}
                 />
               </View>
-            </Px.View>
+            </Px.View> */}
+              <Px.ImageBackground
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                style={styles.cover_block1}
+                source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
+                resizeMode="contain">
+                <View style={styles.cover_block1_space} />
+                <View style={styles.cover_block1_space1} />
+                <View style={styles.cover_block1_item}>
+                  <ImageBackground
+                    style={[styles.image6, styles.image6_layout]}
+                    source={require('../assets/f403aa6d5382d40732382eae901efa3e.png')}
+                  />
+                </View>
+              </Px.ImageBackground>
+
+              <Px.View
+                x="0px 316fr 0px"
+                y="0px minmax(0px, max-content) 0px"
+                absolute
+                style={styles.highlights2_box}>
+                  <TextInput
+                  style={styles.highlights2_box}
+                  onChangeText={onChangeText_city}
+                  value={city}
+                   />
+              </Px.View>
+
           </View>
           <View style={styles.flex23_item}>
             <View style={[styles.line, styles.line_layout]} />
           </View>
         </Px.View>
       </View>
+      
     </View>
   );
 }
@@ -272,7 +364,7 @@ const styles = StyleSheet.create({
     flexBasis: 27
   },
   image7: {
-    resizeMode: 'contain'
+    resizeMode: 'stretch'
   },
   image7_layout: {
     marginTop: 0,
@@ -280,7 +372,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginLeft: 1,
     width: 20,
-    minWidth: 20,
+    minWidth: 16,
     marginRight: 6
   },
   highlights2: {

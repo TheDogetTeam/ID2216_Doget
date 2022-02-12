@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flexGrow: 1
   },
   flex_item: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1
   },
   oCRname: {

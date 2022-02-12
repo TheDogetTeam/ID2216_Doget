@@ -63,6 +63,9 @@ export default function NewItem({navigation}) {
               <ItemBlanks />
             </Px.View>
           </View>
+
+          <View style={styles.flex_space} />
+
           <View style={styles.flex_item}>
             <Px.View
               x="25px 270fr 21px"
@@ -70,10 +73,9 @@ export default function NewItem({navigation}) {
               style={styles.flex25}>
 
               <View style={styles.flex25_item}>
-              <TouchableOpacity 
-            style={styles.cover_block3}
-            onPress={() => navigation.navigate('OCR_Page')}
-            >
+              {/* <TouchableOpacity 
+              style={styles.cover_block3}
+              onPress={() => navigation.navigate('OCR_Page')}>
                 <Px.ImageBackground
                   x="0px 130fr 0px"
                   y="0px minmax(0px, max-content) 0px"
@@ -91,13 +93,32 @@ export default function NewItem({navigation}) {
                     </Px.View>
                   </View>
                 </Px.ImageBackground>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                <Px.Pressable 
+                x="0px 130px 0px" 
+                y="0px minmax(0px, max-content) 0px" 
+                style={styles.group} 
+                onPress={() => navigation.navigate('OCR_Page')}>
+                  <Px.Image
+                    
+                    x="0px 130fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.cover_block3}
+                    aspectRatio={4.333333333333333}
+                    source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
+                  />
+                  <Px.View x="0px 130fr 0px" y="4px minmax(0px, max-content) 4px" absolute style={styles.highlights_box}>
+                    <Text style={styles.highlights} ellipsizeMode={'clip'}>
+                      {'OCR'}
+                    </Text>
+                  </Px.View>
+                </Px.Pressable>
               </View>
 
-
               <View style={styles.flex25_space} />
+
               <View style={styles.flex25_item}>
-              <TouchableOpacity 
+              {/* <TouchableOpacity 
               style={styles.cover_block3}
               onPress={() => navigation.navigate('Main')}
               >
@@ -118,7 +139,27 @@ export default function NewItem({navigation}) {
                     </Px.View>
                   </View>
                 </Px.ImageBackground>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                <Px.Pressable 
+                x="0px 130px 0px" 
+                y="0px minmax(0px, max-content) 0px" 
+                style={styles.group} 
+                onPress={() => navigation.navigate('Main')}>
+                  <Px.Image
+                    
+                    x="0px 130fr 0px"
+                    y="0px minmax(0px, max-content) 0px"
+                    style={styles.cover_block2}
+                    aspectRatio={4.333333333333333}
+                    source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
+                  />
+                  <Px.View x="29px 72fr 29px" y="4px minmax(0px, max-content) 4px" absolute style={styles.highlights1_box}>
+                    <Text style={styles.highlights1} ellipsizeMode={'clip'}>
+                      {'Register'}
+                    </Text>
+                  </Px.View>
+                </Px.Pressable>
+
 
               </View>
             </Px.View>
@@ -167,6 +208,11 @@ const styles = StyleSheet.create({
     flexGrow: 0,
     flexShrink: 1
   },
+  flex_space: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 15
+  },
   big_title1: {
     color: '#576aa9ff',
     textAlign: 'center',
@@ -194,18 +240,20 @@ const styles = StyleSheet.create({
   flex25: {
     flexGrow: 1,
     flexDirection: 'row',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-between',
+    // overflow: 'hidden'
   },
   flex25_item: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1,
     flexBasis: 130
   },
   cover_block3: {
+    width: 'auto',
+    height: 'auto',
     flexGrow: 1,
-    borderRadius: 6,
-    flexDirection: 'row',
-    justifyContent: 'center'
+    resizeMode: 'cover',
+    borderRadius: 6
   },
   cover_block3_item: {
     flexGrow: 0,
@@ -232,15 +280,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   flex25_space: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1,
     flexBasis: 10
   },
   cover_block2: {
+    width: 'auto',
+    height: 'auto',
     flexGrow: 1,
-    borderRadius: 6,
-    flexDirection: 'row',
-    justifyContent: 'center'
+    resizeMode: 'cover',
+    borderRadius: 6
   },
   cover_block2_item: {
     flexGrow: 0,

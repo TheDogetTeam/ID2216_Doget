@@ -1,35 +1,22 @@
-/**
- * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
- */
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, StyleSheet, Text, Image, ImageBackground, Alert } from 'react-native';
 import { Px } from './posize';
 
 export default function ScanButton(props) {
   return (
-    <TouchableOpacity 
-    style={styles.cover_block3}
-    onPress={() => props.navigation.navigate('NewItem')}
-    >
-    <Px.ImageBackground
-      x="0px 148fr 0px"
-      y="0px minmax(0px, 44fr) 0px"
-      style={styles.scan_button}
-      source={require('../assets/1ecd0d62563fcb122455f954f3c58dd1.png')}
-      resizeMode="contain">
+    <ImageBackground style={[styles.scan_button, styles.scan_button_layout]} source={require('../assets/1ecd0d62563fcb122455f954f3c58dd1.png')} resizeMode="contain">
       <View style={styles.scan_button_item}>
-        <Px.View
-          x="0px 148fr 0px"
-          y="9px minmax(0px, max-content) 9px"
-          style={styles.subtitle_box}>
+        <Px.Pressable 
+        x="0px 148fr 0px" 
+        y="9px minmax(0px, max-content) 9px" 
+        tyle={styles.subtitle_box} 
+        onPress={() => props.navigation.navigate('NewItem')}>
           <Text style={styles.subtitle} ellipsizeMode={'clip'}>
             {'Scan'}
           </Text>
-        </Px.View>
+        </Px.Pressable>
       </View>
-    </Px.ImageBackground>
-    </TouchableOpacity>
-
+    </ImageBackground>
   );
 }
 
@@ -42,6 +29,13 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  scan_button_layout: {
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   scan_button_item: {
     flexGrow: 0,
