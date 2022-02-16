@@ -10,7 +10,8 @@ import {
   ImageBackground,
   TouchableOpacity,
   Alert,
-  Button
+  Button,
+  ScrollView
 } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
@@ -32,7 +33,7 @@ export default function NewItem({navigation}) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <View style={styles.block_item}>
+      <ScrollView style={styles.block_item}>
         <Px.View
           x="14px 316fr 18px"
           y="20px minmax(0px, max-content) 0px"
@@ -165,7 +166,7 @@ export default function NewItem({navigation}) {
             </Px.View>
           </View>
         </Px.View>
-      </View>
+      </ScrollView>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
