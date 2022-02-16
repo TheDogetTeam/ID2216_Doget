@@ -2,7 +2,7 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, Image, ImageBackground, ScrollView } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
 import Doge from './Doge';
@@ -24,7 +24,7 @@ export default function DogPage({navigation}) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <View style={styles.block_item}>
+      <ScrollView style={styles.block_item}>
         <Px.View
           x="0px 348fr 0px"
           y="0px minmax(0px, max-content) 0px"
@@ -63,7 +63,7 @@ export default function DogPage({navigation}) {
             </Px.View>
           </View>
         </Px.View>
-      </View>
+      </ScrollView>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>

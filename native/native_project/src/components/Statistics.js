@@ -2,7 +2,7 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, Image, ImageBackground, ScrollView } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
 import Statistic from './Statistic';
@@ -22,7 +22,7 @@ export default function Statistics({navigation}) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <View style={styles.block_item}>
+      <ScrollView style={styles.block_item}>
         <View style={[styles.flex, styles.flex_layout]}>
           <View style={styles.flex_item}>
             <Px.View
@@ -43,7 +43,7 @@ export default function Statistics({navigation}) {
             </Px.View>
           </View>
         </View>
-      </View>
+      </ScrollView>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>

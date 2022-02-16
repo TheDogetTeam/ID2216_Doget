@@ -37,7 +37,6 @@ export default function ItemBlanks(props) {
                 source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
                 resizeMode="contain">
                 <View style={styles.cover_block1_space} />
-                <View style={styles.cover_block1_space1} />
                 <View style={styles.cover_block1_item}>
                   <ImageBackground
                     style={[styles.image7, styles.image7_layout]}
@@ -52,14 +51,12 @@ export default function ItemBlanks(props) {
                 absolute
                 style={styles.highlights2_box}>
                   <TextInput
-                  style={styles.highlights2_box}
+                  style={styles.highlights2}
                   onChangeText={onChangeText_article}
                   value={article}
                    />
-{/*                 <Text style={styles.highlights2} ellipsizeMode={'clip'}>
-                  {'Artical Name'}
-                </Text> */}
               </Px.View>
+
           </View>
           <View style={styles.flex16_item}>
             <ImageBackground
@@ -109,7 +106,6 @@ export default function ItemBlanks(props) {
                 source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
                 resizeMode="contain">
                 <View style={styles.cover_block1_space} />
-                <View style={styles.cover_block1_space1} />
                 <View style={styles.cover_block1_item}>
                   <ImageBackground
                     style={[styles.icon6, styles.icon6_layout]}
@@ -124,7 +120,7 @@ export default function ItemBlanks(props) {
                 absolute
                 style={styles.highlights2_box}>
                   <TextInput
-                  style={styles.highlights2_box}
+                  style={styles.highlights2}
                   onChangeText={onChangeText_price}
                   value={price}
                    />
@@ -150,7 +146,6 @@ export default function ItemBlanks(props) {
               source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
               resizeMode="contain">
               <View style={styles.cover_block1_space} />
-              <View style={styles.cover_block1_space1} />
               <View style={styles.cover_block1_item}>
                 <ImageBackground
                   style={[styles.icon6, styles.icon6_layout]}
@@ -165,7 +160,7 @@ export default function ItemBlanks(props) {
               absolute
               style={styles.highlights2_box}>
                 <TextInput
-                style={styles.highlights2_box}
+                style={styles.highlights2}
                 onChangeText={onChangeText_shop}
                 value={shop}
                   />
@@ -216,7 +211,6 @@ export default function ItemBlanks(props) {
                 source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
                 resizeMode="contain">
                 <View style={styles.cover_block1_space} />
-                <View style={styles.cover_block1_space1} />
                 <View style={styles.cover_block1_item}>
                   <ImageBackground
                     style={[styles.image6, styles.image6_layout]}
@@ -231,7 +225,7 @@ export default function ItemBlanks(props) {
                 absolute
                 style={styles.highlights2_box}>
                   <TextInput
-                  style={styles.highlights2_box}
+                  style={styles.highlights2}
                   onChangeText={onChangeText_date}
                   value={date}
                    />
@@ -275,6 +269,7 @@ export default function ItemBlanks(props) {
                 />
               </View>
             </Px.View> */}
+
               <Px.ImageBackground
                 x="0px 316fr 0px"
                 y="0px minmax(0px, max-content) 0px"
@@ -282,7 +277,6 @@ export default function ItemBlanks(props) {
                 source={require('../assets/c990a542af3a5c2bfb35a2bc491a8790.png')}
                 resizeMode="contain">
                 <View style={styles.cover_block1_space} />
-                <View style={styles.cover_block1_space1} />
                 <View style={styles.cover_block1_item}>
                   <ImageBackground
                     style={[styles.image6, styles.image6_layout]}
@@ -297,7 +291,7 @@ export default function ItemBlanks(props) {
                 absolute
                 style={styles.highlights2_box}>
                   <TextInput
-                  style={styles.highlights2_box}
+                  style={styles.highlights2}
                   onChangeText={onChangeText_city}
                   value={city}
                    />
@@ -351,12 +345,12 @@ const styles = StyleSheet.create({
   cover_block1_space: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 100
+    flexBasis: 10
   },
   cover_block1_space1: {
     flexGrow: 0,
     flexShrink: 1,
-    flexBasis: 189
+    flexBasis: 10
   },
   cover_block1_item: {
     flexGrow: 0,
