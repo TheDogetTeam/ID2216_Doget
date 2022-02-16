@@ -1,7 +1,7 @@
 /**
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
-import React from 'react';
+import React , { Component } from 'react';
 import {
   View,
   StyleSheet,
@@ -11,7 +11,8 @@ import {
   TouchableOpacity,
   Alert,
   Button,
-  ScrollView
+  ScrollView,
+  NativeModules
 } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
@@ -19,7 +20,53 @@ import Categories from './Categories';
 import ItemBlanks from './ItemBlanks';
 import BottomBar from './BottomBar';
 
+var register_callback = NativeModules.register_button;
+
+class Input_content extends Component{
+  constructor(props){  
+    super(props);  
+    this.state = {  
+      onChangeText_article:"Artical Name",
+      onChangeText_price:"Price",
+      onChangeText_shop:"Shop",
+      onChangeText_date:"Date",
+      onChangeText_city:"City",
+      };
+    this.handlearticle = this.handlearticle.bind(this);
+    this.handleprice = this.handlearticle.bind(this);
+    this.handleshop = this.handlearticle.bind(this);
+    this.handledate = this.handlearticle.bind(this);
+    this.handlecity = this.handlearticle.bind(this);
+  }  
+
+
+  handlearticle = (text) => {
+     this.state.onChangeText_article = text;
+  };
+  handleprice = (text) => {
+    this.state = {onChangeText_price: text};
+  }  
+  handleshop = (text) => {
+    this.state = {onChangeText_shop: text};
+    }  
+  handledate = (text) => {
+    this.state = {onChangeText_date: text};
+  }  
+  handlecity = (text) => {
+    this.state = {onChangeText_city: text};
+  }
+}
+
+
+
+function register_button(navigation,Text_content_ext) {
+  register_callback.sayHi( (err) => {console.log(err)}, (msg) => {console.log(Text_content_ext.state.onChangeText_article)} );
+  navigation.navigate('Main');
+}
+
 export default function NewItem({navigation}) {
+  const Text_content_ext = new Input_content();
+
   return (
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -33,10 +80,8 @@ export default function NewItem({navigation}) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <ScrollView style={styles.block_item}>
+      <View style={styles.block_item}>
         <Px.View
-          x="14px 316fr 18px"
-          y="20px minmax(0px, max-content) 0px"
           style={styles.flex}>
           <View style={styles.flex_item}>
             <Px.View
@@ -61,7 +106,7 @@ export default function NewItem({navigation}) {
               x="0px 316fr 0px"
               y="39px minmax(0px, max-content) 0px"
               style={styles.flex12}>
-              <ItemBlanks />
+              <ItemBlanks Text_content_ext = {Text_content_ext}/>
             </Px.View>
           </View>
 
@@ -145,7 +190,7 @@ export default function NewItem({navigation}) {
                 x="0px 130px 0px" 
                 y="0px minmax(0px, max-content) 0px" 
                 style={styles.group} 
-                onPress={() => navigation.navigate('Main')}>
+                onPress={() => register_button(navigation,Text_content_ext)}>
                   <Px.Image
                     
                     x="0px 130fr 0px"
@@ -166,7 +211,7 @@ export default function NewItem({navigation}) {
             </Px.View>
           </View>
         </Px.View>
-      </ScrollView>
+      </View>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>
@@ -197,7 +242,8 @@ const styles = StyleSheet.create({
   },
   block_item: {
     flexGrow: 0,
-    flexShrink: 1
+    flexShrink: 1,
+    width: '100%'
   },
   content_box: {
     width: '100%'
@@ -236,7 +282,11 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   flex12: {
-    width: '100%'
+    justifyContent:'center',
+    marginLeft:'auto',
+    marginRight:'auto',
+    width: '90%'
+
   },
   flex25: {
     flexGrow: 1,

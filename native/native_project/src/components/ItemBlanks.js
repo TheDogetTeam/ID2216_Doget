@@ -14,13 +14,7 @@ import {
 import { Px } from './posize';
 
 export default function ItemBlanks(props) {
-  const [article,onChangeText_article] = React.useState("Artical Name");
-  const [price,onChangeText_price] = React.useState("Price");
-  const [shop,onChangeText_shop] = React.useState("Shop");
-  const [date,onChangeText_date] = React.useState("Date");
-  const [city,onChangeText_city] = React.useState("City");
-
-
+  const Text_content = props.Text_content_ext;
   return (
     <View style={[styles.flex12, styles.flex12_layout]}>
       <View style={styles.flex12_item}>
@@ -52,8 +46,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_article}
-                  value={article}
+                  onChangeText={Text_content.handlearticle}
+                  defaultValue={"Artical Name"}
                    />
               </Px.View>
 
@@ -121,8 +115,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_price}
-                  value={price}
+                  onChangeText={Text_content.handleprice}
+                  defaultValue={"Price"}
                    />
               </Px.View>
 
@@ -161,8 +155,8 @@ export default function ItemBlanks(props) {
               style={styles.highlights2_box}>
                 <TextInput
                 style={styles.highlights2}
-                onChangeText={onChangeText_shop}
-                value={shop}
+                onChangeText={Text_content.handleshop}
+                defaultValue={"Shop"}
                   />
             </Px.View>
 
@@ -226,8 +220,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_date}
-                  value={date}
+                  onChangeText={Text_content.handledate}
+                  defaultValue={"Date"}
                    />
               </Px.View>
 
@@ -292,8 +286,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_city}
-                  value={city}
+                  onChangeText={Text_content.handlecity}
+                  defaultValue={"City"}
                    />
               </Px.View>
 
