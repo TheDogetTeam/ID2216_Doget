@@ -10,6 +10,72 @@ import ControlBar from './ControlBar';
 import Items from './Items';
 import BottomBar from './BottomBar';
 
+const DATA = [
+  {
+    id: "1",
+    icon: require("../assets/a3e57bb31942d19207b892dd473b2064.png"),
+    price: '$20',
+    content: 'Taxi',
+    shop: 'Taxi',
+    city: 'Stockholm',
+    date: '2022.2.3.'
+  },
+  {
+    id: "2",
+    icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
+    price: '$18',
+    content: 'Public Transport',
+    shop: 'T-Center',
+    city: 'Stockholm',
+    date: '2022.2.15.'
+  },
+  {
+    id: "3",
+    icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
+    price: '$34',
+    content: 'Public Transport',
+    shop: 'Solna Center',
+    city: 'Stockholm',
+    date: '2022.2.16.'
+  },
+  {
+    id: "4",
+    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+    price: '$45',
+    content: 'Home Shopping',
+    shop: 'Zara',
+    city: 'Stockholm',
+    date: '2022.2.17.'
+  },
+  {
+    id: "5",
+    icon: require("../assets/4c105694eaddcb9b824f2a116db34c73.png"),
+    price: '$17',
+    content: 'Entertainment',
+    shop: 'Skansen',
+    city: 'Stockholm',
+    date: '2022.2.17.'
+  },
+  {
+    id: "6",
+    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+    price: '$30',
+    content: 'Food',
+    shop: 'Willys',
+    city: 'Solna',
+    date: '2022.2.18.'
+  },
+  {
+    id: "7",
+    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+    price: '$22',
+    content: 'Food',
+    shop: 'Willys',
+    city: 'Solna',
+    date: '2022.2.18.'
+  },
+]
+
 
 export default function Main({ navigation }) {
   return (    
@@ -25,12 +91,12 @@ export default function Main({ navigation }) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <ScrollView style={styles.block_item}>
-        <Px.View
+      <View style={styles.block_item}>
+        {/* <Px.View
           x="0px 348fr 0px"
           y="5px minmax(0px, max-content) 0px"
-          style={styles.block1}>
-          <View style={styles.block1_item}>
+          style={styles.block1}>  */}
+          <View style={styles.block2_item}>
             <View style={[styles.component, styles.component_layout]}>
               <Overview navigation = {navigation}
                 small_text_body1={'$100'}
@@ -39,7 +105,7 @@ export default function Main({ navigation }) {
               />
             </View>
           </View>
-          <View style={styles.block1_item}>
+          <View style={styles.block2_item}>
             <View style={[styles.block2, styles.block2_layout]}>
               <ControlBar
                 icon={require('../assets/002a169a9f76fbdab63da6661b476248.png')}
@@ -51,27 +117,30 @@ export default function Main({ navigation }) {
             </View>
           </View>
           <View style={styles.block1_item}>
-            <Px.View
+            {/* <Px.View
               x="0px 348fr 0px"
               y="0px minmax(0px, max-content) 0px"
-              style={styles.cover_block3}>
+              style={styles.cover_block3}> */}
+            <View style={[styles.cover_block3, styles.cover_block3_layout]}>
               <Items
-                icon7={require('../assets/a3e57bb31942d19207b892dd473b2064.png')}
-                image14={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
-                image15={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
-                image16={require('../assets/58657a5c9395bf2a374e39d3b2585bf2.png')}
-                image18={require('../assets/11af3806068c3f832180ea6c53b04b2b.png')}
-                line={'#e9ecedff'}
-                line1={'#e9ecedff'}
-                small_text_body1={'$100'}
-                small_text_body2={'Left:'}
-                text_body={'$20'}
-                text_body1={'-$10'}
+                // icon7={require('../assets/a3e57bb31942d19207b892dd473b2064.png')}
+                // image14={require('../assets/d47c8b1ff737f1706a337b33efdbca03.png')}
+                // image15={require('../assets/afd6b3ab8df26c984b2af31730fe3b66.png')}
+                // image16={require('../assets/58657a5c9395bf2a374e39d3b2585bf2.png')}
+                // image18={require('../assets/11af3806068c3f832180ea6c53b04b2b.png')}
+                // line={'#e9ecedff'}
+                // line1={'#e9ecedff'}
+                // small_text_body1={'$100'}
+                // small_text_body2={'Left:'}
+                // text_body={'$20'}
+                // text_body1={'-$10'}
+                data={DATA}
               />
-            </Px.View>
+            {/* </Px.View> */}
+            </View>
           </View>
-        </Px.View>
-      </ScrollView>
+        {/* </Px.View> */}
+      </View>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout1]}>
@@ -110,9 +179,22 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     overflow: 'hidden'
   },
+  block1_layout: {
+    marginTop: 5,
+    marginBottom: 0,
+    minHeight: 603,
+    flexShrink: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
+  },
   block1_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  block2_item: {
+    flexGrow: 0,
+    flexShrink: 0
   },
   component: {},
   component_layout: {
@@ -134,6 +216,15 @@ const styles = StyleSheet.create({
   },
   cover_block3: {
     width: '100%'
+  },
+  cover_block3_layout: {
+    marginTop: 0,
+    marginBottom: 0,
+    minHeight: 100,
+    flexShrink: 0,
+    marginLeft: 0,
+    flexGrow: 1,
+    marginRight: 0
   },
   block_space: {
     flexGrow: 1,
