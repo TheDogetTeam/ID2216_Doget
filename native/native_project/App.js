@@ -34,6 +34,7 @@ import Main from './src/components/Main';
 import NewItem from './src/components/NewItem';
 import Statistics from './src/components/Statistics';
 import BottomBar from './src/components/BottomBar';
+import Profile from './src/components/Profile';
 
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -84,6 +85,8 @@ const App: () => Node = () => {
         <Stack.Screen name="NewItem" component={NewItem} />
         <Stack.Screen name="Statistics" component={Statistics} />
         <Stack.Screen name="BottomBar" component={BottomBar} />
+        <Stack.Screen name="Profile" component={Profile} />
+
     </Stack.Navigator>
   </NavigationContainer>
   );

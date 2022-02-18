@@ -67,32 +67,6 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex17}>
           <View style={styles.flex17_item}>
-            {/* <Px.View
-              x="0px 316fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex18}
-             >
-              <View style={styles.flex18_item}>
-                <Px.View
-                  x="0px 41fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.highlights2_box}>
-                  <TextInput
-                  style={styles.highlights2_box}
-                  onChangeText={onChangeText_price}
-                  value={price}
-                   />
-
-                </Px.View>
-              </View>
-              <View style={styles.flex18_space} />
-              <View style={styles.flex18_item1}>
-                <ImageBackground
-                  style={[styles.icon6, styles.icon6_layout]}
-                  source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
-                />
-              </View>
-            </Px.View> */}
               <Px.ImageBackground
                 x="0px 316fr 0px"
                 y="0px minmax(0px, max-content) 0px"
@@ -119,7 +93,6 @@ export default function ItemBlanks(props) {
                   defaultValue={"Price"}
                    />
               </Px.View>
-
           </View>
           <View style={styles.flex17_item}>
             <View style={[styles.line, styles.line_layout]} />
