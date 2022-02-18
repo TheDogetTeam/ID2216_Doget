@@ -4,8 +4,16 @@
 import React from 'react';
 import { View, StyleSheet, Text, Pressable, Alert } from 'react-native';
 import { Px } from './posize';
+import {NativeModules} from 'react-native';
+
+var overview = NativeModules.Overview;
+//var testsum = 111;
+//var sum = overview.Sum((i)=>Alert.alert(i));
+
 
 export default function Overview(props) {
+
+  
   return (
     <Pressable
       style={[styles.flex, styles.flex_layout]}
@@ -46,7 +54,7 @@ export default function Overview(props) {
                     <Text
                       style={styles.small_text_body1}
                       ellipsizeMode={'clip'}>
-                      {'$100'}
+                      {sum}
                     </Text>
                   </Px.View>
                 </View>

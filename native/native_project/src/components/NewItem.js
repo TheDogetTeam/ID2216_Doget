@@ -33,10 +33,10 @@ class Input_content extends Component{
       onChangeText_city:"City",
       };
     this.handlearticle = this.handlearticle.bind(this);
-    this.handleprice = this.handlearticle.bind(this);
-    this.handleshop = this.handlearticle.bind(this);
-    this.handledate = this.handlearticle.bind(this);
-    this.handlecity = this.handlearticle.bind(this);
+    this.handleprice = this.handleprice.bind(this);
+    this.handleshop = this.handleshop.bind(this);
+    this.handledate = this.handledate.bind(this);
+    this.handlecity = this.handlecity.bind(this);
   }  
 
 
