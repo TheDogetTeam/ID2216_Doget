@@ -97,6 +97,27 @@ public class DBHandler extends SQLiteOpenHelper {
         // database after adding database.
         db.close();
     }
+public void loadAll(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME, null);
+        resultSet.moveToFirst();
+
+        while (resultSet.isAfterLast() == false) {
+            if ((resultSet != null) && (resultSet.getCount() > 0)) {
+                Map<String, String> dictionary = new HashMap<String, String>();
+                dictionary.put("article", resultSet.getString(resultSet.getColumnIndex(ARTICLE_COL)));
+                dictionary.put("price", resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
+                dictionary.put("shop", resultSet.getString(resultSet.getColumnIndex(SHOP_COL)));
+                dictionary.put("date", resultSet.getString(resultSet.getColumnIndex(DATE_COL)));
+                dictionary.put("city", resultSet.getString(resultSet.getColumnIndex(CITY_COL)));
+                System.out.println("[DEBUG] LOAD ALL: "+ dictionary.toString() + "||");
+
+            }
+            resultSet.moveToNext();
+        }
+
+    }
+
 
     public Map<String, String> loadEntryFromDB(int id) {
         SQLiteDatabase db = this.getReadableDatabase();

@@ -35,15 +35,14 @@ public class Register_button extends ReactContextBaseJavaModule {
     public void addEntry(String article, String price,String shop,String date,String city) {
         try {
             dbHandler.addNewEntryToDB(article, price, shop, date,city);
-            Map<String, String> dictionary = dbHandler.loadEntryFromDB(2);
+            dbHandler.loadAll();
+
 
             System.out.println("[DEBUG] : Getting Path");
-
             File dbpath = this.reactContext.getDatabasePath(dbHandler.getDatabaseName());
             String db_path = dbpath.getAbsolutePath();
             System.out.println("[DEBUG] : Path:" + db_path);
 
-            System.out.println("[DEBUG] Databse :" + dictionary.toString());
         } catch (IllegalViewOperationException e) {
             System.err.println(e.getMessage());
         }
