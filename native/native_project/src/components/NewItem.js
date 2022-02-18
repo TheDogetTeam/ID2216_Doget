@@ -33,10 +33,10 @@ class Input_content extends Component{
       onChangeText_city:"City",
       };
     this.handlearticle = this.handlearticle.bind(this);
-    this.handleprice = this.handlearticle.bind(this);
-    this.handleshop = this.handlearticle.bind(this);
-    this.handledate = this.handlearticle.bind(this);
-    this.handlecity = this.handlearticle.bind(this);
+    this.handleprice = this.handleprice.bind(this);
+    this.handleshop = this.handleshop.bind(this);
+    this.handledate = this.handledate.bind(this);
+    this.handlecity = this.handlecity.bind(this);
   }  
 
 
@@ -44,16 +44,16 @@ class Input_content extends Component{
      this.state.onChangeText_article = text;
   };
   handleprice = (text) => {
-    this.state = {onChangeText_price: text};
+    this.state.onChangeText_price =  text;
   }  
   handleshop = (text) => {
-    this.state = {onChangeText_shop: text};
+    this.state.onChangeText_shop = text;
     }  
   handledate = (text) => {
-    this.state = {onChangeText_date: text};
+    this.state.onChangeText_date = text;
   }  
   handlecity = (text) => {
-    this.state = {onChangeText_city: text};
+    this.state.onChangeText_city= text;
   }
 }
 
