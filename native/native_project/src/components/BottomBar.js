@@ -8,9 +8,11 @@ import {
   Text,
   Image,
   ImageBackground,
-  Alert
+  Alert,
+  NativeModules
 } from 'react-native';
 import { Px } from './posize';
+
 
 
 export default function BottomBar(props) {
@@ -98,7 +100,7 @@ export default function BottomBar(props) {
           x="0px 52fr 0px"
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex3}
-          onPress={() => Alert.alert('click')}>
+          onPress={() => props.navigation.navigate('Profile')}>
           <View style={styles.flex3_item}>
             <Px.Image
               style={[styles.img, styles.img_layout]}
@@ -126,6 +128,12 @@ BottomBar.fitScreen = false;
 BottomBar.scrollHeight = 46;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   bottomBar: {
     flexGrow: 1,
     borderWidth: 0,

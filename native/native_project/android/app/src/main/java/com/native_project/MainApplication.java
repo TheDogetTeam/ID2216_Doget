@@ -2,6 +2,8 @@ package com.native_project;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -12,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
+    private SQLiteDatabase mydatabase;
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
@@ -22,9 +25,14 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
+            Session_storage storage =  com.native_project.Session_storage.getInstance();
+            storage.setUserData("test1");
+            @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
+          packages.add(new Newitem());
+          packages.add(new Buttombar());
+
+            // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
         }

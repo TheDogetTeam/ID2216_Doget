@@ -14,13 +14,7 @@ import {
 import { Px } from './posize';
 
 export default function ItemBlanks(props) {
-  const [article,onChangeText_article] = React.useState("Artical Name");
-  const [price,onChangeText_price] = React.useState("Price");
-  const [shop,onChangeText_shop] = React.useState("Shop");
-  const [date,onChangeText_date] = React.useState("Date");
-  const [city,onChangeText_city] = React.useState("City");
-
-
+  const Text_content = props.Text_content_ext;
   return (
     <View style={[styles.flex12, styles.flex12_layout]}>
       <View style={styles.flex12_item}>
@@ -52,8 +46,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_article}
-                  value={article}
+                  onChangeText={Text_content.handlearticle}
+                  defaultValue={"Artical Name"}
                    />
               </Px.View>
 
@@ -73,32 +67,6 @@ export default function ItemBlanks(props) {
           y="37px minmax(0px, max-content) 0px"
           style={styles.flex17}>
           <View style={styles.flex17_item}>
-            {/* <Px.View
-              x="0px 316fr 0px"
-              y="0px minmax(0px, max-content) 0px"
-              style={styles.flex18}
-             >
-              <View style={styles.flex18_item}>
-                <Px.View
-                  x="0px 41fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.highlights2_box}>
-                  <TextInput
-                  style={styles.highlights2_box}
-                  onChangeText={onChangeText_price}
-                  value={price}
-                   />
-
-                </Px.View>
-              </View>
-              <View style={styles.flex18_space} />
-              <View style={styles.flex18_item1}>
-                <ImageBackground
-                  style={[styles.icon6, styles.icon6_layout]}
-                  source={require('../assets/d69186c398285ffc266091ad45e7f920.png')}
-                />
-              </View>
-            </Px.View> */}
               <Px.ImageBackground
                 x="0px 316fr 0px"
                 y="0px minmax(0px, max-content) 0px"
@@ -121,11 +89,10 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_price}
-                  value={price}
+                  onChangeText={Text_content.handleprice}
+                  defaultValue={"Price"}
                    />
               </Px.View>
-
           </View>
           <View style={styles.flex17_item}>
             <View style={[styles.line, styles.line_layout]} />
@@ -161,8 +128,8 @@ export default function ItemBlanks(props) {
               style={styles.highlights2_box}>
                 <TextInput
                 style={styles.highlights2}
-                onChangeText={onChangeText_shop}
-                value={shop}
+                onChangeText={Text_content.handleshop}
+                defaultValue={"Shop"}
                   />
             </Px.View>
 
@@ -226,8 +193,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_date}
-                  value={date}
+                  onChangeText={Text_content.handledate}
+                  defaultValue={"Date"}
                    />
               </Px.View>
 
@@ -292,8 +259,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={onChangeText_city}
-                  value={city}
+                  onChangeText={Text_content.handlecity}
+                  defaultValue={"City"}
                    />
               </Px.View>
 
