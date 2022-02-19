@@ -44,16 +44,16 @@ class Input_content extends Component{
      this.state.onChangeText_article = text;
   };
   handleprice = (text) => {
-    this.state = {onChangeText_price: text};
+    this.state.onChangeText_price =  text;
   }  
   handleshop = (text) => {
-    this.state = {onChangeText_shop: text};
+    this.state.onChangeText_shop = text;
     }  
   handledate = (text) => {
-    this.state = {onChangeText_date: text};
+    this.state.onChangeText_date = text;
   }  
   handlecity = (text) => {
-    this.state = {onChangeText_city: text};
+    this.state.onChangeText_city= text;
   }
 }
 
