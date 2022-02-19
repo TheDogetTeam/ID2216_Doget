@@ -24,6 +24,8 @@ public class MainPage implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
         //this is where you register the module
         modules.add(new Overview(reactContext));
+        modules.add(new ShowItems(reactContext));
+
         return modules;
     }
 
