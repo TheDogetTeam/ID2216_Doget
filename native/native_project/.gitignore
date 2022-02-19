@@ -59,8 +59,9 @@ buck-out/
 /ios/Pods/
 
 # .gradle
-# files generated for excecute log and checksums are ignored
+# files generated for excecute log and checksums are ignore
 /android/.gradle/7.2/executionHistory
 /android/.gradle/7.2/fileHashes/
 /android/.gradle/buildOutputCleanup
 /android/.gradle/checksums/*
+
