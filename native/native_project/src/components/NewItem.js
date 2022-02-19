@@ -64,6 +64,10 @@ function register_button(navigation,Text_content_ext) {
   navigation.navigate('Main');
 }
 
+function showReadResults() {
+  register_callback.readEntry(1, (json) => {console.log(json)});
+}
+
 export default function NewItem({navigation}) {
   const Text_content_ext = new Input_content();
 
@@ -144,7 +148,9 @@ export default function NewItem({navigation}) {
                 x="0px 130px 0px" 
                 y="0px minmax(0px, max-content) 0px" 
                 style={styles.group} 
-                onPress={() => navigation.navigate('OCR_Page')}>
+                // onPress={() => navigation.navigate('OCR_Page')}
+                onPress={() => showReadResults()}
+                >
                   <Px.Image
                     
                     x="0px 130fr 0px"

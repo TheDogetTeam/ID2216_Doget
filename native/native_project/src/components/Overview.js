@@ -7,9 +7,10 @@ import { Px } from './posize';
 
 export default function Overview(props) {
   return (
-    <Pressable
+    <View
       style={[styles.flex, styles.flex_layout]}
-      onPress={() => props.navigation.navigate('DogPage')}>
+      // onPress={() => props.navigation.navigate('DogPage')}
+      >
       <View style={styles.flex_item}>
         <Px.Image
           style={styles.cover_group1}
@@ -163,7 +164,8 @@ export default function Overview(props) {
           </Px.View>
         </Px.View>
       </View>
-    </Pressable>
+    {/* </Pressable> */}
+    </View>
   );
 }
 
@@ -186,10 +188,10 @@ const styles = StyleSheet.create({
     marginRight: 0
   },
   flex_item: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1,
     left: 1,
-    flexBasis: 150
+    // flexBasis: 150
   },
   cover_group1: {
     width: 130,
@@ -199,7 +201,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   flex_item1: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1,
     flexBasis: 151
   },

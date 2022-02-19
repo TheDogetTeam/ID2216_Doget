@@ -7,7 +7,10 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.IllegalViewOperationException;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.util.Map;
@@ -46,6 +49,14 @@ public class Register_button extends ReactContextBaseJavaModule {
         } catch (IllegalViewOperationException e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    @ReactMethod
+    public void readEntry(int id, Callback callback) {
+        WritableMap dir;
+        dir = dbHandler.loadEntryFromDB(id);
+//        JSONObject json = new JSONObject(dir);
+        callback.invoke(dir);
     }
     
 }
