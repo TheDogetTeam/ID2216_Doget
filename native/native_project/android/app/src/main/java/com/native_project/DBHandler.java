@@ -4,6 +4,7 @@ package com.native_project;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,7 +12,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
+import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.bridge.WritableNativeMap;
 
 import java.util.HashMap;
@@ -97,11 +100,16 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // on below line we are passing all values
         // along with its key and value pair.
-        values.put(ARTICLE_COL, "\""+article+"\"");
-        values.put(PRICE_COL, "\""+price+"\"");
-        values.put(SHOP_COL, "\""+shop+"\"");
-        values.put(DATE_COL, "\""+date+"\"");
-        values.put(CITY_COL, "\""+city+"\"");
+//        values.put(ARTICLE_COL, "\""+article+"\"");
+//        values.put(PRICE_COL, "\""+price+"\"");
+//        values.put(SHOP_COL, "\""+shop+"\"");
+//        values.put(DATE_COL, "\""+date+"\"");
+//        values.put(CITY_COL, "\""+city+"\"");
+        values.put(ARTICLE_COL, article);
+        values.put(PRICE_COL, price);
+        values.put(SHOP_COL, shop);
+        values.put(DATE_COL, date);
+        values.put(CITY_COL, city);
         System.out.println("!!ENTRY!!");
 
         System.out.println(TABLE_NAME);
@@ -133,25 +141,29 @@ public void deleteRecord(int id){
         db.close();
     }
 
-public List<Map> loadAll(String order){
+public WritableArray loadAll(String order){
     System.out.println("Reading Entry to Table" + TABLE_NAME);
 
     SQLiteDatabase db = this.getReadableDatabase();
 
-    Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME + " ORDER BY " + order, null);
-        resultSet.moveToFirst();
-        List<Map> Output = new ArrayList<>();
+    if (order == null) order = "id";  // default ordered by id
 
-    while (resultSet.isAfterLast() == false) {
-            if ((resultSet != null) && (resultSet.getCount() > 0)) {
-                Map<String, String> dictionary = new HashMap<String, String>();
-                dictionary.put("article", resultSet.getString(resultSet.getColumnIndex(ARTICLE_COL)));
-                dictionary.put("price", resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
-                dictionary.put("shop", resultSet.getString(resultSet.getColumnIndex(SHOP_COL)));
-                dictionary.put("date", resultSet.getString(resultSet.getColumnIndex(DATE_COL)));
-                dictionary.put("city", resultSet.getString(resultSet.getColumnIndex(CITY_COL)));
+    @SuppressLint("Recycle") Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME + " ORDER BY " + order, null);
+
+    resultSet.moveToFirst();
+    WritableArray Output = new WritableNativeArray();
+
+    while (!resultSet.isAfterLast()) {
+            if (resultSet.getCount() > 0) {
+                WritableMap dictionary = new WritableNativeMap();
+                dictionary.putString("id", resultSet.getString(resultSet.getColumnIndex(ID_COL)));
+                dictionary.putString("article", resultSet.getString(resultSet.getColumnIndex(ARTICLE_COL)));
+                dictionary.putString("price", resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
+                dictionary.putString("shop", resultSet.getString(resultSet.getColumnIndex(SHOP_COL)));
+                dictionary.putString("date", resultSet.getString(resultSet.getColumnIndex(DATE_COL)));
+                dictionary.putString("city", resultSet.getString(resultSet.getColumnIndex(CITY_COL)));
                 System.out.println("[DEBUG] LOAD ALL: "+ dictionary.toString() + "||");
-                Output.add(dictionary);
+                Output.pushMap(dictionary);
             }
             resultSet.moveToNext();
         }

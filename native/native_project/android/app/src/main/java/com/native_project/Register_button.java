@@ -45,12 +45,4 @@ public class Register_button extends ReactContextBaseJavaModule {
         }
     }
 
-    @ReactMethod
-    public void readEntry(int id, Callback callback) {
-        WritableMap dir;
-        dir = dbHandler.loadEntryFromDB(id);
-//        JSONObject json = new JSONObject(dir);
-        callback.invoke(dir);
-    }
-    
 }

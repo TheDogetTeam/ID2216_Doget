@@ -27,7 +27,7 @@ public class Overview extends ReactContextBaseJavaModule {
     @Override
     //getName is required to define the name of the module represented in JavaScript
     public String getName() { 
-        return "Overview";
+        return "OverviewData";
     }
  
     @ReactMethod

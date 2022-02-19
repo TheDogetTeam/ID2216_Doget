@@ -2,7 +2,7 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React, {useState} from 'react';
-import { View, StyleSheet, Image, ImageBackground, ScrollView, Pressable, Alert } from 'react-native';
+import { View, StyleSheet, Image, ImageBackground, ScrollView, Pressable, Alert, NativeModules } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
 import Overview from './Overview';
@@ -12,79 +12,83 @@ import BottomBar from './BottomBar';
 import Doge from './Doge';
 import ShowOverview from './ShowOverview';
 
+const { ShowItems } = NativeModules;
 
-const DATA = [
-  {
-    id: "1",
-    icon: require("../assets/a3e57bb31942d19207b892dd473b2064.png"),
-    price: '$20',
-    content: 'Taxi',
-    shop: 'Taxi',
-    city: 'Stockholm',
-    date: '2022.2.3.'
-  },
-  {
-    id: "2",
-    icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
-    price: '$18',
-    content: 'Public Transport',
-    shop: 'T-Center',
-    city: 'Stockholm',
-    date: '2022.2.15.'
-  },
-  {
-    id: "3",
-    icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
-    price: '$34',
-    content: 'Public Transport',
-    shop: 'Solna Center',
-    city: 'Stockholm',
-    date: '2022.2.16.'
-  },
-  {
-    id: "4",
-    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
-    price: '$45',
-    content: 'Home Shopping',
-    shop: 'Zara',
-    city: 'Stockholm',
-    date: '2022.2.17.'
-  },
-  {
-    id: "5",
-    icon: require("../assets/4c105694eaddcb9b824f2a116db34c73.png"),
-    price: '$17',
-    content: 'Entertainment',
-    shop: 'Skansen',
-    city: 'Stockholm',
-    date: '2022.2.17.'
-  },
-  {
-    id: "6",
-    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
-    price: '$30',
-    content: 'Food',
-    shop: 'Willys',
-    city: 'Solna',
-    date: '2022.2.18.'
-  },
-  {
-    id: "7",
-    icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
-    price: '$22',
-    content: 'Food',
-    shop: 'Willys',
-    city: 'Solna',
-    date: '2022.2.18.'
-  },
-]
-
+// const DATA = [
+//   {
+//     id: "1",
+//     icon: require("../assets/a3e57bb31942d19207b892dd473b2064.png"),
+//     price: '$20',
+//     content: 'Taxi',
+//     shop: 'Taxi',
+//     city: 'Stockholm',
+//     date: '2022.2.3.'
+//   },
+//   {
+//     id: "2",
+//     icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
+//     price: '$18',
+//     content: 'Public Transport',
+//     shop: 'T-Center',
+//     city: 'Stockholm',
+//     date: '2022.2.15.'
+//   },
+//   {
+//     id: "3",
+//     icon: require("../assets/3d3ead1b4fa457a1dd2ea6df61870de7.png"),
+//     price: '$34',
+//     content: 'Public Transport',
+//     shop: 'Solna Center',
+//     city: 'Stockholm',
+//     date: '2022.2.16.'
+//   },
+//   {
+//     id: "4",
+//     icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+//     price: '$45',
+//     content: 'Home Shopping',
+//     shop: 'Zara',
+//     city: 'Stockholm',
+//     date: '2022.2.17.'
+//   },
+//   {
+//     id: "5",
+//     icon: require("../assets/4c105694eaddcb9b824f2a116db34c73.png"),
+//     price: '$17',
+//     content: 'Entertainment',
+//     shop: 'Skansen',
+//     city: 'Stockholm',
+//     date: '2022.2.17.'
+//   },
+//   {
+//     id: "6",
+//     icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+//     price: '$30',
+//     content: 'Food',
+//     shop: 'Willys',
+//     city: 'Solna',
+//     date: '2022.2.18.'
+//   },
+//   {
+//     id: "7",
+//     icon: require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png"),
+//     price: '$22',
+//     content: 'Food',
+//     shop: 'Willys',
+//     city: 'Solna',
+//     date: '2022.2.18.'
+//   },
+// ]
+var DATA = new Array();
 
 export default function Main({ navigation }) {
 
   const states = {"overview": "0", "dog": "1"};
   const [OverviewState, setOverviewState] = useState(states.overview);
-  
+
+  ShowItems.readEntryAll("id", (json) => {DATA = [...json]})
+  // DATA.push(1);
+  console.log("DATA is " + DATA)
   return (    
     <ImageBackground
       style={[styles.block, styles.block_layout]}

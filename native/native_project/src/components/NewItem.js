@@ -22,6 +22,7 @@ import BottomBar from './BottomBar';
 
 var register_callback = NativeModules.register_button;
 
+
 class Input_content extends Component{
   constructor(props){  
     super(props);  
@@ -64,8 +65,8 @@ function register_button(navigation,Text_content_ext) {
   navigation.navigate('Main');
 }
 
-function showReadResults() {
-  register_callback.readEntry(1, (json) => {console.log(json)});
+function OCRCallBack() {
+  Alert.alert("OCR function start here!");
 }
 
 export default function NewItem({navigation}) {
@@ -149,7 +150,7 @@ export default function NewItem({navigation}) {
                 y="0px minmax(0px, max-content) 0px" 
                 style={styles.group} 
                 // onPress={() => navigation.navigate('OCR_Page')}
-                onPress={() => showReadResults()}
+                onPress={() => OCRCallBack()}
                 >
                   <Px.Image
                     
