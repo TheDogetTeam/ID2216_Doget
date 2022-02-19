@@ -23,8 +23,9 @@
  
  var profile_callback = NativeModules.profile_button;
 
- function profile_button(name) {
+ function profile_button(navigation,name) {
    profile_callback.addDBTable(name);
+   navigation.navigate("Main");
  } 
 
 
@@ -110,7 +111,7 @@
           <View style={styles.flex25_space} />
           <Px.Pressable 
                 style={styles.press} 
-                onPress={() =>  profile_button(Text_content_ext.state.onChangeText_user)}>
+                onPress={() =>  profile_button(navigation, Text_content_ext.state.onChangeText_user)}>
                   <Px.Image
                     x="0px 130fr 0px"
                     y="0px minmax(0px, max-content) 0px"

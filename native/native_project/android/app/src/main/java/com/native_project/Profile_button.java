@@ -35,7 +35,7 @@ public class Profile_button extends ReactContextBaseJavaModule {
             storage.setUserData(name);
 
             DBHandler dbHandler = new DBHandler(reactContext,storage.getUserData());
-            dbHandler.addNewEntryToDB("start","start","start","start","start");
+            dbHandler.swapTable();
         } catch (IllegalViewOperationException e) {
             System.err.println(e.getMessage());
         }
