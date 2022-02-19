@@ -60,9 +60,9 @@ public class DBHandler extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ARTICLE_COL + " TEXT,"
-                + PRICE_COL + " TEXT,"
+                + PRICE_COL + " FLOAT,"
                 + SHOP_COL + " TEXT,"
-                + DATE_COL + " TEXT,"
+                + DATE_COL + " DATETIME,"
                 + CITY_COL + " TEXT)";
 
         // at last we are calling a exec sql
