@@ -10,10 +10,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.ArrayList;
+
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -171,17 +175,23 @@ public List<Map> loadAll(String order){
     // }
 
 
-    public Map<String, String> loadEntryFromDB(String name) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME +" where article = \""+name+"\"", null);
+
+    public WritableMap loadEntryFromDB(int id) {
+//        public Map<String, String> loadEntryFromDB(int id) {
+
+            SQLiteDatabase db = this.getReadableDatabase();
+        Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME +" where id= "+id+"", null);
+
         resultSet.moveToFirst();
 
-        Map<String, String> dictionary = new HashMap<String, String>();
-        dictionary.put("article", resultSet.getString(resultSet.getColumnIndex(ARTICLE_COL)));
-        dictionary.put("price", resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
-        dictionary.put("shop", resultSet.getString(resultSet.getColumnIndex(SHOP_COL)));
-        dictionary.put("date", resultSet.getString(resultSet.getColumnIndex(DATE_COL)));
-        dictionary.put("city", resultSet.getString(resultSet.getColumnIndex(CITY_COL)));
+//        Map<String, String> dictionary = new HashMap<String, String>();
+        WritableMap dictionary = new WritableNativeMap();
+        dictionary.putString("article", resultSet.getString(resultSet.getColumnIndex(ARTICLE_COL)));
+        dictionary.putString("price", resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
+        dictionary.putString("shop", resultSet.getString(resultSet.getColumnIndex(SHOP_COL)));
+        dictionary.putString("date", resultSet.getString(resultSet.getColumnIndex(DATE_COL)));
+        dictionary.putString("city", resultSet.getString(resultSet.getColumnIndex(CITY_COL)));
+        System.out.println("[DEBUG] LOAD id " + id + " : "+ dictionary.toString() + "||");
 
         if (!resultSet.isClosed())  {
             resultSet.close();

@@ -15,10 +15,11 @@ import { Px } from './posize';
 
 export default function Doge(props) {
   return (
-    <Pressable
-      id={'Doge'}
-      style={[styles.flex, styles.flex_layout]}
-      onPress={() => props.navigation.navigate('Main')}>
+    // <Pressable
+    //   id={'Doge'}
+    //   style={[styles.flex, styles.flex_layout]}
+    //   onPress={() => props.navigation.navigate('Main')}>
+    <View style={[styles.flex, styles.flex_layout]}>
       <View style={styles.flex_item}>
         <ImageBackground
           style={[styles.image6, styles.image6_layout]}
@@ -35,7 +36,8 @@ export default function Doge(props) {
           </Text>
         </Px.View>
       </View>
-    </Pressable>
+    {/* </Pressable> */}
+    </View>
   );
 }
 

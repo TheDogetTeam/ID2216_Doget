@@ -1,14 +1,17 @@
 /**
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
-import React from 'react';
-import { View, StyleSheet, Image, ImageBackground, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import { View, StyleSheet, Image, ImageBackground, ScrollView, Pressable, Alert } from 'react-native';
 import TopBar from './TopBar';
 import { Px } from './posize';
 import Overview from './Overview';
 import ControlBar from './ControlBar';
 import Items from './Items';
 import BottomBar from './BottomBar';
+import Doge from './Doge';
+import ShowOverview from './ShowOverview';
+
 
 const DATA = [
   {
@@ -78,6 +81,10 @@ const DATA = [
 
 
 export default function Main({ navigation }) {
+
+  const states = {"overview": "0", "dog": "1"};
+  const [OverviewState, setOverviewState] = useState(states.overview);
+  
   return (    
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -97,13 +104,18 @@ export default function Main({ navigation }) {
           y="5px minmax(0px, max-content) 0px"
           style={styles.block1}>  */}
           <View style={styles.block2_item}>
-            <View style={[styles.component, styles.component_layout]}>
-              <Overview navigation = {navigation}
+            <Pressable 
+            style={[styles.component, styles.component_layout]}
+            onPress={() => {setOverviewState(OverviewState==states.overview? states.dog : states.overview)} }
+            >
+              {/* <Overview navigation = {navigation}
                 small_text_body1={'$100'}
                 small_text_body2={'/$120'}
                 text_body={'Income/Expense'}
-              />
-            </View>
+              /> */}
+              <ShowOverview state={OverviewState} states={states} />
+              
+            </Pressable>
           </View>
           <View style={styles.block2_item}>
             <View style={[styles.block2, styles.block2_layout]}>

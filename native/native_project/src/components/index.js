@@ -14,6 +14,7 @@ import ItemBlanks from './ItemBlanks';
 import NewItem from './NewItem';
 import BottomBar from './BottomBar';
 import OneItem from './OneItem';
+import ShowOverview from './ShowOverview';
 
 export default {
   ControlBar,
@@ -32,4 +33,5 @@ export default {
   NewItem,
   BottomBar,
   OneItem,
+  ShowOverview
 };
