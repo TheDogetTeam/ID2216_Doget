@@ -31,14 +31,13 @@ public class Overview extends ReactContextBaseJavaModule {
     }
  
     @ReactMethod
-    public void Sum(String name, String location, Callback callback) {
+    public void Sum( Callback callback) {
         int sum = 100;
-        //System.out.println("[DEBUG] : Enter getSum");
-        callBack.invoke(sum);
+        System.out.println("[DEBUG] : Enter getSum");
+        //callBack.invoke(sum);
         // try {
         //     sum += dbHandler.getSum();
         //     dbHandler.loadAll();
-
         // } catch (IllegalViewOperationException e) {
         //     System.err.println(e.getMessage());
         // }

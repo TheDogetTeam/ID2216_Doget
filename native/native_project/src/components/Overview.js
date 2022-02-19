@@ -2,14 +2,16 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Text, Pressable, Alert } from 'react-native';
+import { View, StyleSheet, Text, Pressable, Alert, NativeModules } from 'react-native';
 import { Px } from './posize';
-import {NativeModules} from 'react-native';
 
-var overview = NativeModules.Overview;
-//var testsum = 111;
-//var sum = overview.Sum((i)=>Alert.alert(i));
+// var overview = NativeModules.Overview;
+var testsum = 111;
+// var sum = overview.Sum((i)=>Alert.alert(i));
 
+// function summary(){
+//   overview.Sum((i)=>Alert.alert(i));
+// }
 
 export default function Overview(props) {
 
@@ -54,7 +56,7 @@ export default function Overview(props) {
                     <Text
                       style={styles.small_text_body1}
                       ellipsizeMode={'clip'}>
-                      {sum}
+                      {testsum}
                     </Text>
                   </Px.View>
                 </View>
