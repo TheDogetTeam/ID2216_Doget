@@ -5,9 +5,11 @@ import React from 'react';
 import { View, StyleSheet, Text, Pressable, Alert, NativeModules } from 'react-native';
 import { Px } from './posize';
 
-// var overview = NativeModules.Overview;
-var testsum = 111;
-// var sum = overview.Sum((i)=>Alert.alert(i));
+var overview = NativeModules.OverviewData;
+//var testsum = 111;
+var sum;
+// const { OverviewData } = NativeModules;
+
 
 // function summary(){
 //   overview.Sum((i)=>Alert.alert(i));
@@ -15,6 +17,7 @@ var testsum = 111;
 
 export default function Overview(props) {
 
+  overview.Sum((i)=>{console.log("Total expense is " + i);sum = i; });
   
   return (
     <View
@@ -57,7 +60,7 @@ export default function Overview(props) {
                     <Text
                       style={styles.small_text_body1}
                       ellipsizeMode={'clip'}>
-                      {testsum}
+                      {'$100'}
                     </Text>
                   </Px.View>
                 </View>
@@ -157,7 +160,7 @@ export default function Overview(props) {
                 y="8px minmax(0px, max-content) 0px"
                 style={styles.text_body_box}>
                 <Text style={styles.text_body} ellipsizeMode={'clip'}>
-                  {'Difference '}
+                  {'Total Expense'}
                 </Text>
               </Px.View>
             </View>
@@ -167,7 +170,7 @@ export default function Overview(props) {
                 y="1px minmax(0px, max-content) 15px"
                 style={styles.small_text_body1_box}>
                 <Text style={styles.small_text_body1} ellipsizeMode={'clip'}>
-                  {'$100'}
+                  {sum}
                 </Text>
               </Px.View>
             </View>
