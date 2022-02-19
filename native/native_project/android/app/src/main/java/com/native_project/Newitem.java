@@ -5,7 +5,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-import com.native_project.Newitem;
+import com.native_project.Register_button;
  
 import java.util.ArrayList;
 import java.util.Collections;
