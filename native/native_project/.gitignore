@@ -60,7 +60,7 @@ buck-out/
 
 # .gradle
 # files generated for excecute log and checksums are ignored
-/android/.gradle/7.2/executionHistory
-/android/.gradle/7.2/fileHashes/
-/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
-/android/.gradle/checksums/checksums.lock
+android/.gradle/7.2/executionHistory/**
+android/.gradle/7.2/fileHashes/**
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+android/.gradle/checksums/checksums.lock
