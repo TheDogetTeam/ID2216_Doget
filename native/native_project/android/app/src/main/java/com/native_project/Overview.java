@@ -32,6 +32,8 @@ public class Overview extends ReactContextBaseJavaModule {
  
     @ReactMethod
     public void Sum( Callback callBack) {
+        Session_storage storage =  com.native_project.Session_storage.getInstance();
+        dbHandler = new DBHandler(reactContext,storage.getUserData());
         String sum;
         sum = Double.toString(dbHandler.getSum());
         System.out.println("\n [DEBUG] : getSum: ");
