@@ -62,7 +62,7 @@ class Input_content extends Component{
 
 function register_button(navigation,Text_content_ext) {
   register_callback.addEntry(Text_content_ext.state.onChangeText_article , Text_content_ext.state.onChangeText_price, Text_content_ext.state.onChangeText_shop, Text_content_ext.state.onChangeText_date, Text_content_ext.state.onChangeText_city);
-  navigation.navigate('Main');
+  navigation.navigate('Main', {itemState:2});
 }
 
 function OCRCallBack() {

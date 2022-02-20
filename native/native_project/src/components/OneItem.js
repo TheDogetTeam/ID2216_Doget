@@ -2,7 +2,7 @@
  *  
  * @Author       : Zekun WANG(wangzekun.felix@gmail.com)
  * @CreateTime   : 2022-02-16 21:05:59
- * @LastEditTime : 2022-02-17 00:41:01
+ * @LastEditTime : 2022-02-19 22:14:35
  * @LastEditors  : Zekun WANG
  * @FilePath     : \native_project\src\components\OneItem.js
  * @Description  : Add one new Item 
@@ -44,14 +44,14 @@ export default function OneItem(props) {
           <Px.View x="12px 243fr 0px" y="10px minmax(0px, max-content) 2px" style={styles.flex10}>
             <View style={styles.flex10_item}>
               <Px.View x="0px 243fr 0px" y="0px minmax(0px, max-content) 0px" style={styles.group1}>
-                <View style={[styles.small_text_body2_box, styles.small_text_body2_box_layout]}>
+                {/* <View style={[styles.small_text_body2_box, styles.small_text_body2_box_layout]}>
                   <Text style={styles.small_text_body2} ellipsizeMode={'clip'}>
                     {'Cost:'}
                   </Text>
-                </View>
+                </View> */}
                 <View style={[styles.text_body_box, styles.text_body_box_layout]}>
                   <Text style={styles.text_body} ellipsizeMode={'clip'}> 
-                    {props.price } 
+                    {"$" + props.price } 
                     {/* show the price costed in this item */}
                   </Text>
                 </View>
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: 17,
     bottom: -3,
-    width: 28,
+    width: 200,
     right: 0
   },
   text_body: {

@@ -7,7 +7,7 @@ import OneItem from './OneItem';
 import { Px } from './posize';
 
 const renderItem = ({item}) => {
-  console.log(item)
+  // console.log(item)
   return (
     <OneItem 
       icon={require("../assets/ac6e6279ad9ba4d089b374f9a10b158c.png")}
@@ -22,7 +22,7 @@ const renderItem = ({item}) => {
 
 
 export default function Items(props) {
-  console.log(props.data)
+  // console.log(props.data)
   return (
     // <ScrollView style={styles.block_item}>
     <Px.View

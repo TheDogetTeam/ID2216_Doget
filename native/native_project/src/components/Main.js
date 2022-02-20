@@ -79,16 +79,32 @@ const { ShowItems } = NativeModules;
 //     date: '2022.2.18.'
 //   },
 // ]
-var DATA = new Array();
+// var DATA = new Array();
 
-export default function Main({ navigation }) {
+export default function Main({ navigation, route }) {
+  console.log("Main reload!");
 
   const states = {"overview": "0", "dog": "1"};
   const [OverviewState, setOverviewState] = useState(states.overview);
+  const [renderItemState, setrenderItemState] = useState(2);
+  const [DATA, updateDATA] = useState(new Array());
+  // if(renderItemState==2) setrenderItemState(1);
 
-  ShowItems.readEntryAll("id", (json) => {DATA = [...json]})
+  if(route.params !== undefined) {
+    console.log("itemState: " + route.params.itemState);
+    if (route.params.itemState > 0) setrenderItemState(1);
+    route.params.itemState = 0;
+  }
+
+  if(renderItemState!=0){
+    setrenderItemState(0);
+    ShowItems.readEntryAll("id DESC", (json) => {updateDATA([...json])})
+    console.log("rerendered!");
+  }
+
+  console.log("DATA: " + DATA.length);
   // DATA.push(1);
-  console.log("DATA is " + DATA)
+  // console.log("DATA is " + DATA)
   return (    
     <ImageBackground
       style={[styles.block, styles.block_layout]}
@@ -158,7 +174,7 @@ export default function Main({ navigation }) {
         {/* </Px.View> */}
       </View>
       <View style={styles.block_space} />
-      <View style={styles.block_item}>
+      <View style={styles.block_item_bot}>
         <View style={[styles.component, styles.component_layout1]}>
           <BottomBar navigation = {navigation} />
         </View>
@@ -187,6 +203,10 @@ const styles = StyleSheet.create({
   block_item: {
     flexGrow: 0,
     flexShrink: 1
+  },
+  block_item_bot: {
+    flexGrow: 0,
+    flexShrink: 0
   },
   content_box: {
     width: '100%'
