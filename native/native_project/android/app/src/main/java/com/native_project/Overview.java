@@ -32,8 +32,10 @@ public class Overview extends ReactContextBaseJavaModule {
  
     @ReactMethod
     public void Sum( Callback callBack) {
-        int sum = 100;
-        System.out.println("[DEBUG] : Enter getSum");
+        String sum;
+        sum = Double.toString(dbHandler.getSum());
+        System.out.println("\n [DEBUG] : getSum: ");
+        System.out.println(sum);
         callBack.invoke(sum);
         // try {
         //     sum += dbHandler.getSum();

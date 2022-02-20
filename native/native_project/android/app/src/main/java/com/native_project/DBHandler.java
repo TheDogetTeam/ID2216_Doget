@@ -67,7 +67,7 @@ public class DBHandler extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ARTICLE_COL + " TEXT,"
-                + PRICE_COL + " FLOAT,"
+                + PRICE_COL + " DOUBLE,"
                 + SHOP_COL + " TEXT,"
                 + DATE_COL + " DATETIME,"
                 + CITY_COL + " TEXT)";
@@ -117,6 +117,10 @@ public class DBHandler extends SQLiteOpenHelper {
         System.out.println(shop);
         System.out.println(date);
         System.out.println(city);
+
+        // System.out.println("\n Current Sum!");
+        // System.out.println(sumPrice);
+
 
 
 
@@ -171,20 +175,17 @@ public WritableArray loadAll(String order){
     return Output;
     }
 
-    // public int getSum(){
-    //     SQLiteDatabase db = this.getReadableDatabase();
-    //     Cursor resultSet = db.rawQuery("Select * from " + TABLE_NAME, null);
-    //     resultSet.moveToFirst();
-    //     int sum = 0;
-    //     while (resultSet.isAfterLast() == false) {
-    //         if ((resultSet != null) && (resultSet.getCount() > 0)) {
-    //             sum += Integer.parseInt(resultSet.getString(resultSet.getColumnIndex(PRICE_COL)));
-    //             System.out.println("[DEBUG] getSum: "+ sum );
-    //         }
-    //         resultSet.moveToNext();
-    //     }
-    //     return sum;
-    // }
+    public double getSum(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        double sum = 0;
+        Cursor resultSet = db.rawQuery("Select SUM(price) from " + TABLE_NAME, null);
+        if(resultSet.moveToFirst()) {
+            //System.out.println(resultSet.getDouble(0));
+            sum = resultSet.getDouble(0);
+        }
+        //System.out.println(sum);
+        return sum;
+    }
 
 
 

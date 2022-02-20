@@ -39,6 +39,8 @@ public class Register_button extends ReactContextBaseJavaModule {
             DBHandler dbHandler = new DBHandler(reactContext,storage.getUserData());
             dbHandler.addNewEntryToDB(article, price, shop, date,city);
             System.out.println(dbHandler.loadAll("article").toString());
+            //dbHandler.deleteAll();
+            //dbHandler.getSum();
 
         } catch (IllegalViewOperationException e) {
             System.err.println(e.getMessage());
