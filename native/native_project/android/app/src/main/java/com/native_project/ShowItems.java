@@ -16,13 +16,10 @@ import java.util.Map;
 
 
 public class ShowItems extends ReactContextBaseJavaModule {
-    private final DBHandler dbHandler;
     ReactApplicationContext reactContext;
 
     public ShowItems(ReactApplicationContext reactContext) {
         super(reactContext); //required by React Native
-        Session_storage storage =  com.native_project.Session_storage.getInstance();
-        dbHandler = new DBHandler(reactContext,storage.getUserData());
         this.reactContext = reactContext;
     }
 
@@ -35,6 +32,8 @@ public class ShowItems extends ReactContextBaseJavaModule {
     @ReactMethod
     public void readEntryByID(int id, Callback callback) {
         WritableMap dir;
+        Session_storage storage =  com.native_project.Session_storage.getInstance();
+        DBHandler dbHandler = new DBHandler(reactContext,storage.getUserData());
         dir = dbHandler.loadEntryFromDB(id);
 //        JSONObject json = new JSONObject(dir);
         callback.invoke(dir);
@@ -43,6 +42,8 @@ public class ShowItems extends ReactContextBaseJavaModule {
     @ReactMethod
     public void readEntryAll(String order, Callback callback) {
         WritableArray dir;
+        Session_storage storage =  com.native_project.Session_storage.getInstance();
+        DBHandler dbHandler = new DBHandler(reactContext,storage.getUserData());
         dir = dbHandler.loadAll(order);
         callback.invoke(dir);
     }

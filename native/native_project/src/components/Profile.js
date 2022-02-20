@@ -25,7 +25,7 @@
 
  function profile_button(navigation,name) {
    profile_callback.addDBTable(name);
-   navigation.navigate("Main");
+   navigation.navigate("Main", {itemState:2});
  } 
 
 

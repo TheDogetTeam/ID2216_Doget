@@ -64,7 +64,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // an sqlite query and we are
         // setting our column names
         // along with their data types.
-        String query = "CREATE TABLE " + TABLE_NAME + " ("
+        String query = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ARTICLE_COL + " TEXT,"
                 + PRICE_COL + " DOUBLE,"
@@ -80,7 +80,6 @@ public class DBHandler extends SQLiteOpenHelper {
     public void swapTable(){
         SQLiteDatabase db = this.getWritableDatabase();
         System.out.println("DataBase Name: "+this.getDatabaseName());
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
         db.close();
     }
