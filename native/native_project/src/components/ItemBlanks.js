@@ -15,13 +15,14 @@ import { Px } from './posize';
 
 export default function ItemBlanks(props) {
   const Text_content = props.Text_content_ext;
+
   var date = new Date().getDate(); //To get the Current Date
-var month = new Date().getMonth() + 1; //To get the Current Month
-var year = new Date().getFullYear(); //To get the Current Year
-var hours = new Date().getHours(); //To get the Current Hours
-var min = new Date().getMinutes(); //To get the Current Minutes
-var sec = new Date().getSeconds(); //To get the Current Seconds
-const datetime = year+"-"+month+"-"+date+" "+hours+":"+min+":"+sec;
+    var month = new Date().getMonth() + 1; //To get the Current Month
+    var year = new Date().getFullYear(); //To get the Current Year
+    var hours = new Date().getHours(); //To get the Current Hours
+    var min = new Date().getMinutes(); //To get the Current Minutes
+    var sec = new Date().getSeconds(); //To get the Current Seconds
+    const datetime = year+"-"+month+"-"+date+" "+hours+":"+min+":"+sec;
 
   return (
     <View style={[styles.flex12, styles.flex12_layout]}>
@@ -201,7 +202,7 @@ const datetime = year+"-"+month+"-"+date+" "+hours+":"+min+":"+sec;
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={Text_content.handledate}
+                  onChangeText={Text_content.handledate(datetime)}
                   defaultValue={datetime}
                   
                   

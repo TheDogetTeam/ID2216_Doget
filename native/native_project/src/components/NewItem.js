@@ -26,6 +26,7 @@ var register_callback = NativeModules.register_button;
 class Input_content extends Component{
   constructor(props){  
     super(props);  
+    
     this.state = {  
       onChangeText_article:"Artical Name",
       onChangeText_price:"Price",
