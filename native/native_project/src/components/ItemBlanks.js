@@ -1,7 +1,7 @@
 /**
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
-import React from 'react';
+import React , { Component }from 'react';
 import {
   View,
   StyleSheet,
@@ -13,17 +13,35 @@ import {
 } from 'react-native';
 import { Px } from './posize';
 
-export default function ItemBlanks(props) {
-  const Text_content = props.Text_content_ext;
 
-  var date = new Date().getDate(); //To get the Current Date
-    var month = new Date().getMonth() + 1; //To get the Current Month
-    var year = new Date().getFullYear(); //To get the Current Year
-    var hours = new Date().getHours(); //To get the Current Hours
-    var min = new Date().getMinutes(); //To get the Current Minutes
-    var sec = new Date().getSeconds(); //To get the Current Seconds
-    const datetime = year+"-"+month+"-"+date+" "+hours+":"+min+":"+sec;
 
+
+
+class ItemBlanks extends Component{
+
+  constructor(props){  
+    super(props);  
+    this.state = {  
+      article:"",
+      price:0,
+      shop:"",
+      date:"",
+      city:"",
+      date : new Date().getDate(), //To get the Current Date
+      month :new Date().getMonth() + 1, //To get the Current Month
+      year : new Date().getFullYear(), //To get the Current Year
+      hours : new Date().getHours(), //To get the Current Hours
+      min : new Date().getMinutes(), //To get the Current Minutes
+      sec : new Date().getSeconds(), //To get the Current Seconds
+  }
+  this.datetime = this.state.year +"-"+ this.state.month+"-"+ this.state.date+" "+ this.state.hours+":"+ this.state.min+":"+ this.state.sec;
+  Text_content = this.props.Text_content_ext;
+
+
+
+}
+   
+  render() {
   return (
     <View style={[styles.flex12, styles.flex12_layout]}>
       <View style={styles.flex12_item}>
@@ -55,8 +73,9 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={Text_content.handlearticle}
-                  defaultValue={"Artical Name"}
+                  onChangeText={(text) => Text_content.handlearticle(text)}
+                  defaultValue={Text_content.state.onChangeText_article}
+                  //value = {Text_content.state.article}
                    />
               </Px.View>
 
@@ -99,7 +118,7 @@ export default function ItemBlanks(props) {
                   <TextInput
                   style={styles.highlights2}
                   onChangeText={Text_content.handleprice}
-                  defaultValue={"Price"}
+                  defaultValue={Text_content.state.onChangeText_price}
                    />
               </Px.View>
           </View>
@@ -138,7 +157,7 @@ export default function ItemBlanks(props) {
                 <TextInput
                 style={styles.highlights2}
                 onChangeText={Text_content.handleshop}
-                defaultValue={"Shop"}
+                defaultValue={Text_content.state.onChangeText_shop}
                   />
             </Px.View>
 
@@ -202,8 +221,8 @@ export default function ItemBlanks(props) {
                 style={styles.highlights2_box}>
                   <TextInput
                   style={styles.highlights2}
-                  onChangeText={Text_content.handledate(datetime)}
-                  defaultValue={datetime}
+                  onChangeText={Text_content.handledate}
+                  defaultValue={this.datetime}
                   
                   
                    />
@@ -271,7 +290,7 @@ export default function ItemBlanks(props) {
                   <TextInput
                   style={styles.highlights2}
                   onChangeText={Text_content.handlecity}
-                  defaultValue={"City"}
+                  defaultValue={Text_content.state.onChangeText_city}
                    />
               </Px.View>
 
@@ -284,7 +303,12 @@ export default function ItemBlanks(props) {
       
     </View>
   );
+      
 }
+}
+
+export default  ItemBlanks;
+
 
 ItemBlanks.inStorybook = true;
 ItemBlanks.fitScreen = false;

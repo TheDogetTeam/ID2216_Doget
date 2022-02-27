@@ -14,7 +14,6 @@ import {
 import { Px } from './posize';
 
 
-
 export default function BottomBar(props) {
   return (
     <Px.View
@@ -51,7 +50,7 @@ export default function BottomBar(props) {
           x="0px 65fr 0px"
           y="0px minmax(0px, max-content) 0px"
           style={styles.flex1}
-          onPress={() => props.navigation.navigate('NewItem')}>
+          onPress={() => props.navigation.navigate('NewItem',{article:"Artical Name",price:"Price",shop:"Shop",city:"City"})}>
 
           <View style={styles.flex1_item}>
             <Px.Image
