@@ -2,9 +2,10 @@
 
 **This is the course project for ID2216 - Developing Mobile Applications**
 
-Our application is developed with several tools, with Figma for the UI design, and Pxcode is used to transfer the design into codes for React-Native. Then the app is built with React-Native. We use JavaScript for the front-end, and the back-end codes are written in JAVA and Kotlin.
+ Nowadays, smart phones are so widely used and almost become part of the daily life for a large proportion of people, and applications that serve multifarious purposes are designed, some of which are made to help people track their expenses and maintain a budget.  Our application is developed with several tools, with Figma for the UI design, and Pxcode is used to transfer the design into codes for React-Native. Then the app is built with React-Native. We use JavaScript for the front-end, and the back-end codes are written in JAVA and Kotlin.
 
-The whole project can be divided into several parts:
+## UI Layout Screenshot
+![UI](picture/version2-B.png)
 
 ## Web
 
