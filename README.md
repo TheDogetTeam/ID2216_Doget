@@ -7,6 +7,12 @@
 ## UI Layout Screenshot
 ![UI](picture/version3.png)
 
+## Screen Recording Demo
+[YouTube](https://youtu.be/kSSZUDAUx6Y)
+
+## APK Path
+"native/apk"  
+[APK Download](https://github.com/GiantPanda0090/ID2216_Doget/native/apk/doget.apk)
 ## Web
 
 The **webui** is developed with javascript and HTML to build a web version of our applications.
