@@ -11,8 +11,44 @@ import {
   Alert
 } from 'react-native';
 import { Px } from './posize';
+import ItemBlanks from './ItemBlanks';
+
+function sport(props){
+  props.navigation.push('NewItem',{article:"Doge Ball",price:"172",shop:"Doge Hallen",city:"Stockholm"});
+} 
+function shopping(props){
+  props.navigation.push('NewItem',{article:"New Doge",price:"323",shop:"MR Doge",city:"Stockholm"});
+} 
+function phone(props){
+  props.navigation.push('NewItem',{article:"TeleDoge",price:"414",shop:"CryptoCom",city:"Stockholm"});
+} 
+
+function transport(props){
+  props.navigation.push('NewItem',{article:"Ride Doge",price:"1234",shop:"Local Doge Transport",city:"Stockholm"});
+} 
+
+function restaurant(props){
+  props.navigation.push('NewItem',{article:"Get that bone",price:"1414",shop:"CryptoKabam",city:"Stockholm"});
+} 
+
+function grocery(props){
+  props.navigation.push('NewItem',{article:"Daily Bones",price:"2342",shop:"Doge Market",city:"Stockholm"});
+} 
+
+function utility(props){
+  props.navigation.push('NewItem',{article:"Crypto Refill",price:"4145",shop:"Doge Bank",city:"Stockholm"});
+} 
+
+function rent(props){
+  props.navigation.push('NewItem',{article:"Who let the doge out",price:"3333",shop:"Doge Apartment",city:"Stockholm"});
+} 
+
+function others(props){
+  props.navigation.push('NewItem',{article:"Doge Paws",price:"1",shop:"Paws Massage",city:"Stockholm"});
+} 
 
 export default function Categories(props) {
+
   return (
     <Px.View
       x="0px 303fr 0px"
@@ -28,7 +64,7 @@ export default function Categories(props) {
               x="11.5px 35fr 21.5px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex3}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => sport(props)}>
               <View style={styles.flex3_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout]}
@@ -52,7 +88,7 @@ export default function Categories(props) {
               x="0px 68fr 0px"
               y="14px minmax(0px, max-content) 0px"
               style={styles.flex4}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => restaurant(props)}>
               <View style={styles.flex4_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout1]}
@@ -76,7 +112,7 @@ export default function Categories(props) {
               x="9.5px 43fr 15.5px"
               y="12px minmax(0px, max-content) 0px"
               style={styles.flex5}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => others(props)}>
               <View style={styles.flex5_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout2]}
@@ -107,7 +143,7 @@ export default function Categories(props) {
               x="0px 60fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex7}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => shopping(props)}>
               <View style={styles.flex7_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout3]}
@@ -131,7 +167,7 @@ export default function Categories(props) {
               x="2px 49fr 9px"
               y="13px minmax(0px, max-content) 0px"
               style={styles.flex8}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => grocery(props)}>
               <View style={styles.flex8_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout4]}
@@ -155,7 +191,7 @@ export default function Categories(props) {
               x="5.5px 48fr 6.5px"
               y="10px minmax(0px, max-content) 0px"
               style={styles.flex9}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => Alert.alert('Enter Your Own Catagory')}>
               <View style={styles.flex9_item}>
                 <ImageBackground
                   style={[styles.icon7, styles.icon7_layout]}
@@ -186,7 +222,7 @@ export default function Categories(props) {
               x="0px 41fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex11}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => phone(props)}>
               <View style={styles.flex11_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout5]}
@@ -210,7 +246,7 @@ export default function Categories(props) {
               x="0px 39fr 2px"
               y="18px minmax(0px, max-content) 0px"
               style={styles.flex12}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => utility(props)}>
               <View style={styles.flex12_item}>
                 <Px.ImageBackground
                   x="5px 24fr 10px"
@@ -256,7 +292,7 @@ export default function Categories(props) {
               x="0px 60fr 0px"
               y="0px minmax(0px, max-content) 0px"
               style={styles.flex14}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => transport(props)}>
               <View style={styles.flex14_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout6]}
@@ -280,7 +316,7 @@ export default function Categories(props) {
               x="9.5px 35fr 15.5px"
               y="13px minmax(0px, max-content) 0px"
               style={styles.flex15}
-              onPress={() => Alert.alert('click')}>
+              onPress={() => rent(props)}>
               <View style={styles.flex15_item}>
                 <ImageBackground
                   style={[styles.icon2, styles.icon2_layout]}

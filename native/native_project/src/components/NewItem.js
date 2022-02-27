@@ -42,6 +42,7 @@ class Input_content extends Component{
   }  
 
 
+
   handlearticle = (text) => {
      this.state.onChangeText_article = text;
   };
@@ -57,6 +58,7 @@ class Input_content extends Component{
   handlecity = (text) => {
     this.state.onChangeText_city= text;
   }
+
 }
 
 
@@ -70,8 +72,12 @@ function OCRCallBack() {
   Alert.alert("OCR function start here!");
 }
 
-export default function NewItem({navigation}) {
+export default function NewItem({navigation, route}) {
   const Text_content_ext = new Input_content();
+  Text_content_ext.handlearticle(route.params.article);
+  Text_content_ext.handleprice(route.params.price);
+  Text_content_ext.handleshop(route.params.shop);
+  Text_content_ext.handlecity(route.params.city);
 
   return (
     <ImageBackground
@@ -104,7 +110,7 @@ export default function NewItem({navigation}) {
               x="8.5px 303fr 4.5px"
               y="18px minmax(0px, max-content) 0px"
               style={styles.flex1}>
-              <Categories />
+              <Categories navigation = {navigation}/>
             </Px.View>
           </View>
           <View style={styles.flex_item}>
