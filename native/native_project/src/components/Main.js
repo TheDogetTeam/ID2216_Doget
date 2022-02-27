@@ -102,7 +102,7 @@ export default function Main({ navigation, route }) {
     console.log("rerendered!");
   }
 
-  console.log("DATA: " + DATA.length);
+  console.log("DATA: " + DATA);
   // DATA.push(1);
   // console.log("DATA is " + DATA)
   return (    
