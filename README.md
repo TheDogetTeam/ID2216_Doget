@@ -12,7 +12,7 @@
 
 ## APK Path
 "native/apk"  
-[APK Download](https://github.com/GiantPanda0090/ID2216_Doget/tree/main/native/apk)
+[APK Download](https://github.com/GiantPanda0090/ID2216_Doget/blob/main/native/apk/doget.apk)
 ## Web
 
 The **webui** is developed with javascript and HTML to build a web version of our applications.
