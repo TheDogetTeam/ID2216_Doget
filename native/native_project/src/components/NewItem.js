@@ -105,14 +105,14 @@ export default function NewItem({navigation, route}) {
               </Text>
             </Px.View>
           </View>
-          <View style={styles.flex_item}>
+          <ScrollView style={styles.flex_item_categories}>
             <Px.View
               x="8.5px 303fr 4.5px"
               y="18px minmax(0px, max-content) 0px"
               style={styles.flex1}>
               <Categories navigation = {navigation}/>
             </Px.View>
-          </View>
+          </ScrollView>
           <View style={styles.flex_item}>
             <Px.View
               x="0px 316fr 0px"
@@ -131,27 +131,6 @@ export default function NewItem({navigation, route}) {
               style={styles.flex25}>
 
               <View style={styles.flex25_item}>
-              {/* <TouchableOpacity 
-              style={styles.cover_block3}
-              onPress={() => navigation.navigate('OCR_Page')}>
-                <Px.ImageBackground
-                  x="0px 130fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.cover_block3}
-                  source={require('../assets/a16030a8c830c69cd9780ad59acdd11e.png')}
-                  resizeMode="contain">
-                  <View style={styles.cover_block3_item}>
-                    <Px.View
-                      x="0px 130fr 0px"
-                      y="4px minmax(0px, max-content) 4px"
-                      style={styles.highlights_box}>
-                      <Text style={styles.highlights} ellipsizeMode={'clip'}>
-                        {'OCR'}
-                      </Text>
-                    </Px.View>
-                  </View>
-                </Px.ImageBackground>
-                </TouchableOpacity> */}
                 <Px.Pressable 
                 x="0px 130px 0px" 
                 y="0px minmax(0px, max-content) 0px" 
@@ -178,28 +157,6 @@ export default function NewItem({navigation, route}) {
               <View style={styles.flex25_space} />
 
               <View style={styles.flex25_item}>
-              {/* <TouchableOpacity 
-              style={styles.cover_block3}
-              onPress={() => navigation.navigate('Main')}
-              >
-                <Px.ImageBackground
-                  x="0px 130fr 0px"
-                  y="0px minmax(0px, max-content) 0px"
-                  style={styles.cover_block2}
-                  source={require('../assets/6cec8410f1165bcb7e78c37912edb7d4.png')}
-                  resizeMode="contain">
-                  <View style={styles.cover_block2_item}>
-                    <Px.View
-                      x="29px 72fr 29px"
-                      y="4px minmax(0px, max-content) 4px"
-                      style={styles.highlights1_box}>
-                      <Text style={styles.highlights1} ellipsizeMode={'clip'}>
-                        {'Register'}
-                      </Text>
-                    </Px.View>
-                  </View>
-                </Px.ImageBackground>
-                </TouchableOpacity> */}
                 <Px.Pressable 
                 x="0px 130px 0px" 
                 y="0px minmax(0px, max-content) 0px" 
@@ -256,7 +213,7 @@ const styles = StyleSheet.create({
   },
   block_item: {
     flexGrow: 0,
-    flexShrink: 1,
+    flexShrink: 0,
     width: '100%'
   },
   content_box: {
@@ -266,8 +223,12 @@ const styles = StyleSheet.create({
     flexGrow: 1
   },
   flex_item: {
-    flexGrow: 0,
+    flexGrow: 1,
     flexShrink: 1
+  },
+  flex_item_categories: {
+    flexGrow: 1,
+    flexShrink: 3
   },
   flex_space: {
     flexGrow: 1,
