@@ -22,7 +22,7 @@ export default function Statistics({navigation}) {
           <TopBar big_title={'Doget'} />
         </Px.View>
       </View>
-      <ScrollView style={styles.block_item}>
+      <View style={styles.block_item}>
         <View style={[styles.flex, styles.flex_layout]}>
           <View style={styles.flex_item}>
             <Px.View
@@ -34,16 +34,16 @@ export default function Statistics({navigation}) {
               </Text>
             </Px.View>
           </View>
-          <View style={styles.flex_item}>
+          <ScrollView style={styles.flex_item}>
             <Px.View
               x="1px 280fr 0px"
               y="28px minmax(0px, max-content) 0px"
               style={styles.flex1}>
               <Statistic />
             </Px.View>
-          </View>
+          </ScrollView>
         </View>
-      </ScrollView>
+      </View>
       <View style={styles.block_space} />
       <View style={styles.block_item}>
         <View style={[styles.component, styles.component_layout]}>

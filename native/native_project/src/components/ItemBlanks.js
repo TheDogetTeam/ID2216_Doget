@@ -75,6 +75,7 @@ class ItemBlanks extends Component{
                   style={styles.highlights2}
                   onChangeText={(text) => Text_content.handlearticle(text)}
                   defaultValue={Text_content.state.onChangeText_article}
+                  selectTextOnFocus={true}
                   //value = {Text_content.state.article}
                    />
               </Px.View>
@@ -119,6 +120,8 @@ class ItemBlanks extends Component{
                   style={styles.highlights2}
                   onChangeText={Text_content.handleprice}
                   defaultValue={Text_content.state.onChangeText_price}
+                  keyboardType={"numeric"}
+                  selectTextOnFocus={true}
                    />
               </Px.View>
           </View>
@@ -158,6 +161,7 @@ class ItemBlanks extends Component{
                 style={styles.highlights2}
                 onChangeText={Text_content.handleshop}
                 defaultValue={Text_content.state.onChangeText_shop}
+                selectTextOnFocus={true}
                   />
             </Px.View>
 
@@ -223,7 +227,7 @@ class ItemBlanks extends Component{
                   style={styles.highlights2}
                   onChangeText={Text_content.handledate}
                   defaultValue={this.datetime}
-                  
+                  selectTextOnFocus={true}
                   
                    />
               </Px.View>
@@ -291,6 +295,7 @@ class ItemBlanks extends Component{
                   style={styles.highlights2}
                   onChangeText={Text_content.handlecity}
                   defaultValue={Text_content.state.onChangeText_city}
+                  selectTextOnFocus={true}
                    />
               </Px.View>
 

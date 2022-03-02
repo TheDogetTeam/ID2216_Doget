@@ -2,29 +2,62 @@
  * This source code is exported from pxCode, you can get more document from https://www.pxcode.io
  */
 import React from 'react';
-import { View, StyleSheet, Image, ImageBackground, Dimensions} from 'react-native';
+import { View, StyleSheet, Image, ImageBackground, Dimensions, NativeModules } from 'react-native';
 import { Px } from './posize';
+// import { LineChart, Grid, AreaChart, PieChart, XAxis, YAxis } from 'react-native-svg-charts';
+import { LineChartLocal, PieChartLocal, AreaChartLocal } from './StatisticPlot';
+import * as shape from 'd3-shape'
+import { useState } from 'react';
+
+const { ShowItems } = NativeModules;
+
 const win = Dimensions.get('window');
 
 
+// const data1 = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50]
+// const data2 = [50, 10, 40, 95]
+// const shops = ["shop0", "shopsmall", "Doge", "shopelarge"]
+var pieData
+
+function extractData(rawdata){
+
+  const shop = rawdata.shop
+  const price = parseFloat(rawdata.price)
+
+  if(shop in pieData) pieData[shop] += price
+  else pieData[shop] = price
+
+  return price
+}
+
 export default function Statistic(props) {
+  console.log("Statistics reload!");
+  pieData = {}
+  const [DATA, updateDATA] = useState(new Array());
+  const [readState, setReadState] = useState(2);
+  if(readState!=0) {
+    ShowItems.readEntryAll("id DESC", (json) => {updateDATA([...json])})
+    setReadState(0)
+  }
+  
+  var data1 = DATA.map(extractData)
+  var data2 = Object.values(pieData)
+  var shops = Object.keys(pieData)
+  
+  
+  console.log("data1:" + data1)
+  console.log("data2:" + data2)
+  console.log("shops:" + shops)
+  console.log("DATA:" + DATA)
+
   return (
     <Px.View
       x="0px 280fr 0px"
       y="0px minmax(0px, max-content) 0px"
       style={styles.flex1}>
-      <View style={styles.flex1_item}>
-        <ImageBackground
-          style={[styles.image18, styles.image18_layout]}
-          source={require('../assets/421aabc05b2b1f480d218257e09bafdf.png')}
-        />
-      </View>
-      <View style={styles.flex1_item}>
-        <ImageBackground
-          style={[styles.image12, styles.image12_layout]}
-          source={require('../assets/1df63a1f392ab78721cd900a551aac52.png')}
-        />
-      </View>
+        <LineChartLocal data={data1} max={Math.max(...data1)} min={0}/>
+        {/* <AreaChartLocal data={data1}/> */}
+        <PieChartLocal data={data2} shops={shops}/>
     </Px.View>
   );
 }
@@ -39,7 +72,13 @@ const styles = StyleSheet.create({
   },
   flex1_item: {
     flexGrow: 0,
-    flexShrink: 1
+    flexShrink: 1,
+    flexDirection: 'row',
+  },
+  flex2_item: {
+    flexGrow: 0,
+    flexShrink: 1,
+    padding: 10
   },
   image18: {
     resizeMode: 'contain',
