@@ -8,7 +8,7 @@
 ![UI](picture/version3.png)
 
 ## Screen Recording Demo
-[YouTube](https://youtu.be/kSSZUDAUx6Y)
+[YouTube](https://youtu.be/1_M7XvSOv40)
 
 ## APK Path
 "native/apk"  
