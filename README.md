@@ -13,6 +13,12 @@
 ## APK Path
 "native/apk"  
 [APK Download](https://github.com/GiantPanda0090/ID2216_Doget/blob/main/native/apk/doget.apk)
+
+## Generate APK 
+Under native/native_project. run the "generate_apk" script  
+For Linux: generate_apk.sh  
+For Windows: generate_apk.bat
+
 ## Web
 
 The **webui** is developed with javascript and HTML to build a web version of our applications.
